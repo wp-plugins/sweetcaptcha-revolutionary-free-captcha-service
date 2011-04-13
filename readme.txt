@@ -2,12 +2,11 @@
 Contributors: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 Tags: captcha, anti-spam, captcha contact form 7, register, comment, login, sign-up, Akismet, Comment, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha game, captcha plugin, captcha puzzle, captsha, comment, comments, contact form 7, game, interactive captcha, kapcha, kaptcha, keycaptcha, protection, register, registration, registration form, security, Security captcha, spam, spam protection, php captcha, captcha php, captcha in php, captcha code, captcha form, form catcha, free captcha, image captcha, captcha image, captcha script, script captcha, simple captcha, jquery captcha, captcha download, captcha generator, captcha html, captcha ajax, captcha code in php, php captcha code, php captcha script, iphone, joomla, android, ipad, 
-
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
 
-SweetCaptcha - Desing your own captcha and put your users and your website at first priority.
+SweetCaptcha - Design your own captcha and put your users and your website at first priority.
 == Description ==
 
 = General Information =
@@ -33,13 +32,9 @@ SweetCatpcha Features:
 * Works on iphones and ipads. 
 * Can design your own SweetCaptcha.
 
-
-
 = IMPORTANT =
 
 In order for SweetCaptcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise SweetCaptcha might not work correctly. 
-
-
 
 == Installation ==
 
@@ -60,7 +55,6 @@ Please download the sweetcaptcha.php file from our website www.sweetcaptcha.com
 = How to setup the values in the dashboard? =
 Please see the screenshots for description.
 
-
 == Screenshots ==
 
 1. SweetCaptcha Dashboard Settings.
@@ -68,9 +62,9 @@ Please see the screenshots for description.
 3. SweetCaptcha values under Settings. 
 4. SweetCaptcha on contact form 7.
 5. SweetCaptcha on login form.
-6. Our CAPTCHA for people who can hardly differentiate this or that tint and/or color
-7. Page with KeyCAPTCHA settings
-
+6. Go to the www.sweetcaptcha.com website
+7. Register your website
+8. Download the sweetcaptcha.php file
 
 == Requirements ==
 
