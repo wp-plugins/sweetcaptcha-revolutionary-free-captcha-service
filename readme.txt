@@ -50,7 +50,7 @@ In order for SweetCaptcha to work you need to follow the instructions on the "IN
 
 = Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
-Please download the sweetcaptcha.php file from our website www.sweetcaptcha.com
+Please download the sweetcaptcha.php file from our website http://www.sweetcaptcha.com
 And copy the values from the file, see the screenshot.
 
 = Does SweetCaptcha run on mobile devices ? =
