@@ -48,12 +48,28 @@ In order for SweetCaptcha to work you need to follow the instructions on the "IN
 
 == Frequently Asked Questions ==
 
-= Where can I find the Secret and Key =
+= Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
 Please download the sweetcaptcha.php file from our website www.sweetcaptcha.com
+And copy the values from the file, see the screenshot.
 
-= How to setup the values in the dashboard? =
-Please see the screenshots for description.
+= Does SweetCaptcha run on mobile devices ? =
+
+Of course, SweetCaptcha runs on iphones, ipads and Android devices. 
+
+= Why is SweetCaptcha so great on mobile devices ? =
+
+SweetCaptcha helps you raise your conversion rate by 33% because of mobile device users.
+
+= Does SweetCaptcha work on other CMS platforms ? =
+
+Of course, SweetCaptcha works on Joomla, as a PHP script and soon on Drupal.
+
+= Can I have my own private SweetCaptcha designs for my site ?  =
+
+Yes! just drop us a mail to: designers@sweetcaptcha.com
+Meanwhile visit our hall of fame: http://www.sweetcaptcha.com/designers.php
+
 
 == Screenshots ==
 
