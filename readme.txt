@@ -7,9 +7,11 @@ Tested up to: 3.1
 Stable tag: trunk
 
 SweetCaptcha - Design your own captcha and put your users and your website at first priority.
+
 == Description ==
 
 = General Information =
+
 SweetCaptcha is a free Captcha service putting your users and your website at first priority.
 We are focused on enhancing the user experience on your website. Captcha services today are making life difficult for the user, and for the website owner by using an element on the website that is not designed according to the website concept.
 Instead of asking the user to input difficult and boring text, SweetCaptcha offers a cute and interactive friendly user experience. The SweetCaptcha consists of a question the user needs to answer by dragging the correct answer.
@@ -38,7 +40,9 @@ In order for SweetCaptcha to work you need to follow the instructions on the "IN
 
 == Installation ==
 
-1. Download SweetCaptcha archive, and extract to wp-content/plugins.
+1. Download the SweetCaptcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the SweetCatpcha zip file, Press "Install now".
+1. Or from your dashboard go to Plugins->Add new->Search for "SweetCaptcha", and press Install now.
+1. To activate the plugin, go to Plugins and press Activate under the SweetCaptcha plugin.
 1. Open the configuration panel for SweetCaptcha on your WordPress Dashboard under Settings. (See screen shot.)
 1. Register your domain on our website: http://www.sweetcaptcha.com (screenshot 6 and 7)
 1. Download the sweetcpatcha.php file. (screenshot 8)
@@ -52,6 +56,10 @@ In order for SweetCaptcha to work you need to follow the instructions on the "IN
 
 Please download the sweetcaptcha.php file from our website http://www.sweetcaptcha.com
 And copy the values from the file, see the screenshot.
+
+= I get a message: "The plugin does not have a valid header" =
+
+Delete the SweetCaptcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
 
 = Does SweetCaptcha run on mobile devices ? =
 
