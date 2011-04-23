@@ -1,4 +1,4 @@
-=== SweetCaptcha - Free designed captcha service ===
+=== Sweet Captcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 Tags: captcha, anti-spam, captcha contact form 7, register, comment, login, sign-up, Akismet, Comment, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha game, captcha plugin, captcha puzzle, captsha, comment, comments, contact form 7, game, interactive captcha, kapcha, kaptcha, keycaptcha, protection, register, registration, registration form, security, Security captcha, spam, spam protection, php captcha, captcha php, captcha in php, captcha code, captcha form, form catcha, free captcha, image captcha, captcha image, captcha script, script captcha, simple captcha, jquery captcha, captcha download, captcha generator, captcha html, captcha ajax, captcha code in php, php captcha code, php captcha script, iphone, joomla, android, ipad, 
