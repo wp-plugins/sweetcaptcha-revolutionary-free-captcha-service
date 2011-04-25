@@ -59,36 +59,36 @@ And copy the values from the file, see the screenshot.
 
 = I get a message: "The plugin does not have a valid header" =
 
-Delete the SweetCaptcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
+Delete the Sweet Captcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
 
-= Does SweetCaptcha run on mobile devices ? =
+= Does SweetCAPTCHA run on mobile devices ? =
 
-Of course, SweetCaptcha runs on iphones, ipads and Android devices. 
+Of course, SweetCAPTCHA runs on iphones, ipads and Android devices. 
 
 = Why is SweetCaptcha so great on mobile devices ? =
 
-SweetCaptcha helps you raise your conversion rate by 33% because of mobile device users.
+SweetCAPTCHA helps you raise your conversion rate by 33% because of mobile device users.
 
 = Does SweetCaptcha work on other CMS platforms ? =
 
-Of course, SweetCaptcha works on Joomla, as a PHP script and soon on Drupal.
+Of course, SweetCAPTCHA works on Joomla, as a PHP script and soon on Drupal.
 
 = Can I have my own private SweetCaptcha designs for my site ?  =
 
 Yes! just drop us a mail to: designers@sweetcaptcha.com
-Meanwhile visit our hall of fame: http://www.sweetcaptcha.com/designers.php
+Meanwhile visit our Sweet CAPTCHA - hall of fame: http://www.sweetcaptcha.com/designers.php
 
 
 == Screenshots ==
 
-1. SweetCaptcha Dashboard Settings.
+1. Sweet CAPTCHA Dashboard Settings.
 2. sweetcpatcha.php file values.
-3. SweetCaptcha values under Settings. 
-4. SweetCaptcha on contact form 7.
-5. SweetCaptcha on login form.
-6. Go to the www.sweetcaptcha.com website
-7. Register your website
-8. Download the sweetcaptcha.php file
+3. Sweet CAPTCHA values under Settings. 
+4. Sweet CAPTCHA on contact form 7.
+5. Sweet CAPTCHA on login form.
+6. Go to the HTTP://www.SweetCaptcha.com website
+7. Register your website on Sweet CAPTCHA
+8. Download the SweetCaptcha.php file
 
 == Requirements ==
 
