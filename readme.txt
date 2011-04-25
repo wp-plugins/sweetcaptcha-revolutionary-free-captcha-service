@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
 
-SweetCaptcha - Design your own captcha and put your users and your website at first priority.
+SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
 
 == Description ==
 
