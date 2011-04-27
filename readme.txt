@@ -1,7 +1,7 @@
 === SweetCaptcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
-Tags: Akismet, anti-spam, captcha, captcha contact form 7, captcha php, comment, comments, contact form 7, iPad, iphone, login, php captcha, registration, spam, sweetcaptcha, wordpressmu   
+Tags: captcha, anti-spam, captcha contact form 7, register, comment, login, sign-up, Akismet, Comment, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha game, captcha plugin, captcha puzzle, captsha, comment, comments, contact form 7, game, interactive captcha, kapcha, kaptcha, keycaptcha, protection, register, registration, registration form, security, Security captcha, spam, spam protection, php captcha, captcha php, captcha in php, captcha code, captcha form, form catcha, free captcha, image captcha, captcha image, captcha script, script captcha, simple captcha, jquery captcha, captcha download, captcha generator, captcha html, captcha ajax, captcha code in php, php captcha code, php captcha script, iphone, joomla, android, ipad,  
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
