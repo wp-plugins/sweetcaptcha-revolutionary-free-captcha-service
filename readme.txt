@@ -99,7 +99,11 @@ Wordpress >= 2.8, cURL extension
 = 1.0 =
 * Initial version
 
+= 1.1 =
+* "invalid domain" bug fix.
+* "all my SweetCaptcha is mixed" bug fix.
+
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.1 =
 Current version.
