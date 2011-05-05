@@ -45,6 +45,7 @@ Like us on Facebook! send us your website URL with SweetCapthcha on it, and we w
 1. To activate the plugin, go to Plugins and press Activate under the SweetCaptcha plugin.
 1. Open the configuration panel for SweetCaptcha on your WordPress Dashboard under Settings. (See screen shot.)
 1. Register your domain on our website: http://www.sweetcaptcha.com (screenshot 6 and 7)
+(dont use "http"! only "www" - www.example.com)
 1. Download the sweetcpatcha.php file. (screenshot 8)
 1. Copy from from the file the following values: APP_ID, SWEETCAPTCHA_KEY, SWEETCAPTCHA_SECRET. (See the screenshot for details)
 1. Paste the values in their corresponding place in the WordPress Dashboard Settings for SweetCaptcha. (See screenshot)
