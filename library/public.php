@@ -9,11 +9,16 @@ function sweetcaptcha_login_head() {
 	$wp_versions = explode( '.', $wp_version );
 	
 	if ( ( $wp_versions[ 0 ] >= 2 ) && ( $wp_versions[ 1 ] >= 9 ) ) {
-		$jquery = get_bloginfo('siteurl') . '/wp-includes/js/jquery/jquery.js';
+		
+    //edited voodoo
+    $jquery = get_option('home') . '/wp-includes/js/jquery/jquery.js';
 	} else {
-		$jquery = get_bloginfo('siteurl') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js';
+	   // edited voodoo
+		$jquery = get_option('home') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js';
 	}
-	echo '<script type="text/javascript" src="' . $jquery . '"></script>';
+	 // edited voodoo
+	//echo '<script type="text/javascript" src="' . $jquery . '"></script>';
+	wp_enqueue_script( 'jquery' );
 }
 
 /**
@@ -21,7 +26,9 @@ function sweetcaptcha_login_head() {
  * @return void
  */
 function sweetcaptcha_wp_head() {
-	echo '<script type="text/javascript" src="' . get_bloginfo('siteurl') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js"></script>';
+	//edited voodoo
+	wp_enqueue_script( 'jquery' );
+  //echo '<script type="text/javascript" src="' . get_bloginfo('siteurl') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js"></script>';
 }
 
 /**

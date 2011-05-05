@@ -31,7 +31,7 @@ defined('WP_PLUGIN_DIR') or
 	define('WP_PLUGIN_DIR', ABSPATH . '/wp-content/plugins');
 
 // define absolute path to plugin
-define('SWEETCAPTCHA_ROOT', WP_PLUGIN_DIR . '/sweetcaptcha-revolutionary-free-captcha-service');
+define('SWEETCAPTCHA_ROOT', WP_PLUGIN_DIR . '/sweetcaptcha');
 // define absolute path to plugin library
 define('SWEETCAPTCHA_LIBRARY', SWEETCAPTCHA_ROOT . '/library');
 // define absolute path to plugin templates

@@ -38,7 +38,8 @@ class Sweetcaptcha {
 	private $secret;
 	private $path;
 	
-	const API_URL = 'http://www.sweetcaptcha.com/api.php';
+	// edited voodoo
+	const API_URL = 'www.sweetcaptcha.com';
 	
 	function __construct($appid, $key, $secret, $path) {
 		$this->appid = $appid;
@@ -62,18 +63,34 @@ class Sweetcaptcha {
 	}
 	
 	private function call($params) {
+		$param_data = "";		
+		foreach ($params as $param_name => $param_value) {
+			$param_data .= urlencode($param_name) .'='. urlencode($param_value) .'&'; 
+		}
 		
-		$ch = curl_init(self::API_URL);
-		 curl_setopt($ch, CURLOPT_POST, 1);
-		 curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-		 curl_setopt($ch, CURLOPT_FOLLOWLOCATION  ,1); 
-		 curl_setopt($ch, CURLOPT_HEADER, 0);  // DO NOT RETURN HTTP HEADERS 
-		 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  // RETURN THE CONTENTS OF THE CALL
-		 curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
-		 curl_setopt($ch, CURLOPT_REFERER, $_SERVER['HTTP_HOST']);
-		 $response = curl_exec($ch);
-		 return $response;	
-		 			
+		if (  !($fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10) ) ) {
+			die ("Couldn't connect to server");
+        }
+		
+		$req = "POST /api.php HTTP/1.0\r\n";
+		$req .= "Host: www.sweetcaptcha.com\r\n";
+		$req .= "Content-Type: application/x-www-form-urlencoded\r\n";
+		$req .= "Referer: " . $_SERVER['HTTP_HOST']. "\r\n";
+		$req .= "Content-Length: " . strlen($param_data) . "\r\n\r\n";
+		$req .= $param_data;		
+	
+		$response = '';
+		fwrite($fs, $req);
+		
+		while ( !feof($fs) ) {
+			$response .= fgets($fs, 1160);
+		}
+		
+		fclose($fs);
+		
+		$response = explode("\r\n\r\n", $response, 2);
+		
+		return $response[1];	
 	}
 	
 	public function __call($method, $params) {
