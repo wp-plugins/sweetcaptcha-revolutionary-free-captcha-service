@@ -61,6 +61,13 @@ And copy the values from the file, see the screenshot.
 
 Delete the SweetCaptcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
 
+= I get a message: "..invalid domain" =
+
+Remove your current SweetCaptcha folder from your Wordpress
+plugin directory , download the current version .
+On SweetCaptcha webiste register your site without "http" -
+example - www.example.com
+
 = Does SweetCaptcha run on mobile devices ? =
 
 Of course, SweetCaptcha runs on iphones, ipads and Android devices. 
