@@ -4,6 +4,7 @@
  * Add SweetCaptcha jQuery - version >= 1.4 is required to login pages
  * @return void
  */
+ 
 function sweetcaptcha_login_head() {
 	global $wp_version;
 	$wp_versions = explode( '.', $wp_version );
@@ -14,11 +15,12 @@ function sweetcaptcha_login_head() {
     $jquery = get_option('home') . '/wp-includes/js/jquery/jquery.js';
 	} else {
 	   // edited voodoo
-		$jquery = get_option('home') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js';
+		$jquery = get_option('home') . '/wp-content/plugins/sweetcaptcha-revolutionary-free-captcha-service/js/jquery.min.js';
 	}
 	 // edited voodoo
-	//echo '<script type="text/javascript" src="' . $jquery . '"></script>';
-	wp_enqueue_script( 'jquery' );
+	 
+	echo '<script type="text/javascript" src="' . $jquery . '"></script>';
+	
 }
 
 /**

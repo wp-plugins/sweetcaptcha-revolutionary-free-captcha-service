@@ -12,7 +12,8 @@ $sweetcaptcha_instance = new Sweetcaptcha(
 	get_option( 'sweetcaptcha_app_id' ), 
 	get_option( 'sweetcaptcha_key' ), 
 	get_option( 'sweetcaptcha_secret' ), 
-	get_option( 'sweetcaptcha_public_url' )
+	//get_option( 'sweetcaptcha_public_url' )
+	SWEETCAPTCHA_PHP_PATH
 );
 
 /*
