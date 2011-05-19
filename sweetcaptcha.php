@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 1.0
+Version: 1.0.5
 Author: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -32,6 +32,8 @@ defined('WP_PLUGIN_DIR') or
 
 // define absolute path to plugin
 define('SWEETCAPTCHA_ROOT', WP_PLUGIN_DIR . '/sweetcaptcha-revolutionary-free-captcha-service');
+// define absolute path to plugin  sweetcaptcha.php
+define('SWEETCAPTCHA_PHP_PATH', WP_PLUGIN_URL . '/sweetcaptcha-revolutionary-free-captcha-service/library/sweetcaptcha.php');
 // define absolute path to plugin library
 define('SWEETCAPTCHA_LIBRARY', SWEETCAPTCHA_ROOT . '/library');
 // define absolute path to plugin templates
@@ -43,42 +45,39 @@ $wp_versions = explode( '.', $wp_version );
 // split action to admin and public part
 if (is_admin()) {
 	require_once SWEETCAPTCHA_LIBRARY . '/admin.php';
-
+	
 	// add link to settings menu
 	add_action('admin_menu', 'sweetcaptcha_admin_menu');
-
+	
 	// add activation hook -> default option values - XXX - doesn't work since wp 3.1 and below 2.8
 	//register_activation_hook( __FILE__, 'sweetcaptcha_activate' );
-
+	
 	// because various problems with register activation hook trough Wordpress versions - check if SweetCaptcha is installed, otherwise set default values
 	add_action('admin_menu', 'sweetcaptcha_activate');
-
+	
 	// add uninstall hook -> remove option values - only for wordpress version >= 2.7
 	if ( ( $wp_versions[ 0 ] >=2 ) && ( $wp_versions[ 1 ] >= 7 ) ) {
 		register_uninstall_hook( __FILE__, 'sweetcaptcha_uninstall' );
 	}
 
 } else {
-
+	
 	require_once SWEETCAPTCHA_LIBRARY . '/public.php';
 	require_once SWEETCAPTCHA_LIBRARY . '/sweetcaptcha.php';
-
+	
 	// add jquery to all public pages
-	if ( ( $wp_versions[ 0 ] >= 2 ) && ( $wp_versions[ 1 ] >= 9 ) ) {
-		wp_enqueue_script( 'jquery' );
-		// add jquery to login head
-		add_action( 'login_head' , 'sweetcaptcha_login_head' );
-	} else {
-		add_action( 'login_head' , 'sweetcaptcha_login_head' );
-		add_action( 'wp_head', 'sweetcaptcha_wp_head' );
-	}
+ 
 
+		add_action( 'login_head' , 'sweetcaptcha_login_head' );
+    wp_enqueue_script( 'jquery' );
+
+	
 	// add SweetCaptcha to comment form
 	if ( get_option( 'sweetcaptcha_form_comment' ) ) {
 		add_action( 'comment_form', 'sweetcaptcha_comment_form', 1 );
 		add_filter( 'preprocess_comment', 'sweetcaptcha_comment_form_check', 1 );
 	}
-
+	
 	// add SweetCaptcha to login form
 	if ( get_option( 'sweetcaptcha_form_registration' ) ) {
 		// only for version >= 2.8
@@ -87,28 +86,28 @@ if (is_admin()) {
 			add_filter( 'authenticate', 'sweetcaptcha_authenticate', 40, 3 );
 		}
 	}
-
+	
 	// add SweetCaptcha to lost password form
 	if ( get_option( 'sweetcaptcha_form_lost' ) ) {
 		add_action( 'lostpassword_form', 'sweetcaptcha_login_form', 1 );
 		add_filter( 'allow_password_reset', 'sweetcaptcha_lost_password_check', 1 );
 	}
-
+	
 	// add SweetCaptcha to registration form
 	if ( get_option( 'sweetcaptcha_form_registration' ) ) {
 		add_action('register_form', 'sweetcaptcha_login_form' );
 		add_filter('registration_errors', 'sweetcaptcha_register_form_check' );
-
+		
 		add_action('bp_before_registration_submit_buttons', 'sweetcaptcha_before_registration_submit_buttons' );
 		add_action('bp_signup_validate', 'sweetcaptcha_signup_validate' );
-
+		
 		// adding SweetCaptcha to Network Wordpress registration form - only version >= 3
 		if ( ( $wp_versions[ 0 ] > 2 ) ) {
 			add_action('signup_extra_fields', 'sweetcaptcha_signup_extra_fields' );
 			add_filter('wpmu_validate_user_signup', 'sweetcaptcha_wpmu_validate_user_signup' );
 		}
 	}
-
+	
 	// add SweetCaptcha to BuddyPress login form
 	add_action( 'bp_sidebar_login_form', 'sweetcaptcha_login_form' );
 }
