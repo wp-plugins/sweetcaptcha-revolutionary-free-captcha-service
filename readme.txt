@@ -37,7 +37,7 @@ SweetCatpcha Features:
 = IMPORTANT =
 
 In order for SweetCaptcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise SweetCaptcha might not work correctly. 
-Like us on Facebook! send us your website URL with SweetCapthcha on it, and we will post it on our fan page: https://www.facebook.com/SweetCaptcha .
+Like us on Facebook! send us your website URL with SweetCapthcha on it, and we will post it on our fan page: http://www.facebook.com/SweetCaptcha .
 == Installation ==
 
 1. Download the SweetCaptcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the SweetCatpcha zip file, Press "Install now".
