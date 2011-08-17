@@ -1,12 +1,11 @@
 === SweetCaptcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
+Donate link:
 Author URI: http://www.sweetcaptcha.com
 Tags: captcha, anti-spam, register, comment, login, sign-up, Akismet, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha plugin, captsha, comment, comments, contact form 7, iPhone, post,
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
-
-SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
 
 == Description ==
 
@@ -112,6 +111,5 @@ Wordpress >= 2.8, cURL extension
 * "all my SweetCaptcha is mixed" bug fix.
 
 == Upgrade Notice ==
-
 = 1.1 =
-Current version.
+*Initial version.
