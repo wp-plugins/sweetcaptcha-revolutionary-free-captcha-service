@@ -1,11 +1,12 @@
 === SweetCaptcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
-Donate link:
 Author URI: http://www.sweetcaptcha.com
-Tags: captcha, anti-spam, register, comment, login, sign-up, Akismet, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha plugin, captsha, comment, comments, contact form 7, iPhone, post,
+Tags: captcha, anti-spam, captcha contact form 7, register, comment, login, sign-up, Akismet, Comment, security, spam, woedpressmu, wpmu, sweetcaptcha, antispam, best captcha, buddypress captcha,capatcha, capcha, captcha, captcha game, captcha plugin, captcha puzzle, captsha, comment, comments, contact form 7, game, interactive captcha, kapcha, kaptcha, keycaptcha, protection, register, registration, registration form, security, Security captcha, spam, spam protection, php captcha, captcha php, captcha in php, captcha code, captcha form, form catcha, free captcha, image captcha, captcha image, captcha script, script captcha, simple captcha, jquery captcha, captcha download, captcha generator, captcha html, captcha ajax, captcha code in php, php captcha code, php captcha script, iphone, joomla, android, ipad
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
+
+SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
 
 == Description ==
 
@@ -36,7 +37,7 @@ SweetCatpcha Features:
 = IMPORTANT =
 
 In order for SweetCaptcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise SweetCaptcha might not work correctly. 
-Like us on Facebook! send us your website URL with SweetCapthcha on it, and we will post it on our fan page: http://www.facebook.com/SweetCaptcha .
+Like us on Facebook! send us your website URL with SweetCapthcha on it, and we will post it on our fan page: https://www.facebook.com/SweetCaptcha .
 == Installation ==
 
 1. Download the SweetCaptcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the SweetCatpcha zip file, Press "Install now".
@@ -44,7 +45,6 @@ Like us on Facebook! send us your website URL with SweetCapthcha on it, and we w
 1. To activate the plugin, go to Plugins and press Activate under the SweetCaptcha plugin.
 1. Open the configuration panel for SweetCaptcha on your WordPress Dashboard under Settings. (See screen shot.)
 1. Register your domain on our website: http://www.sweetcaptcha.com (screenshot 6 and 7)
-(dont use "http"! only "www" - www.example.com)
 1. Download the sweetcpatcha.php file. (screenshot 8)
 1. Copy from from the file the following values: APP_ID, SWEETCAPTCHA_KEY, SWEETCAPTCHA_SECRET. (See the screenshot for details)
 1. Paste the values in their corresponding place in the WordPress Dashboard Settings for SweetCaptcha. (See screenshot)
@@ -60,13 +60,6 @@ And copy the values from the file, see the screenshot.
 = I get a message: "The plugin does not have a valid header" =
 
 Delete the SweetCaptcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
-
-= I get a message: "..invalid domain" =
-
-Remove your current SweetCaptcha folder from your Wordpress
-plugin directory , download the current version .
-On SweetCaptcha webiste register your site without "http" -
-example - www.example.com
 
 = Does SweetCaptcha run on mobile devices ? =
 
@@ -106,10 +99,7 @@ Wordpress >= 2.8, cURL extension
 = 1.0 =
 * Initial version
 
-= 1.1 =
-* "invalid domain" bug fix.
-* "all my SweetCaptcha is mixed" bug fix.
-
 == Upgrade Notice ==
-= 1.1 =
-*Initial version.
+
+= 1.0 =
+Current version.
