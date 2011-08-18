@@ -1,7 +1,7 @@
 === SweetCaptcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
-Tags: captcha, anti-spam, captcha contact form 7, register, comment, login, sign-up, Akismet, Comment, security, spam, woedpressmu,
+Tags: antispam, capcha, captcha, captha, catcha, comment, login, lost password, math captcha, registration, spam, text captcha,
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
