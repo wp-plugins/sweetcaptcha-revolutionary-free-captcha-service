@@ -103,3 +103,4 @@ Wordpress >= 2.8, cURL extension
 
 = 1.0 =
 Current version.
+
