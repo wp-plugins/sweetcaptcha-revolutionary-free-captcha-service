@@ -71,7 +71,7 @@
 			<input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
 		</p>
 		<p>
-		<strong>How does your site feel today?? Check out this FREE plugin.<br />
+		<strong>How does your site feel today? Check out this FREE plugin.<br />
 		<a href="http://wordpress.org/extend/plugins/Jumpple/" target="_blank">Jumpple</a> - Your website keeper! Protect all your websites under one Jumpple account.</strong>
 		</p>
 	</form>
