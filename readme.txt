@@ -15,7 +15,7 @@ SweetCaptcha - Design your own CAPTCHA and put your users and your website at fi
 SweetCaptcha is a free Captcha service putting your users and your website at first priority.
 We are focused on enhancing the user experience on your website. Captcha services today are making life difficult for the user, and for the website owner by using an element on the website that is not designed according to the website concept.
 Instead of asking the user to input difficult and boring text, SweetCaptcha offers a cute and interactive friendly user experience. The SweetCaptcha consists of a question the user needs to answer by dragging the correct answer.
-SweetCatpcha works on smartphones, iphones and ipads. 
+SweetCatpcha works on smartphones, iphones and ipads and Android.
 SweetCaptcha is an anti-spam solution for Wordpress forms, Contact Form 7, and BuddyPress.
 
 = Integration with WordPress =
