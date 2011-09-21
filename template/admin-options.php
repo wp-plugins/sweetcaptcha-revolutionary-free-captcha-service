@@ -72,7 +72,7 @@
 		</p>
 		<p>
 		<strong>How does your site feel today? Download this awsome FREE plugin!<br />
-		<a href="http://wordpress.org/extend/plugins/Jumpple/" target="_blank">Jumpple</a> - Your website keeper! Protect your website with JUMPPLE - Jumpple on!.</strong>
+		<a href="http://wordpress.org/extend/plugins/Jumpple/" target="_blank">Jumpple</a> - Your website monitor.Protect your website with JUMPPLE - Jumpple on!.</strong>
 		</p>
 	</form>
 </div>
