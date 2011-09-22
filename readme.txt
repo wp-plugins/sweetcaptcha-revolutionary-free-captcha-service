@@ -1,7 +1,7 @@
 === SweetCaptcha - Free designed captcha service ===
 Contributors: SweetCaptcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
-Tags:  Akismet, antispam, buddypress, captcha, comment, comments, login, multilingual, security, spam, wordpressmu, form, buddypress, capatcha, capcha, captha, catcha, admin, links, contact form 7, captsha,  buddypress, kapcha, kaptcha, keycaptcha, iPhone, iPad, google, lost password, registration, images, hack,
+Tags:  Akismet, antispam, buddypress, captcha, comment, comments, login, multilingual, security, spam, wordpressmu, form, buddypress, capatcha, capcha, captha, catcha, admin, links, contact form 7, captsha,  buddypress, kapcha, kaptcha, keycaptcha, iPhone, iPad, google, lost password, registration, images, hack, widget,
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
