@@ -4,7 +4,7 @@ Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
 Version: 1.0.5
-Author: SweetCaptcha.com ltd.
+Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
 */
@@ -52,7 +52,7 @@ if (is_admin()) {
 	// add activation hook -> default option values - XXX - doesn't work since wp 3.1 and below 2.8
 	//register_activation_hook( __FILE__, 'sweetcaptcha_activate' );
 	
-	// because various problems with register activation hook trough Wordpress versions - check if SweetCaptcha is installed, otherwise set default values
+	// because various problems with register activation hook trough Wordpress versions - check if Sweet Captcha is installed, otherwise set default values
 	add_action('admin_menu', 'sweetcaptcha_activate');
 	
 	// add uninstall hook -> remove option values - only for wordpress version >= 2.7
@@ -72,13 +72,13 @@ if (is_admin()) {
     wp_enqueue_script( 'jquery' );
 
 	
-	// add SweetCaptcha to comment form
+	// add Sweet Captcha to comment form
 	if ( get_option( 'sweetcaptcha_form_comment' ) ) {
 		add_action( 'comment_form', 'sweetcaptcha_comment_form', 1 );
 		add_filter( 'preprocess_comment', 'sweetcaptcha_comment_form_check', 1 );
 	}
 	
-	// add SweetCaptcha to login form
+	// add Sweet Captcha to login form
 	if ( get_option( 'sweetcaptcha_form_registration' ) ) {
 		// only for version >= 2.8
 		if ( ( ( $wp_versions[ 0 ] >= 2 ) || ( $wp_versions[ 1 ] > 7 ) ) ) {
@@ -87,13 +87,13 @@ if (is_admin()) {
 		}
 	}
 	
-	// add SweetCaptcha to lost password form
+	// add Sweet Captcha to lost password form
 	if ( get_option( 'sweetcaptcha_form_lost' ) ) {
 		add_action( 'lostpassword_form', 'sweetcaptcha_login_form', 1 );
 		add_filter( 'allow_password_reset', 'sweetcaptcha_lost_password_check', 1 );
 	}
 	
-	// add SweetCaptcha to registration form
+	// add Sweet Captcha to registration form
 	if ( get_option( 'sweetcaptcha_form_registration' ) ) {
 		add_action('register_form', 'sweetcaptcha_login_form' );
 		add_filter('registration_errors', 'sweetcaptcha_register_form_check' );

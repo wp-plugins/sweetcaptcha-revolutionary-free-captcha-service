@@ -1,7 +1,7 @@
-=== SweetCaptcha - Free designed captcha service ===
-Contributors: SweetCaptcha.com ltd.
+=== Sweet Captcha - Free designed captcha service ===
+Contributors: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
-Tags: captsha, anti-spam, kaptcha, captcha, comment, catcha, login, registration captcha, security, contact form 7, capatcha, kapcha, plugin,
+Tags: captsha, anti-spam, kaptcha, captcha, captcha on comments, catcha, register captcha, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha,  
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: trunk
@@ -12,15 +12,15 @@ SweetCaptcha - Design your own CAPTCHA and put your users and your website at fi
 
 = General Information =
 
-SweetCaptcha is a free Captcha service putting your users and your website at first priority.
+Sweet Captcha is a free Captcha service putting your users and your website at first priority.
 We are focused on enhancing the user experience on your website. Captcha services today are making life difficult for the user, and for the website owner by using an element on the website that is not designed according to the website concept.
-Instead of asking the user to input difficult and boring text, SweetCaptcha offers a cute and interactive friendly user experience. The SweetCaptcha consists of a question the user needs to answer by dragging the correct answer.
-SweetCatpcha works on smartphones, iphones and ipads and Android.
-SweetCaptcha is an anti-spam solution for Wordpress forms, Contact Form 7, and BuddyPress.
+Instead of asking the user to input difficult and boring text, Sweet Captcha offers a cute and interactive friendly user experience. The Sweet Captcha consists of a question the user needs to answer by dragging the correct answer.
+Sweet Catpcha works on smartphones, iphones and ipads and Android.
+Sweet Captcha is an anti-spam solution for Wordpress forms, Contact Form 7, and BuddyPress.
 
 = Integration with WordPress =
 
-SweetCaptcha protects the following forms:
+Sweet Captcha protects the following forms:
 ----------------------------------------
 * Registration form
 * Comment form
@@ -28,26 +28,26 @@ SweetCaptcha protects the following forms:
 * Lost password form
 * Contact Form 7
 
-SweetCatpcha Features:
+Sweet Catpcha Features:
 --------------------------
 * Our CAPTCHA is compatible with BuddyPress plugin
 * Works on iphones and ipads. 
-* Can design your own SweetCaptcha.
+* Can design your own Sweet Captcha.
 
 = IMPORTANT =
 
-In order for SweetCaptcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise SweetCaptcha might not work correctly. 
-Like us on Facebook! send us your website URL with SweetCapthcha on it, and we will post it on our fan page: https://www.facebook.com/SweetCaptcha .
+In order for Sweet Captcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise Sweet Captcha might not work correctly. 
+Like us on Facebook! send us your website URL with Sweet Capthcha on it, and we will post it on our fan page: https://www.facebook.com/SweetCaptcha .
 == Installation ==
 
-1. Download the SweetCaptcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the SweetCatpcha zip file, Press "Install now".
+1. Download the Sweet Captcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the Sweet Catpcha zip file, Press "Install now".
 1. Or from your dashboard go to Plugins->Add new->Search for "SweetCaptcha", and press Install now.
 1. To activate the plugin, go to Plugins and press Activate under the SweetCaptcha plugin.
-1. Open the configuration panel for SweetCaptcha on your WordPress Dashboard under Settings. (See screen shot.)
+1. Open the configuration panel for Sweet Captcha on your WordPress Dashboard under Settings. (See screen shot.)
 1. Register your domain on our website: http://www.sweetcaptcha.com (screenshot 6 and 7)
 1. Download the sweetcpatcha.php file. (screenshot 8)
 1. Copy from from the file the following values: APP_ID, SWEETCAPTCHA_KEY, SWEETCAPTCHA_SECRET. (See the screenshot for details)
-1. Paste the values in their corresponding place in the WordPress Dashboard Settings for SweetCaptcha. (See screenshot)
+1. Paste the values in their corresponding place in the WordPress Dashboard Settings for Sweet Captcha. (See screenshot)
 1. Save changes.
 
 == Frequently Asked Questions ==
@@ -59,24 +59,24 @@ And copy the values from the file, see the screenshot.
 
 = I get a message: "The plugin does not have a valid header" =
 
-Delete the SweetCaptcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
+Delete the Sweet Captcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
 
-= Does SweetCaptcha run on mobile devices ? =
+= Does Sweet Captcha run on mobile devices ? =
 
-Of course, SweetCaptcha runs on iphones, ipads and Android devices. 
+Of course, Sweet Captcha runs on iphones, ipads and Android devices. 
 
-= Why is SweetCaptcha so great on mobile devices ? =
+= Why is Sweet Captcha so great on mobile devices ? =
 
-SweetCAPTCHA helps you raise your conversion rate by 33% because of mobile device users.
+Sweet CAPTCHA helps you raise your conversion rate by 33% because of mobile device users.
 
-= Does SweetCaptcha work on other CMS platforms ? =
+= Does Sweet Captcha work on other CMS platforms ? =
 
-Of course, SweetCaptcha works on Joomla, as a PHP script and soon on Drupal.
+Of course, Sweet Captcha works on Joomla, as a PHP script and soon on Drupal.
 
-= Can I have my own private SweetCaptcha designs for my site ?  =
+= Can I have my own private Sweet Captcha designs for my site ?  =
 
 Yes! just drop us a mail to: designers@sweetcaptcha.com
-Meanwhile visit our SweetCaptcha - hall of fame: http://www.sweetcaptcha.com/designers.php
+Meanwhile visit our Sweet Captcha - hall of fame: http://www.sweetcaptcha.com/designers.php
 
 
 == Screenshots ==
@@ -103,4 +103,5 @@ Wordpress >= 2.8, cURL extension
 
 = 1.0 =
 Current version.
+
 
