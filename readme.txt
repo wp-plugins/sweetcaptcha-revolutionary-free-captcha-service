@@ -101,6 +101,8 @@ Wordpress >= 2.8, cURL extension
 
 == Upgrade Notice ==
 
+1.0.6
+
 = 1.0 =
 Current version.
 
