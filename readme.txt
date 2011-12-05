@@ -104,3 +104,7 @@ Wordpress >= 2.8, cURL extension
 = 1.0.5 =
 * NEW added language translation support.
 
+== Upgrade Notice ==
+
+1.0.6
+
