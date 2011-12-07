@@ -39,43 +39,78 @@ Sweet Catpcha Features:
 = IMPORTANT =
 
 In order for Sweet Captcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise Sweet Captcha might not work correctly. 
-Like us on Facebook! send us your website URL with Sweet Capthcha on it, and we will post it on our fan page: https://www.facebook.com/SweetCaptcha .
+
+For news and updates follow us on Facebook and Twitter: 
+
+http://facebook.com/SweetCaptcha
+
+http://twitter.com/SweetCaptcha
+
+
 == Installation ==
 
-1. Download the Sweet Captcha zip file. From your Wordpress dashboard->Plugins->Add new->Upload, choose the Sweet Catpcha zip file, Press "Install now".
-1. Or from your dashboard go to Plugins->Add new->Search for "SweetCaptcha", and press Install now.
-1. To activate the plugin, go to Plugins and press Activate under the SweetCaptcha plugin.
-1. Open the configuration panel for Sweet Captcha on your WordPress Dashboard under Settings. (See screen shot.)
-1. Register your domain on our website: http://www.sweetcaptcha.com (screenshot 6 and 7)
-1. Download the sweetcpatcha.php file. (screenshot 8)
-1. Copy from from the file the following values: APP_ID, SWEETCAPTCHA_KEY, SWEETCAPTCHA_SECRET. (See the screenshot for details)
-1. Paste the values in their corresponding place in the WordPress Dashboard Settings for Sweet Captcha. (See screenshot)
-1. Save changes.
+1. Download the Sweet Captcha plugin or install it directly from your dashboard (just search "sweet captcha").
+
+1. Install and activate Sweet Captcha.
+
+1. Go to Sweet captcha settings(under "settings") , you will need 3 values in order to activate it.
+
+*Application ID
+*SweetCaptcha Key
+*SweetCaptcha Secret
+
+1. Go to htto://www.SweetCaptcha.com and register for FREE in order to:
+
+*Recieve the 3 parametes via E-mail.
+*Choose your Sweet Captcha design.
+*Choose your Sweet captcha language.
+(screenshot 6 and 7)
+
+1.After you register,check your Email inbox, copy Paste the values to your dashboard settings and "save changes".
+
+That it!
 
 == Frequently Asked Questions ==
 
 = Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
-Please download the sweetcaptcha.php file from our website http://www.sweetcaptcha.com
-And copy the values from the file, see the screenshot.
+Just go to http://www.sweetcaptcha.com and register for FREE
+(The registration is for you,so you can choose your Sweet captcha design and language.
 
-= I get a message: "The plugin does not have a valid header" =
 
-Delete the Sweet Captcha folder from the plugins directory, and reinstall it via the Wordpress dashboard (see installation notes).
+= Why do i need to register on sweetcpathca.com ? =
+We need to know which design and language you want.
+(Sweet captcha is a service - we send each site a special design
+and language)
+
+= is Sweet captcha FREE? =
+Yes!
 
 = Does Sweet Captcha run on mobile devices ? =
 
-Of course, Sweet Captcha runs on iphones, ipads and Android devices. 
+Of course, Sweet Captcha runs on iphones, ipads and Android devices.
+(Just go to http://www.sweetcaptcha.com and check for yourself)
 
 = Why is Sweet Captcha so great on mobile devices ? =
 
-Sweet CAPTCHA helps you raise your conversion rate by 33% because of mobile device users.
+Sweet CAPTCHA helps you raise your conversion rate by 33% !!
+How? just try it and see how simple and fun it is.
 
 = Does Sweet Captcha work on other CMS platforms ? =
 
-Of course, Sweet Captcha works on Joomla, as a PHP script and soon on Drupal.
+Of course, Sweet Captcha works on WordPess, Joomla and as a PHP script.
 
-= Can I have my own private Sweet Captcha designs for my site ?  =
+= Can I choose a special design of Sweet captcha for my site? =
+Yes!
+go to http://www.sweetcaptcha.com and register for FREE to 
+choose from your desire design category.
+
+= Can i choose a language for my Sweet captcha? =
+Yes!
+go to http://www.sweetcaptcha.com and register for FREE to 
+choose your desire language for your Sweet captcha.
+
+= Can I Design Sweet Captcha myself?  =
 
 Yes! just drop us a mail to: designers@sweetcaptcha.com
 Meanwhile visit our Sweet Captcha - hall of fame: http://www.sweetcaptcha.com/designers.php
@@ -107,4 +142,3 @@ Wordpress >= 2.8, cURL extension
 == Upgrade Notice ==
 
 1.0.6
-
