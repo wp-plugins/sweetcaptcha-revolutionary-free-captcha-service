@@ -15,7 +15,7 @@
 <div class="wrap">
 	<h2><?php _e( 'SweetCaptcha Settings', 'sweetcaptcha' ); ?></h2>
 
-	<p><?php printf( __( 'To get the ID , key and secret goto <a href="%s" title="" target="_blank">%s</a> and register, follow the 60 seconds instructions its free & easy.'), 'http://www.SweetCaptcha.com', 'http://www.sweetcaptcha.com/register.php' ); ?></p>
+	<p><?php printf( __( 'To get the ID , key and secret goto <a href="%s" title="" target="_blank">%s</a> and register, follow the 60 seconds instructions its free & easy.'), 'http://www.SweetCaptcha.com/register.php', 'http://www.sweetcaptcha.com); ?></p>
 
 	<form name="form1" method="post" action="">
 		<input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
