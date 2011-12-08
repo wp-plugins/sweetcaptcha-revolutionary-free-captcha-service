@@ -15,7 +15,7 @@
 <div class="wrap">
 	<h2><?php _e( 'SweetCaptcha Settings', 'sweetcaptcha' ); ?></h2>
 
-	<p><?php printf( __( 'To get the ID , key and secret goto <a href="%s" title="" target="_blank">%s</a> and register, follow the 60 seconds instructions its free & easy.'), 'http://www.SweetCaptcha.com', 'http://www.SweetCaptcha.com' ); ?></p>
+	<p><?php printf( __( 'To get the ID , key and secret goto <a href="%s" title="" target="_blank">%s</a> and register, follow the 60 seconds instructions its free & easy.'), 'http://www.SweetCaptcha.com/register.php', 'http://www.SweetCaptcha.com' ); ?></p>
 
 	<form name="form1" method="post" action="">
 		<input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
@@ -64,7 +64,7 @@
 			<?php echo __('A. Copy the following tag with square brackets [sweetcaptcha]') . '<br />'; ?> 
 			<?php echo __('B. Open the page with settings of Contact Form 7') . '<br />'; ?>
 			<?php echo __('C. Paste the copied tag into "Form" section above the line which contains "&lt;p&gt;[submit "Send"]&lt;/p&gt;"') . '<br />'; ?>
-			<?php printf( __('D. Need more help ?  <a href="%s" title="Contact us" target="_blank">Contact us</a>.'), 'https://www.sweetcaptcha.com/contact.php' );?>
+			<?php printf( __('D. Need more help ?  <a href="%s" title="Contact us" target="_blank">Contact us</a>.'), 'http://www.sweetcaptcha.com/contact.php' );?>
 		</p>
 		
 		<p class="submit">
