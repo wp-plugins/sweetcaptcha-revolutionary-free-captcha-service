@@ -4,7 +4,7 @@ Author URI: http://www.sweetcaptcha.com
 Tags: captsha, anti-spam, kaptcha, captcha, captcha on comments, catcha, register captcha, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha,  
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: trunk
+Stable tag: 1.0.6
 
 SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
 
