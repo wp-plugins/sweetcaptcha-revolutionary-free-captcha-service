@@ -4,7 +4,7 @@ Author URI: http://www.sweetcaptcha.com
 Tags: captsha, anti-spam, kaptcha, captcha, captcha on comments, catcha, register captcha, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha,  
 Requires at least: 2.8
 Tested up to: 3.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 
 SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
 
@@ -139,6 +139,13 @@ Wordpress >= 2.8, cURL extension
 = 1.0.5 =
 * NEW added language translation support.
 
+= 1.0.6 =
+* NEW added category selection.
+
+= 1.0.7 =
+* NEW added internal registration feature.
+
 == Upgrade Notice ==
 
-1.0.6
+= 1.0.7 =
+Current version.
