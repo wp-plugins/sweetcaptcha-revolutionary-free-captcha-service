@@ -13,23 +13,30 @@ Sweet Captcha - Design your own CAPTCHA and put your users and your website at f
 = General Information =
 
 Sweet Captcha is a free Captcha service putting your users and your website at first priority.
+We dont think CAPTCHA should be hard to users,captcha
+should be hard to machines! 
 
 = Do you hate today's CAPTCHA ?? Then try Sweet Captcha =
 
 Instead of asking the user to input difficult and boring text, Sweet Captcha offers a cute and interactive friendly user experience. The Sweet Captcha consists of a question the user needs to answer by dragging the correct answer.
+Is that a Sweet Captcha or no?  ;-)
 
-= Do your users use iPad, iPhone or Andorid? =
+= Does your users use CAPTCHA on iPad, iPhone or Andorid? =
+
+Have you ever tried to solve a regular CAPTCHA on your mobile
+device?
+Its impossible right?
+So why do it to your users?
 
 Sweet Catpcha works on smartphones, iphones, ipads and Android.
 
-Sweet Captcha is an anti-spam solution for Wordpress forms,
- Contact Form 7, and BuddyPress.
+Sweet Captcha is an anti-spam CAPTCHA solution for Wordpress forms,Contact Form 7, and BuddyPress.
 
 = Sweet Captcha Integration with WordPress =
 
 Sweet Captcha protects the following forms:
 ----------------------------------------
-* Registration form
+* Registration form 
 * Comment form
 * Login form
 * Lost password form
@@ -37,11 +44,41 @@ Sweet Captcha protects the following forms:
 
 Sweet Catpcha Features:
 --------------------------
-* Choose your ready made design for your Sweet Captcha.
+* Choose your ready made Sweet Captcha design.
 * Design your own Sweet Captcha.
 * NEW!!! Choose your Sweet Captcha language.
-* Full mobile support! works best on iphones, ipads and Android. 
+* Full mobile captcha support! works best on iphones, ipads and Android. 
 * Our CAPTCHA is compatible with BuddyPress plugin.
+
+Sweet Captcha design categories:
+--------------------------
+* Sweet Captcha "Music" category.
+* Sweet Captcha "Movies" category.
+* Sweet Captcha "Fun" category.
+* Sweet Captcha "Wedding" category.
+* Sweet Captcha "Shopping" category.
+* Sweet Captcha "Random" category.
+
+
+Sweet Captcha Localization
+--------------------------
+Need your Sweet Captcha in a different language? Some users have been kind enough to provide some translation files. (If 
+you want to contribute a Sweet Captcha translation,drop us a mail)
+
+* English Sweet Captcha translation.
+* German Sweet Captcha translation.
+* French Sweet Captcha translation.
+* Dutch Sweet Captcha translation.
+* Portuguese Sweet Captcha translation.
+* Russian Sweet Captcha translation.
+* Swedish Sweet Captcha translation.
+* Czech Sweet Captcha translation.
+* Hebrew Sweet Captcha translation.
+* Slovak Sweet Captcha translation.
+* Arab Sweet Captcha translation.
+* Swedish Sweet Captcha translation.
+
+
 
 = IMPORTANT =
 
