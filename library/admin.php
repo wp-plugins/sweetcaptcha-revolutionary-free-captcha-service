@@ -100,6 +100,24 @@ function sweetcaptcha_register_form() {
 		$form_html = $sweetcaptcha_instance->get_register_form();
 	}
 
+	// Fill the fields.
+	$website = json_encode(empty($_POST['website']) ? "http://{$_SERVER['SERVER_NAME']}/" : $_POST['website']);
+	$email = json_encode($_POST['email']);
+	$form_html .= "<script type=\"text/javascript\" language=\"javascript\">\n";
+	$form_html .= "    jQuery('input[name=website]').val($website);\n";
+	$form_html .= "    jQuery('input[name=email]').val($email);\n";
+
+	if (isset($_POST['language'])) {
+		$language = (int)$_POST['language'];
+		$form_html .= "    jQuery('select[name=language]').val($language);\n";
+	}
+	if (isset($_POST['category'])) {
+		$category = (int)$_POST['category'];
+		$form_html .= "    jQuery('select[name=category]').val($category);\n";
+	}
+	$form_html .= "</script>\n";
+
+
     require_once SWEETCAPTCHA_TEMPLATE . '/admin-register.php';
 
 	// Display share buttons.
