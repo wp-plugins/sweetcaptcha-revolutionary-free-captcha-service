@@ -97,20 +97,25 @@ http://twitter.com/SweetCaptcha
 
 1. Install and activate Sweet Captcha.
 
-1. Go to Sweet captcha settings (under "Settings") , you will need 3 values in order to activate it.
+1. Go to Sweet captcha settings (under "Settings") , make sure  you have the 3 values in order to activate it.
 
 * Application ID
-* SweetCaptcha Key
-* SweetCaptcha Secret
+* Sweet Captcha Key
+* Sweet Captcha Secret
 
-1. Go to htto://www.SweetCaptcha.com and register for FREE in order to:
+1. also:
 
-* Recieve the 3 parametes via E-mail.
+* Recieve the 3 Sweet Captcha parametes via E-mail.
 * Choose your Sweet Captcha design.
 * Choose your Sweet captcha language.
 (screenshot 6 and 7)
 
-1. After you register, check your Email inbox, copy and paste the values to your dashboard settings and "Save changes".
+1. How to use Sweet Cpatcha for contact us form? If you are using "contact form 7" for example,add new form (under "contact" settings) and make sure you have something like this:
+
+[sweetcaptcha]
+
+<p>[submit "Send"]</p>
+ 
 
 That's it!
 Enjoy your fresh new Sweet Captcha ;-)
