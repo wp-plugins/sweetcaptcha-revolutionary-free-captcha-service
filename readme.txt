@@ -1,7 +1,7 @@
 === Sweet Captcha - Free designed captcha service ===
 Contributors: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
-Tags: captsha, anti-spam, kaptcha, captcha, captcha on comments, catcha, register captcha, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha,  
+Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 2.8
 Tested up to: 3.1
 Stable tag: 1.0.7
@@ -65,18 +65,23 @@ Sweet Captcha Localization
 Need your Sweet Captcha in a different language? Some users have been kind enough to provide some translation files. (If 
 you want to contribute a Sweet Captcha translation,drop us a mail)
 
-* English Sweet Captcha translation.
-* German Sweet Captcha translation.
-* French Sweet Captcha translation.
-* Dutch Sweet Captcha translation.
-* Portuguese Sweet Captcha translation.
-* Russian Sweet Captcha translation.
-* Swedish Sweet Captcha translation.
-* Czech Sweet Captcha translation.
-* Hebrew Sweet Captcha translation.
-* Slovak Sweet Captcha translation.
-* Arab Sweet Captcha translation.
-* Swedish Sweet Captcha translation.
+* English Sweet CAPTCHA translation.
+* German Sweet CAPTCHA translation.
+* French Sweet CAPTCHA translation.
+* Dutch Sweet CAPTCHA translation.
+* Portuguese Sweet CAPTCHA translation.
+* Russian Sweet CAPTCHA translation.
+* Swedish Sweet CAPTCHA translation.
+* Czech Sweet CAPTCHA translation.
+* Hebrew Sweet CAPTCHA translation.
+* Slovak Sweet CAPTCHA translation.
+* Arab Sweet CAPTCHA translation.
+* Swedish Sweet CAPTCHA translation.
+* Italian Sweet CAPTCHA translation.
+* Romanian Sweet CAPTCHA translation.
+* Spanish Sweet CAPTCHA translation.
+
+
 
 
 
@@ -102,10 +107,9 @@ http://twitter.com/SweetCaptcha
 * Application ID
 * Sweet Captcha Key
 * Sweet Captcha Secret
-
+(You will Recieve the 3 Sweet Captcha parametes via E-mail)
 1. also:
 
-* Recieve the 3 Sweet Captcha parametes via E-mail.
 * Choose your Sweet Captcha design.
 * Choose your Sweet captcha language.
 (screenshot 6 and 7)
@@ -125,7 +129,8 @@ Enjoy your fresh new Sweet Captcha ;-)
 = Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
 Just go to http://www.sweetcaptcha.com and register for FREE
-(The registration is for you, so you can choose your Sweet captcha design and language.
+(The registration is for you, so you can choose your Sweet captcha design and language, you will get the Sweet Captcha
+via E-mail.
 
 
 = Why do i need to register on sweetcpathca.com ? =
@@ -152,19 +157,28 @@ Of course, Sweet Captcha works on WordPess, Joomla and as a PHP script.
 
 = Can I choose a special design of Sweet captcha for my site? =
 Yes!
-Go to http://www.sweetcaptcha.com and register for FREE to 
-choose from your desired design category.
+Drop us a mail at:
+designers@sweetcaptcha.com
+And we will "stream" your special SweetCaptcha design to your site.
+
+= I'm a Web designer, Can I Design Sweet Captcha myself?  =
+
+Yes! Do you want your designes to be viewd all over the globe?Sweet Captcha is viewd more than 500000 times a day!!
+just drop us an email to: designers@sweetcaptcha.com
+Maybe you will be on our Sweet Captcha - hall of fame.
 
 = Can I choose a language for my Sweet captcha? =
 Yes!
-go to http://www.sweetcaptcha.com and register for FREE to 
-choose your desired language for your Sweet captcha.
+When you install the Sweet Captcha plugin, choose your
+desire language.
 
-= Can I Design Sweet Captcha myself?  =
+= I can't drag the Sweet Captcha images = 
 
-Yes! just drop us an email to: designers@sweetcaptcha.com
-Meanwhile visit our Sweet Captcha - hall of fame: http://www.sweetcaptcha.com/designers.php
-
+Please check the folowing:
+1.Check that you have the latest version of "contact form 7"
+(double check on Wordpress.org)
+2.If you are using "Subscribe2", try to disable and check again.
+(We heard from usere that some time its conflicting with Sweet Captcha.)
 
 == Screenshots ==
 
