@@ -172,13 +172,55 @@ Yes!
 When you install the Sweet Captcha plugin, choose your
 desire language.
 
-= I can't drag the Sweet Captcha images = 
+= I can't drag and drop the Sweet Captcha images = 
 
 Please check the folowing:
 1.Check that you have the latest version of "contact form 7"
 (double check on Wordpress.org)
 2.If you are using "Subscribe2", try to disable and check again.
 (We heard from usere that some time its conflicting with Sweet Captcha.)
+
+= Step by step - adding Sweet Captcha to Contact form 7 =
+
+1.Install and activate Sweet Captcha.
+
+2. Go to Wordptess dashboard --> settings --> SweetCaptcha.
+
+3. Make sure "SweetCaptcha for Contact form 7" box is checked.
+
+4. Go to Wordptess dashboard --> Plugins --> Contact form 7 -->
+
+make sure you have the latest Contact form 7.
+
+5. Press "settings" under the "contact form 7" plugin title.
+
+6. Press "add new" near the contact form 1
+
+(choose the default language - or change it)
+
+7. Choose a name of the form instead of "Untitled"
+
+8. Add Sweet Capcha to the form like this:
+
+p>Your Name (required)<br />
+    [text* your-name] </p>
+
+<p>Your Email (required)<br />
+    [email* your-email] </p>
+
+<p>Subject<br />
+    [text your-subject] </p>
+
+<p>Your Message<br />
+    [textarea your-message] </p>
+
+[sweetcaptcha]
+
+<p>[submit "Send"]</p>
+
+9. Add other setting and save.
+
+10.Thats it! your Sweet Captcha is installed
 
 == Screenshots ==
 
