@@ -40,11 +40,11 @@ Sweet Catpcha Features:
 
 In order for Sweet Captcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise Sweet Captcha might not work correctly. 
 
-For news and updates follow us on Facebook and Twitter: 
+For news, updates and support follow us on Facebook and Twitter: 
 
-http://facebook.com/SweetCaptcha
+[Facebook Fan page](http://facebook.com/SweetCaptcha)
 
-http://twitter.com/SweetCaptcha
+[Twitter](http://twitter.com/SweetCaptcha)
 
 
 == Installation ==
@@ -59,7 +59,7 @@ http://twitter.com/SweetCaptcha
 *SweetCaptcha Key
 *SweetCaptcha Secret
 
-1. Go to htto://www.SweetCaptcha.com and register for FREE in order to:
+1. Go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE in order to:
 
 *Recieve the 3 parametes via E-mail.
 *Choose your Sweet Captcha design.
@@ -74,7 +74,7 @@ That it!
 
 = Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
-Just go to http://www.sweetcaptcha.com and register for FREE
+Just go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE
 (The registration is for you,so you can choose your Sweet captcha design and language.
 
 
@@ -89,7 +89,7 @@ Yes!
 = Does Sweet Captcha run on mobile devices ? =
 
 Of course, Sweet Captcha runs on iphones, ipads and Android devices.
-(Just go to http://www.sweetcaptcha.com and check for yourself)
+(Just go to [SweetCaptcha](http://www.SweetCaptcha.com) and check for yourself)
 
 = Why is Sweet Captcha so great on mobile devices ? =
 
@@ -102,18 +102,18 @@ Of course, Sweet Captcha works on WordPess, Joomla and as a PHP script.
 
 = Can I choose a special design of Sweet captcha for my site? =
 Yes!
-go to http://www.sweetcaptcha.com and register for FREE to 
+go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE to 
 choose from your desire design category.
 
 = Can i choose a language for my Sweet captcha? =
 Yes!
-go to http://www.sweetcaptcha.com and register for FREE to 
+go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE to 
 choose your desire language for your Sweet captcha.
 
 = Can I Design Sweet Captcha myself?  =
 
 Yes! just drop us a mail to: designers@sweetcaptcha.com
-Meanwhile visit our Sweet Captcha - hall of fame: http://www.sweetcaptcha.com/designers.php
+Meanwhile visit our Sweet Captcha - [hall of fame](http://www.sweetcaptcha.com/designers.php)
 
 
 == Screenshots ==
@@ -123,7 +123,7 @@ Meanwhile visit our Sweet Captcha - hall of fame: http://www.sweetcaptcha.com/de
 3. SweetCaptcha values under Settings. 
 4. SweetCaptcha on contact form 7.
 5. SweetCaptcha on login form.
-6. Go to the HTTP://www.SweetCaptcha.com website
+6. Go to the [SweetCaptcha](http://www.SweetCaptcha.com) website.
 7. Register your website on SweetCaptcha
 8. Download the SweetCaptcha.php file
 
