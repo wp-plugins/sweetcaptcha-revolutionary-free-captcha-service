@@ -79,6 +79,7 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 * Italian Sweet CAPTCHA translation.
 * Romanian Sweet CAPTCHA translation.
 * Spanish Sweet CAPTCHA translation.
+* Polish Sweet CAPTCHA translation.
 
 
 
