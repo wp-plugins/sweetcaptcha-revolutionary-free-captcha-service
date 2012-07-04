@@ -1,4 +1,4 @@
-=== Sweet Captcha - Free designed captcha service ===
+=== Sweet Captcha - R U Human? ===
 Contributors: SweetCaptcha
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 2.8
