@@ -92,9 +92,9 @@ In order for Sweet Captcha to work you need to follow the instructions on the "I
 
 For news and updates follow us on Facebook and Twitter: 
 
-http://facebook.com/SweetCaptcha
+[Facebook Fan & Support page](http://facebook.com/SweetCaptcha)
 
-http://twitter.com/SweetCaptcha
+[Twitter](http://twitter.com/SweetCaptcha)
 
 
 == Installation ==
@@ -129,7 +129,7 @@ Enjoy your fresh new Sweet Captcha ;-)
 
 = Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
 
-Just go to http://www.sweetcaptcha.com and register for FREE
+Just go to [Sweet Captcha](http://www.sweetcaptcha.com) and register for FREE
 (The registration is for you, so you can choose your Sweet captcha design and language, you will get the Sweet Captcha
 via E-mail.
 
@@ -145,7 +145,7 @@ Yes!!!
 = Does Sweet Captcha run on mobile devices ? =
 
 Of course, Sweet Captcha runs on iphones, ipads and Android devices.
-(Just browse to http://www.sweetcaptcha.com and check for yourself)
+(Just browse to [Sweet Captcha](http://www.sweetcaptcha.com) and check for yourself)
 
 = Why is Sweet Captcha so great on mobile devices ? =
 
@@ -230,7 +230,7 @@ p>Your Name (required)<br />
 3. SweetCaptcha values under Settings. 
 4. SweetCaptcha on contact form 7.
 5. SweetCaptcha on login form.
-6. Go to the HTTP://www.SweetCaptcha.com website
+6. Go to the [Sweet Captcha](http://www.sweetcaptcha.com) website
 7. Register your website on SweetCaptcha
 8. Download the SweetCaptcha.php file
 
