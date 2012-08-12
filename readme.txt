@@ -1,4 +1,4 @@
-=== Sweet Captcha ===
+=== Sweet Captcha - Wordpress Plugin ===
 Contributors: SweetCaptcha
 Version: 2.4.1
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
@@ -10,11 +10,15 @@ Sweet Captcha - Design your own CAPTCHA and put your users and your website at f
 
 == Description ==
 
-= General Information =
 
 Sweet Captcha is a free Captcha service putting your users and your website at first priority.
 We dont think CAPTCHA should be hard to users,captcha
 should be hard to machines! 
+
+= Help Keep This Plugin Free =
+
+If you find this plugin useful to you, please consider [__making a small donation__](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76) to help contribute to our time invested and to further development. Thanks for your kind support!
+
 
 = Do you hate today's CAPTCHA ?? Then try Sweet Captcha =
 
