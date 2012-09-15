@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 1.0.5
+Version: 2.4.1
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -25,7 +25,6 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
-
 // for backward compatibility - 2.0
 defined('WP_PLUGIN_DIR') or
 	define('WP_PLUGIN_DIR', ABSPATH . '/wp-content/plugins');
@@ -42,10 +41,24 @@ define('SWEETCAPTCHA_TEMPLATE', SWEETCAPTCHA_ROOT . '/template');
 // prepare wordpress version for check
 $wp_versions = explode( '.', $wp_version );
 
+//
+// TODO: the patch by SverAlex, to make it work with all themes and in all WP
+//
+function sweetcaptcha_init() {
+  wp_enqueue_script('jquery');
+}
+add_action('init', 'sweetcaptcha_init');
+// End of the patch
+//
+
+require_once SWEETCAPTCHA_LIBRARY . '/sweetcaptcha.php';
 // split action to admin and public part
 if (is_admin()) {
 	require_once SWEETCAPTCHA_LIBRARY . '/admin.php';
 	
+	// Add admin notices.
+	add_action('admin_notices', 'sweetcaptcha_admin_notices');
+
 	// add link to settings menu
 	add_action('admin_menu', 'sweetcaptcha_admin_menu');
 	
@@ -63,11 +76,9 @@ if (is_admin()) {
 } else {
 	
 	require_once SWEETCAPTCHA_LIBRARY . '/public.php';
-	require_once SWEETCAPTCHA_LIBRARY . '/sweetcaptcha.php';
 	
 	// add jquery to all public pages
  
-
 		add_action( 'login_head' , 'sweetcaptcha_login_head' );
     wp_enqueue_script( 'jquery' );
 

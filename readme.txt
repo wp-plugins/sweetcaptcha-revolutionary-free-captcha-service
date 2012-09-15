@@ -1,28 +1,46 @@
-=== Sweet Captcha - Free designed captcha service ===
-Contributors: sweetcaptcha
-Author URI: http://www.sweetcaptcha.com
-Tags: captsha, anti-spam, kaptcha, captcha, captcha on comments, catcha, register captcha, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha,  
-Requires at least: 3.3.0
+=== Sweet Captcha ===
+Contributors: SweetCaptcha
+Version: 2.4.1
+Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
+Requires at least: 3.0.0
 Tested up to: 3.4.1
-Stable tag: 2.4.1
+Stable tag: trunk
 
-SweetCaptcha - Design your own CAPTCHA and put your users and your website at first priority.
+Sweet Captcha - Design your own CAPTCHA and put your users and your website at first priority.
 
 == Description ==
 
-= General Information =
 
 Sweet Captcha is a free Captcha service putting your users and your website at first priority.
-We are focused on enhancing the user experience on your website. Captcha services today are making life difficult for the user, and for the website owner by using an element on the website that is not designed according to the website concept.
-Instead of asking the user to input difficult and boring text, Sweet Captcha offers a cute and interactive friendly user experience. The Sweet Captcha consists of a question the user needs to answer by dragging the correct answer.
-Sweet Catpcha works on smartphones, iphones and ipads and Android.
-Sweet Captcha is an anti-spam solution for Wordpress forms, Contact Form 7, and BuddyPress.
+We dont think CAPTCHA should be hard to users,captcha
+should be hard to machines! 
 
-= Integration with WordPress =
+= Help Keep This Plugin Free =
+
+If you find this plugin useful to you, please consider [__making a small donation__](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76) to help contribute to our time invested and to further development. Thanks for your kind support!
+
+
+= Do you hate today's CAPTCHA ?? Then try Sweet Captcha =
+
+Instead of asking the user to input difficult and boring text, Sweet Captcha offers a cute and interactive friendly user experience. The Sweet Captcha consists of a question the user needs to answer by dragging the correct answer.
+Is that a Sweet Captcha or no?  ;-)
+
+= Does your users use CAPTCHA on iPad, iPhone or Andorid? =
+
+Have you ever tried to solve a regular CAPTCHA on your mobile
+device?
+Its impossible right?
+So why do it to your users?
+
+Sweet Catpcha works on smartphones, iphones, ipads and Android.
+
+Sweet Captcha is an anti-spam CAPTCHA solution for Wordpress forms,Contact Form 7, and BuddyPress.
+
+= Sweet Captcha Integration with WordPress =
 
 Sweet Captcha protects the following forms:
 ----------------------------------------
-* Registration form
+* Registration form 
 * Comment form
 * Login form
 * Lost password form
@@ -30,19 +48,55 @@ Sweet Captcha protects the following forms:
 
 Sweet Catpcha Features:
 --------------------------
-* Our CAPTCHA is compatible with BuddyPress plugin
-* Works on iphones and ipads. 
-* Can design your own Sweet Captcha.
-* NEW! language translation support,
-  register and choose your Sweet Captcha language.
+* Choose your ready made Sweet Captcha design.
+* Design your own Sweet Captcha.
+* NEW!!! Choose your Sweet Captcha language.
+* Full mobile captcha support! works best on iphones, ipads and Android. 
+* Our CAPTCHA is compatible with BuddyPress plugin.
+
+Sweet Captcha design categories:
+--------------------------
+* Sweet Captcha "Music" category.
+* Sweet Captcha "Movies" category.
+* Sweet Captcha "Fun" category.
+* Sweet Captcha "Wedding" category.
+* Sweet Captcha "Shopping" category.
+* Sweet Captcha "Random" category.
+
+
+Sweet Captcha Localization
+--------------------------
+Need your Sweet Captcha in a different language? Some users have been kind enough to provide some translation files. (If 
+you want to contribute a Sweet Captcha translation,drop us a mail)
+
+* English Sweet CAPTCHA translation.
+* German Sweet CAPTCHA translation.
+* French Sweet CAPTCHA translation.
+* Dutch Sweet CAPTCHA translation.
+* Portuguese Sweet CAPTCHA translation.
+* Russian Sweet CAPTCHA translation.
+* Swedish Sweet CAPTCHA translation.
+* Czech Sweet CAPTCHA translation.
+* Hebrew Sweet CAPTCHA translation.
+* Slovak Sweet CAPTCHA translation.
+* Arab Sweet CAPTCHA translation.
+* Swedish Sweet CAPTCHA translation.
+* Italian Sweet CAPTCHA translation.
+* Romanian Sweet CAPTCHA translation.
+* Spanish Sweet CAPTCHA translation.
+* Polish Sweet CAPTCHA translation.
+* Chinese Sweet CAPTCHA translation.
+
+
+
 
 = IMPORTANT =
 
 In order for Sweet Captcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise Sweet Captcha might not work correctly. 
 
-For news, updates and support follow us on Facebook and Twitter: 
+For news and updates follow us on Facebook and Twitter: 
 
-[Facebook Fan page](http://facebook.com/SweetCaptcha)
+[Facebook Fan & Support page](http://facebook.com/SweetCaptcha)
 
 [Twitter](http://twitter.com/SweetCaptcha)
 
@@ -53,79 +107,178 @@ For news, updates and support follow us on Facebook and Twitter:
 
 1. Install and activate Sweet Captcha.
 
-1. Go to Sweet captcha settings(under "settings") , you will need 3 values in order to activate it.
+1. Go to Sweet captcha settings (under "Settings") , make sure  you have the 3 values in order to activate it.
 
-*Application ID
-*SweetCaptcha Key
-*SweetCaptcha Secret
+* Application ID
+* Sweet Captcha Key
+* Sweet Captcha Secret
+(You will Recieve the 3 Sweet Captcha parametes via E-mail)
+1. also:
 
-1. Go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE in order to:
-
-*Recieve the 3 parametes via E-mail.
-*Choose your Sweet Captcha design.
-*Choose your Sweet captcha language.
+* Choose your Sweet Captcha design.
+* Choose your Sweet captcha language.
 (screenshot 6 and 7)
 
-1.After you register,check your Email inbox, copy Paste the values to your dashboard settings and "save changes".
+1. How to use Sweet Cpatcha for contact us form? If you are using "contact form 7" for example,add new form (under "contact" settings) and make sure you have something like this:
 
-That it!
+[sweetcaptcha]
+
+<p>[submit "Send"]</p>
+ 
+
+That's it!
+Enjoy your fresh new Sweet Captcha ;-)
 
 == Frequently Asked Questions ==
 
-= Where can I find the APPLICATION_ID, SWEETCAPTCHA_KEY and SWEETCAPTCHA_secret ? =
+= What is CAPTCHA? =
 
-Just go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE
-(The registration is for you,so you can choose your Sweet captcha design and language.
+A CAPTCHA is a type of challenge-response test used in computing as an attempt to ensure that the response is generated by a person. The term CAPTCHA is an acronym based on the word "capture" and standing for Completely Automated Public Turing test to tell Computers and Humans Apart.
+
+= What is the difference between Sweet CAPTCHA and other CAPTCHAs? =
+
+Sweet Captcha is for users! Our CAPTCHA is very easy to use for humans and get a little more complexed for spammers.
+
+Our vision, here, at Sweet Captcha, is to behave accordingly to the website the CAPTCHA is on. (Each website has different needs)
+
+= Sweet CAPTCHA is very easy for humans but what about spam-bots? they can solve Sweet CAPTCHA too right? =
+
+Lets start with number 1 competitor - Google RE CAPTCHA, today re CAPTCHA Can be hacked 50% of the time by CAPTCHA spam-bots, Sweet CAPTCHA behave on
+
+each website accordingly.
+
+For example - The Sweet CAPTCHA behaves differen on a weddings blog than on a Bank website.
+
+= Does Sweet CAPTCHA works with Flash? =
+
+No! flash is dead...(we believe on a CAPTCHA who works on a cross platform environment:
+Sweet CAPTCHA for pc.
+Sweet CAPTCHA for mobile.
+Sweet CAPTCHA for tablets.
+Sweet CAPTCHA for games, applications and more.
+
+= What browsers supports your CAPTCHA? =
+
+Sweet CAPTCHA works in all modern browsers such as Chrome, Internet Explorer, FireFox, Safari, Opera ...
+
+= Is Sweet captcha FREE? =
+Yes!!!
+
+= Does Sweet Captcha run on mobile devices ? =
+
+Sure, Sweet Captcha runs on iphones, ipads and Android devices.
+(Just browse to [Sweet Captcha](http://www.sweetcaptcha.com) and check for yourself)
+
+= Why is Sweet Captcha so great on mobile devices ? =
+
+Sweet CAPTCHA helps you raise your conversion rate by 33% !!!
+How? just try it and see how simple and fun it is.
+
+= Where can I find a sample of your CAPTCHA? =
+
+If you interested just in screenshots of Sweet CAPTCHA you can find it [here](http://wordpress.org/extend/plugins/sweetcaptcha-revolutionary-free-captcha-service/screenshots/). If you would like to experience Sweet CAPTCHA you can go [here](https://www.sweetcapthca.com).
+
+= Can I choose a language for my Sweet captcha? =
+Yes!
+When you install the Sweet Captcha plugin, choose your desire language from more than 17 languages.
+
+= I cannot find my language on Sweet CAPTCHA translations. What can i do? =
+
+All Sweet CAPTCHA translations came from users just like you ;-) ,so, if you want to contribute a new Sweet CAPTCHA language,
+just drop us a mail to: support@SweetCAPTCHA.com
+
+= May I use my own images in your CAPTCHA? =
+
+Yes you can ;-)
+Drop us a mail at: designers@sweetcaptcha.com
+And we will "stream" your special Sweet Captcha design to your site.
+
+= Do you limit the number of websites where I would like to use Sweet CAPTCHA? =
+
+No. You can add as many websites as you would like to protect by Sweet CAPTCHA.
+
+= Where can I find the APPLICATION_ID, SWEET CAPTCHA _KEY and SWEET CAPTCHA _secret ? =
+
+Just go to [Sweet Captcha](http://www.sweetcaptcha.com) and register for FREE
+(The registration is for you, so you can choose your Sweet captcha design and language, you will get the Sweet Captcha
+via E-mail.
 
 
 = Why do i need to register on sweetcpathca.com ? =
 We need to know which design and language you want.
-(Sweet captcha is a service - we send each site a special design
-and language)
+(Sweet captcha is a service - we send each site a special Sweet CAPTCHA design and Sweet CAPTCHA language)
 
-= is Sweet captcha FREE? =
-Yes!
-
-= Does Sweet Captcha run on mobile devices ? =
-
-Of course, Sweet Captcha runs on iphones, ipads and Android devices.
-(Just go to [SweetCaptcha](http://www.SweetCaptcha.com) and check for yourself)
-
-= Why is Sweet Captcha so great on mobile devices ? =
-
-Sweet CAPTCHA helps you raise your conversion rate by 33% !!
-How? just try it and see how simple and fun it is.
 
 = Does Sweet Captcha work on other CMS platforms ? =
 
 Of course, Sweet Captcha works on WordPess, Joomla and as a PHP script.
 
-= Can I choose a special design of Sweet captcha for my site? =
-Yes!
-go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE to 
-choose from your desire design category.
+= I'm a Web designer, Can I Design Sweet Captcha myself?  =
 
-= Can i choose a language for my Sweet captcha? =
-Yes!
-go to [SweetCaptcha](http://www.SweetCaptcha.com) and register for FREE to 
-choose your desire language for your Sweet captcha.
+Yes! Do you want your designes to be viewd all over the globe?Sweet Captcha is viewd more than 500000 times a day!!
+just drop us an email to: designers@sweetcaptcha.com
+Maybe you will be on our Sweet Captcha - hall of fame.
 
-= Can I Design Sweet Captcha myself?  =
+= I can't drag and drop the Sweet Captcha images = 
 
-Yes! just drop us a mail to: designers@sweetcaptcha.com
-Meanwhile visit our Sweet Captcha - [hall of fame](http://www.sweetcaptcha.com/designers.php)
+Please check the folowing:
+1.Check that you have the latest version of "contact form 7"
+(double check on Wordpress.org)
+2.If you are using "Subscribe2", try to disable and check again.
+(We heard from usere that some time its conflicting with Sweet Captcha.)
 
+= Step by step - adding Sweet Captcha to Contact form 7 =
+
+1.Install and activate Sweet Captcha.
+
+2. Go to Wordptess dashboard --> settings --> Sweet Captcha.
+
+3. Make sure "Sweet Captcha for Contact form 7" box is checked.
+
+4. Go to Wordptess dashboard --> Plugins --> Contact form 7 -->
+
+make sure you have the latest Contact form 7.
+
+5. Press "settings" under the "contact form 7" plugin title.
+
+6. Press "add new" near the contact form 1
+
+(choose the default language - or change it)
+
+7. Choose a name of the form instead of "Untitled"
+
+8. Add Sweet Capcha to the form like this:
+
+p>Your Name (required)<br />
+    [text* your-name] </p>
+
+<p>Your Email (required)<br />
+    [email* your-email] </p>
+
+<p>Subject<br />
+    [text your-subject] </p>
+
+<p>Your Message<br />
+    [textarea your-message] </p>
+
+[sweetcaptcha]
+
+<p>[submit "Send"]</p>
+
+9. Add other setting and save.
+
+10.Thats it! your Sweet Captcha is installed
 
 == Screenshots ==
 
-1. SweetCaptcha Dashboard Settings.
-2. sweetcpatcha.php file values.
-3. SweetCaptcha values under Settings. 
-4. SweetCaptcha on contact form 7.
-5. SweetCaptcha on login form.
-6. Go to the [SweetCaptcha](http://www.SweetCaptcha.com) website.
-7. Register your website on SweetCaptcha
-8. Download the SweetCaptcha.php file
+1. Sweet Captcha Dashboard Settings.
+2. sweet cpatcha.php file values.
+3. Sweet Captcha values under Settings. 
+4. Sweet Captcha on contact form 7.
+5. Sweet Captcha on login form.
+6. Go to the [Sweet Captcha](http://www.sweetcaptcha.com) website
+7. Register your website on Sweet Captcha
+8. Download the Sweet Captcha.php file
 
 == Requirements ==
 
@@ -134,21 +287,32 @@ Wordpress >= 2.8, cURL extension
 == Changelog ==
 
 = 1.0 =
-* Initial version
+* Initial Sweet CAPTCHA version
 
 = 1.0.5 =
-* NEW added language translation support.
-
-= 1.0.6 =
-* NEW added category selection.
-
-= 1.0.7 =
-* NEW added internal registration feature.
-
-= 1.0.7 =
-* NEW added language support.
+* NEW added Sweet CAPTCHA language translation support.
 
 == Upgrade Notice ==
 
+1.0.6
+
+= 1.0.7 =
+* NEW added Sweet CAPTCHA internal registration feature.
+
+== Upgrade Notice ==
+
+= 1.0.7 =
+Current Sweet CAPTCHA version.
+
 = 1.0.8 =
-Current version.
+* NEW added Sweet CAPTCHA language support.
+
+= 2.4.1 =
+* NEW added Sweet CAPTCHA language support.
+* Stable Sweet CAPTCHA with WordPress 3.4.1
+* Security tightened up even more on Sweet CAPTCHA
+== Upgrade Notice ==
+
+* Security tightened up even more on Sweet CAPTCHA
+* Sweet CAPTCHA Easier to install
+* Sweet CAPTCHA stable with WordPress 3.4.1
