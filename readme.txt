@@ -279,6 +279,7 @@ p>Your Name (required)<br />
 6. Go to the [Sweet Captcha](http://www.sweetcaptcha.com) website
 7. Register your website on Sweet Captcha
 8. Download the Sweet Captcha.php file
+9. Sweet Captcha infographics
 
 == Requirements ==
 
