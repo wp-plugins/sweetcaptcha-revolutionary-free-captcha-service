@@ -287,11 +287,31 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
+= V2.4.1 - 15.09.2012 =
+* NEW : Italian language support added to the plugin.
+* Bugfix : Updated all functionality for wordpress 3.4.2.
+
+= V1.0.8 - 30.03.2012 =
+
+* Bugfix : theme issues plus ajax conflicts - bug was fixed.
+* Bugfix : "domain not regitered" issues - bug was fixed. 
+
+= V1.0.7 - 27.02.2012 =
+
+* Bugfix : theme issues plus ajax conflicts - bug was fixed.
+* Bugfix : "domain not regitered" issues - bug was fixed.
+
+= V1.0.6 - 27.02.2012 =
+
+* NEW : French language support added to the plugin.
+* Bugfix : CSS issues on black.
+
+= V1.0.5 - 27.04.2011 =
+
+* NEW : added Sweet CAPTCHA language translation support.
+
 = 1.0 =
 * Initial Sweet CAPTCHA version
-
-= 1.0.5 =
-* NEW added Sweet CAPTCHA language translation support.
 
 == Upgrade Notice ==
 
