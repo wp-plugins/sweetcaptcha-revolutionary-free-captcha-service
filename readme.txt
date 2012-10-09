@@ -1,6 +1,6 @@
 === Sweet Captcha ===
 Contributors: SweetCaptcha
-Version: 2.4.1
+Version: 2.4.2
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 3.0.0
 Tested up to: 3.4.1
@@ -182,10 +182,16 @@ If you interested just in screenshots of Sweet CAPTCHA you can find it [here](ht
 Yes!
 When you install the Sweet Captcha plugin, choose your desire language from more than 17 languages.
 
+= Can I change my current language for my Sweet captcha? =
+Yes, just drop us a mail at: support@SweetCaptcha.com and we will do it for you ;-) .
+
 = I cannot find my language on Sweet CAPTCHA translations. What can i do? =
 
 All Sweet CAPTCHA translations came from users just like you ;-) ,so, if you want to contribute a new Sweet CAPTCHA language,
 just drop us a mail to: support@SweetCAPTCHA.com
+
+= How can i change my current design category of Sweet Captcha? = 
+Just drop us a mail at: support@SweetCaptcha.com and we will do it for you ;-)
 
 = May I use my own images in your CAPTCHA? =
 
@@ -286,6 +292,9 @@ p>Your Name (required)<br />
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= V2.4.1 - 09.10.2012 =
+Bugfix : PHP error on Dashboard, Fixed!
 
 = V2.4.1 - 15.09.2012 =
 * NEW : Italian language support added to the plugin.
