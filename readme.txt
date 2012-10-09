@@ -15,7 +15,7 @@ Sweet Captcha is a free Captcha service putting your users and your website at f
 We dont think CAPTCHA should be hard to users,captcha
 should be hard to machines! 
 
-= Help Keep This Plugin Free =
+= Help Keep SweetCaptcha Plugin Free =
 
 If you find this plugin useful to you, please consider [__making a small donation__](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76) to help contribute to our time invested and to further development. Thanks for your kind support!
 
