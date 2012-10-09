@@ -114,6 +114,21 @@ function sweetcaptcha_comment_form_check($comment) {
 }
 
 /**
+ * SweetCaptcha adjustments for login, registration, lost password,... form
+ * @return boolean
+ */
+function sweetcaptcha_adjust_form() {
+	return '
+  <script language="JavaScript">
+    jQuery(document).ready(function() { 
+      jQuery("#sidebar-login-form #captchi li").css("display","block"); 
+      jQuery("#sidebar-login-form #captchi").css("max-height","500px");
+    });
+  </script><br>'
+  ;
+}
+
+/**
  * Add SweetCaptcha to login form
  * @return boolean
  */
@@ -123,6 +138,20 @@ function sweetcaptcha_login_form() {
 	echo $sweetcaptcha_instance->get_html();
 	echo '<script language="JavaScript">if (document.getElementById("login")) { document.getElementById("login").style.width = "582px"; } jQuery(document).ready(function(){ jQuery("#sidebar-login-form #captchi li").css("display","block"); jQuery("#sidebar-login-form #captchi").css("max-height","500px");});</script><br>';
 	
+	return true;
+}
+
+/**
+ * Add SweetCaptcha to registration form
+ * @return boolean
+ */
+function sweetcaptcha_registration_form() {
+	global $sweetcaptcha_instance;
+	if (!get_option('sweetcaptcha_form_registration')) {
+		return true;
+	}
+	echo $sweetcaptcha_instance->get_html();
+  //echo sweetcaptcha_adjust_form();
 	return true;
 }
 
@@ -184,9 +213,11 @@ function sweetcaptcha_register_form_check($errors) {
  */
 function sweetcaptcha_before_registration_submit_buttons() {
 	global $sweetcaptcha_instance;
-	
-	echo '<div style="clear: both;">' . $sweetcaptcha_instance->get_html() . '</div>';
-	
+	echo 
+    '<div id="sweetcaptcha-wrapper">' 
+    .( ( function_exists('sweetcaptcha_header') ) ? sweetcaptcha_header() : '' )
+    . $sweetcaptcha_instance->get_html() 
+    . '</div>';
 	return TRUE;
 }
 
@@ -248,9 +279,9 @@ function sweetcaptcha_wpmu_validate_user_signup($errors) {
  * @param $atts
  * @return string
  */
-function sweetcaptcha_shortcode( $atts ) {
+function sweetcaptcha_shortcode( $atts = array() ) {
 	global $sweetcaptcha_instance;
-	return $sweetcaptcha_instance->get_html();
+	return ( ( function_exists('sweetcaptcha_header') ) ? sweetcaptcha_header() : '' ).$sweetcaptcha_instance->get_html();
 }
 
 /**
@@ -261,19 +292,14 @@ function sweetcaptcha_shortcode( $atts ) {
  */
 function sweetcaptcha_validate($errors, $tag = NULL) {
 	global $sweetcaptcha_instance;
-
 	$scValues = sweetcaptcha_get_values();
-
-	if ( isset( $_POST['your-message'] ) ) {
-		if ( $sweetcaptcha_instance->check( $scValues ) == 'false' ) {
-			if ( !empty( $tag ) ) { // if Contact Form 7
-				$errors['valid'] = false;
-				$errors['reason']['your-message'] = __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' );
-			} else {
-				$errors['errors']->add( 'sweetcaptcha', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
-			}
+	if ( $sweetcaptcha_instance->check( $scValues ) != 'true' ) {
+		if ( !empty( $tag ) ) { // if Contact Form 7
+			$errors['valid'] = false;
+			$errors['reason']['your-message'] = __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' );
+		} else {
+			$errors['errors']->add( 'sweetcaptcha', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
 		}
 	}
-	
 	return $errors;
 }

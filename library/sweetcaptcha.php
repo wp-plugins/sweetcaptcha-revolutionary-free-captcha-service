@@ -58,6 +58,7 @@ class Sweetcaptcha {
 			'secret' => $this->secret,
 			'path' => $this->path,
 			'is_mobile' => preg_match('/mobile/i', $_SERVER['HTTP_USER_AGENT']) ? 'true' : 'false',
+			'user_ip' => $_SERVER['REMOTE_ADDR'],
 		);
 		
 		return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
@@ -74,7 +75,7 @@ class Sweetcaptcha {
         }
 		
 		$req = "POST /api.php HTTP/1.0\r\n";
-		$req .= "Host: www.sweetcaptcha.com\r\n";
+		$req .= "Host: ".self::API_URL."\r\n";
 		$req .= "Content-Type: application/x-www-form-urlencoded\r\n";
 		$req .= "Referer: " . $_SERVER['HTTP_HOST']. "\r\n";
 		$req .= "Content-Length: " . strlen($param_data) . "\r\n\r\n";
