@@ -16,8 +16,8 @@
 	text-transform: capitalize;
 	padding-left: 10px;
 	text-align: left;
-	width: 200px;
-	min-width: 25%;
+	width: 160px;
+	/*min-width: 25%;*/
 }
 
 #register table td.right {
@@ -47,7 +47,7 @@
 	<?php echo $form_html; ?>
 
 	<p class="submit">
-		<input type="button" id="register_submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Continue') ?>" />
+		<input type="button" id="register_submit" name="Submit" class="button-primary" style="padding: 8px 12px;" value="<?php esc_attr_e('Continue') ?>" />
 		&nbsp;or <a href="options-general.php?page=sweetcaptcha&skip_register=1">skip</a> if you are already registered.
 	</p>
 </div>

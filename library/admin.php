@@ -40,7 +40,7 @@ function sweetcaptcha_admin_menu() {
   //$menu_item = "<div class='admin-menu-item'>SweetCaptcha</div>";
   //add_options_page(__('SweetCaptcha', 'sweetcaptcha'), __($menu_item, 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page');
   add_menu_page(__('SweetCaptcha', 'sweetcaptcha'), __('SweetCaptcha', 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page', 
-          SWEETCAPTCHA_URL.'/images/menu-icon.png', 6);
+          SWEETCAPTCHA_URL.'/images/menu-icon.png');
 }
 
 /**
@@ -97,8 +97,6 @@ function sweetcaptcha_register_form() {
     }
   } else {
     $form_html = $sweetcaptcha_instance->get_register_form();
-    //echo $form_html;
-    
   }
 
   // Fill the fields.
@@ -123,9 +121,12 @@ function sweetcaptcha_register_form() {
   $form_html .= "</script>\n";
   
   $form_html = preg_replace('/category:/', 'SweetCaptcha theme:', $form_html);
+  $form_html = preg_replace('/Please fill in your site details/', 'Fill in your SweetCaptcha details to activate:', $form_html);
+  $form_html = preg_replace('/language:/', 'SweetCaptcha language:', $form_html);
+  $form_html = preg_replace('/SweetCaptcha theme:/', 'SweetCaptcha design:', $form_html);
   
+  /*
   $cats = file(SWEETCAPTCHA_ROOT.'/site-categories.txt');
-  //var_export($cats);
   $select_html = '';
   foreach ($cats as $cat) {
     $cat =  trim ( $cat);
@@ -133,11 +134,11 @@ function sweetcaptcha_register_form() {
   }
   //$form_html = preg_replace(strrev("|</tr>|"),'</tr><tr><td></td><td></td></tr>',$form_html,1);
   $form_html = str_lreplace("</tr>", '</tr><tr><td class="left">Website category:</td><td class="right"><select name="site_category">'.$select_html.'</select></td></tr>',$form_html);
-
+  */
   require_once SWEETCAPTCHA_TEMPLATE . '/admin-register.php';
 
   // Display share buttons.
-  sweetaptcha_share_buttons();
+  //sweetaptcha_share_buttons();
 }
 
 function str_lreplace($search, $replace, $subject) {
