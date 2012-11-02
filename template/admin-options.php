@@ -52,11 +52,11 @@ jQuery(document).ready(function($) {
       <tbody>
         <?php
         if (!empty($sweetcaptcha_options) && is_array($sweetcaptcha_options)):
-          foreach ($sweetcaptcha_options as $opt_name => $opt_title):
+          foreach ($sweetcaptcha_options as $opt_name => $opt):
             ?>
               
             <tr valign="top">
-              <th scope="row" style="min-width: 15%"><label for="<?php echo $opt_name ?>"><?php echo $opt_title . ':'; ?></label></th>
+              <th scope="row" style="min-width: 15%"><label for="<?php echo $opt_name ?>"><?php echo $opt['title'] . ':'; ?></label></th>
               <?php
               if (!substr_count($opt_name, '_form_')) {
                 $type = 'text';
@@ -72,9 +72,9 @@ jQuery(document).ready(function($) {
               ?>
               <td>
                 <input<?php echo $class ?> id="<?php echo $opt_name ?>" type="<?php echo $type ?>" name="<?php echo $opt_name ?>" value="<?php echo $value ?>" size="50"<?php echo $checked ?> />
-                <?php if (isset($descriptions[$opt_name])): ?>
+                <?php if (isset($sweetcaptcha_options[$opt_name]['description'])): ?>
                   <span class="description">
-                    <?php echo $descriptions[$opt_name]; ?>
+                    <?php echo $sweetcaptcha_options[$opt_name]['description']; ?>
                   </span>
                 <?php endif; ?>
               </td>

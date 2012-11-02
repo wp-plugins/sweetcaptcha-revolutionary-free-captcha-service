@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 2.4.3
+Version: 2.4.3.3
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -29,8 +29,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 defined('WP_PLUGIN_DIR') or define('WP_PLUGIN_DIR', ABSPATH . '/wp-content/plugins');
 
 // define absolute path to plugin
-define('SWEETCAPTCHA_ROOT', WP_PLUGIN_DIR . '/sweetcaptcha-revolutionary-free-captcha-service');
-define('SWEETCAPTCHA_URL', WP_PLUGIN_URL . '/sweetcaptcha-revolutionary-free-captcha-service');
+define('SWEETCAPTCHA_DIR_NAME', basename( dirname(__FILE__) ));
+define('SWEETCAPTCHA_ROOT', WP_PLUGIN_DIR . '/' . SWEETCAPTCHA_DIR_NAME);
+define('SWEETCAPTCHA_URL', WP_PLUGIN_URL . '/' . SWEETCAPTCHA_DIR_NAME);
 // define absolute path to plugin  sweetcaptcha.php
 define('SWEETCAPTCHA_PHP_PATH', SWEETCAPTCHA_URL . '/library/sweetcaptcha.php');
 // define absolute path to plugin library
@@ -86,11 +87,13 @@ if (is_admin()) {
 	
 	// add Sweet Captcha to login form
 	if ( get_option( 'sweetcaptcha_form_login' ) ) {
-		// only for version >= 2.8
+    // only for version >= 2.8
 		if ( ( ( $wp_versions[ 0 ] >= 2 ) || ( $wp_versions[ 1 ] > 7 ) ) ) {
 			add_action( 'login_form', 'sweetcaptcha_login_form', 1 );
 			add_filter( 'authenticate', 'sweetcaptcha_authenticate', 40, 3 );
 		}
+    // add SweetCaptcha to BuddyPress login form
+    add_action( 'bp_sidebar_login_form', 'sweetcaptcha_login_form' );
 	}
 	
 	// add Sweet Captcha to lost password form
@@ -113,9 +116,6 @@ if (is_admin()) {
 			add_filter('wpmu_validate_user_signup', 'sweetcaptcha_wpmu_validate_user_signup' );
 		}
 	}
-
-	// add SweetCaptcha to BuddyPress login form
-	add_action( 'bp_sidebar_login_form', 'sweetcaptcha_login_form' );
   
 }
 

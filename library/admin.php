@@ -1,17 +1,17 @@
 <?php
 // settings definiiton
 $sweetcaptcha_options = array(
-    'sweetcaptcha_app_id' => __('Application ID', 'sweetcaptcha'),
-    'sweetcaptcha_key' => __('SweetCaptcha Key', 'sweetcaptcha'),
-    'sweetcaptcha_secret' => __('SweetCaptcha Secret', 'sweetcaptcha'),
-//    'sweetcaptcha_public_url'			=> __('SweetCaptcha Public URL', 'sweetcaptcha'),
-    'sweetcaptcha_form_omit_users' => __('Omit captcha for registered users', 'sweetcaptcha'),
-    'sweetcaptcha_form_registration' => __('SweetCaptcha for Registration Form', 'sweetcaptcha'),
-    'sweetcaptcha_form_comment' => __('SweetCaptcha for Comment Form', 'sweetcaptcha'),
-    'sweetcaptcha_form_login' => __('SweetCaptcha for Login Form', 'sweetcaptcha'),
-    'sweetcaptcha_form_lost' => __('SweetCaptcha for Lost Password Form', 'sweetcaptcha'),
-    'sweetcaptcha_form_contact_7' => __('SweetCaptcha for Contact Form 7', 'sweetcaptcha'),
-    'sweetcaptcha_form_contact' => __('<b style="color:brown;">SweetCaptcha Contact Form</b>', 'sweetcaptcha')
+    'sweetcaptcha_app_id' => array('title' => __('Application ID', 'sweetcaptcha'), 'description' => __('Insert your Application ID', 'sweetcaptcha')),
+    'sweetcaptcha_key' => array('title' => __('SweetCaptcha Key', 'sweetcaptcha'), 'description' => __('Insert SweetCaptcha Key', 'sweetcaptcha')),
+    'sweetcaptcha_secret' => array('title' => __('SweetCaptcha Secret', 'sweetcaptcha'), 'description' => __('Insert SweetCaptcha Secret', 'sweetcaptcha')),
+//    'sweetcaptcha_public_url'			=> array('title' => __('SweetCaptcha Public URL', 'sweetcaptcha'), 'description' => __('Default values is "/wp-content/plugins/sweetcaptcha/library/sweetcaptcha.php" - don\'t change it unless you know what are you doing.', 'sweetcaptcha')),
+    'sweetcaptcha_form_omit_users' => array('title' => __('Omit captcha for registered users', 'sweetcaptcha'), 'description' => __('Disable SweetCaptcha for registered users.', 'sweetcaptcha')),
+    'sweetcaptcha_form_registration' => array('title' => __('SweetCaptcha for Registration Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for registration form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_comment' => array('title' => __('SweetCaptcha for Comment Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for comment form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_login' => array('title' => __('SweetCaptcha for Login Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for login form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_lost' => array('title' => __('SweetCaptcha for Lost Password Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for lost password form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_contact_7' => array('title' => __('SweetCaptcha for Contact Form 7', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for contact form 7 plug-in.', 'sweetcaptcha')),
+    'sweetcaptcha_form_contact' => array('title' => __('<b style="color:brown;">SweetCaptcha Contact Form</b>', 'sweetcaptcha'), 'description' => __('Do you want a contact form with SweetCaptcha? Check the check box, configure and save settings.', 'sweetcaptcha')),
 );
 
 /**
@@ -158,20 +158,6 @@ function sweetcatpcha_main_settings($ignore_post = false) {
   $data_field_name = 'mt_favorite_color';
 
   sweetcaptcha_contactform_settings();
-
-  $descriptions = array(
-      'sweetcaptcha_app_id' => __('Insert your Application ID', 'sweetcaptcha'),
-      'sweetcaptcha_key' => __('Insert SweetCaptcha Key', 'sweetcaptcha'),
-      'sweetcaptcha_secret' => __('Insert SweetCaptcha Secret', 'sweetcaptcha'),
-      'sweetcaptcha_public_url' => __('Default values is "/wp-content/plugins/sweetcaptcha/library/sweetcaptcha.php" - don\'t change it unless you know what are you doing.', 'sweetcaptcha'),
-      'sweetcaptcha_form_omit_users' => __('Disable SweetCaptcha for registered users.', 'sweetcaptcha'),
-      'sweetcaptcha_form_registration' => __('Enable SweetCaptcha for registration form.', 'sweetcaptcha'),
-      'sweetcaptcha_form_comment' => __('Enable SweetCaptcha for comment form.', 'sweetcaptcha'),
-      'sweetcaptcha_form_login' => __('Enable SweetCaptcha for login form.', 'sweetcaptcha'),
-      'sweetcaptcha_form_lost' => __('Enable SweetCaptcha for lost password form.', 'sweetcaptcha'),
-      'sweetcaptcha_form_contact_7' => __('Enable SweetCaptcha for contact form 7 plug-in.', 'sweetcaptcha'),
-      'sweetcaptcha_form_contact' => __('Do you want a contact form with SweetCaptcha? Check the check box, configure and save settings.', 'sweetcaptcha'),
-  );
 
   // See if the user has posted us some information
   // If they did, this hidden field will be set to 'Y'

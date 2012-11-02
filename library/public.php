@@ -8,19 +8,13 @@
 function sweetcaptcha_login_head() {
 	global $wp_version;
 	$wp_versions = explode( '.', $wp_version );
-	
 	if ( ( $wp_versions[ 0 ] >= 2 ) && ( $wp_versions[ 1 ] >= 9 ) ) {
-		
-    //edited voodoo
     $jquery = get_option('home') . '/wp-includes/js/jquery/jquery.js';
 	} else {
 	   // edited voodoo
-		$jquery = get_option('home') . '/wp-content/plugins/sweetcaptcha-revolutionary-free-captcha-service/js/jquery.min.js';
+		$jquery = get_option('home') . '/wp-content/plugins/'.SWEETCAPTCHA_DIR_NAME.'/js/jquery.min.js';
 	}
-	 // edited voodoo
-	 
 	echo '<script type="text/javascript" src="' . $jquery . '"></script>';
-	
 }
 
 /**
@@ -227,9 +221,7 @@ function sweetcaptcha_before_registration_submit_buttons() {
  */
 function sweetcaptcha_signup_validate() {
 	global $bp, $sweetcaptcha_instance;
-	
 	$scValues = sweetcaptcha_get_values();
-	
 	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
 		$bp->signup->errors['signup_username'] = __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' );
 	}
