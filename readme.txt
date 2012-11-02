@@ -1,6 +1,6 @@
 === Sweet Captcha ===
 Contributors: SweetCaptcha
-Version: 2.4.3.3
+Version: 2.4.3.4
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 3.0.0
 Tested up to: 3.4.1
@@ -38,13 +38,13 @@ Sweet Captcha is an anti-spam CAPTCHA solution for Wordpress forms,Contact Form 
 
 = Sweet Captcha Integration with WordPress =
 
-Sweet Captcha protects the following forms:
+Sweet Captcha protects the following:
 ----------------------------------------
-* Registration form 
-* Comment form
-* Login form
-* Lost password form
-* Contact Form 7
+* Sweet Captcha for Registration form 
+* Sweet Captcha for Comment form
+* Sweet Captcha for Login form
+* Sweet Captcha for Lost password form
+* Sweet Captcha for Contact Form 7
 
 Sweet Catpcha Features:
 --------------------------
@@ -96,7 +96,7 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 
 In order for Sweet Captcha to work you need to follow the instructions on the "INSTALLATION" tab. Otherwise Sweet Captcha might not work correctly. 
 
-For news and updates follow us on Facebook and Twitter: 
+For Sweet Captcha news and updates follow us on Facebook and Twitter: 
 
 [Facebook Fan & Support page](http://facebook.com/SweetCaptcha)
 
@@ -111,7 +111,7 @@ For news and updates follow us on Facebook and Twitter:
 
 1. Go to Sweet captcha settings (under "Settings") , make sure  you have the 3 values in order to activate it.
 
-* Application ID
+* Sweet Captcha Application ID
 * Sweet Captcha Key
 * Sweet Captcha Secret
 (You will Recieve the 3 Sweet Captcha parametes via E-mail)
@@ -295,6 +295,9 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
+= V2.4.3.4- 02.11.2012 =
+Bugfix : Sweet Captcha bug, "no such a user" after pressing "save changes" - solved.
+
 = V2.4.3.3- 02.11.2012 =
 Bugfix : Sweet Captcha Reset button is now working.
 Bugfix: Buddypress, Sweet Captcha remove from above log in upper right side
@@ -312,18 +315,18 @@ Bugfix : Sweet Captcha PHP error on Dashboard.
 
 = V1.0.8 - 30.03.2012 =
 
-* Bugfix : theme issues plus ajax conflicts - bug was fixed.
-* Bugfix : "domain not regitered" issues - bug was fixed. 
+* Bugfix : theme issues plus ajax conflicts - Sweet Captcha bug was fixed.
+* Bugfix : "domain not regitered" issues - Sweet Captchabug was fixed. 
 
 = V1.0.7 - 27.02.2012 =
 
-* Bugfix : theme issues plus ajax conflicts - bug was fixed.
-* Bugfix : "domain not regitered" issues - bug was fixed.
+* Bugfix : theme issues plus ajax conflicts - Sweet Captcha bug was fixed.
+* Bugfix : "domain not regitered" issues - Sweet Captcha bug was fixed.
 
 = V1.0.6 - 27.02.2012 =
 
-* NEW : French language support added to the plugin.
-* Bugfix : CSS issues on black.
+* NEW : Sweet Captcha French language support added to the plugin.
+* Bugfix : CSS issues on black Sweet Captcha bug was fixed.
 
 = V1.0.5 - 27.04.2011 =
 
