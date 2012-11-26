@@ -88,6 +88,8 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 * Spanish Sweet CAPTCHA translation.
 * Polish Sweet CAPTCHA translation.
 * Chinese Sweet CAPTCHA translation.
+* Korean Sweet CAPTCHA translation.
+* Norwegian Sweet CAPTCHA translation.
 
 
 
