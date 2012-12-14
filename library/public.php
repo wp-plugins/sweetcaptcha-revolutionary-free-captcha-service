@@ -21,11 +21,13 @@ function sweetcaptcha_login_head() {
  * Add Sweetcaptcha jQuery - version >= 1.4 is required to wordpress pages
  * @return void
  */
+/*
 function sweetcaptcha_wp_head() {
 	//edited voodoo
 	wp_enqueue_script( 'jquery' );
   //echo '<script type="text/javascript" src="' . get_bloginfo('siteurl') . '/wp-content/plugins/sweetcaptcha/js/jquery.min.js"></script>';
 }
+*/
 
 /**
  * Get SweetCaptcha values from POST data

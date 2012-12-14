@@ -1,3 +1,6 @@
+
+//if ( !jQuery.curCSS ) { jQuery.curCSS = jQuery.css; }
+
 jQuery(document).ready(function(){
 	jQuery('#swtcptcf_additions_options').change( function() {
 		if(jQuery(this).is(':checked') )

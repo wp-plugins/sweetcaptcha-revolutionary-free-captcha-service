@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 2.4.3.4
+Version: 2.4.3.5
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -45,7 +45,9 @@ $wp_versions = explode( '.', $wp_version );
 function sweetcaptcha_init() {
   global $wpdb;
   wp_enqueue_script('jquery');
-  wp_enqueue_script( 'cntctfrmScript', plugins_url( 'js/swtcptcf.js', __FILE__ ) );
+  // TODO: http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js -> v1.9.2 - 2012-11-27
+  wp_enqueue_script( 'jquery-ui.custom', plugins_url( 'js/jquery-ui.custom.min.js', __FILE__ ) ); // v1.9.2 - 2012-11-27
+  wp_enqueue_script( 'swtcptcf', plugins_url( 'js/swtcptcf.js', __FILE__ ) );
 }
 
 add_action('init', 'sweetcaptcha_init');
