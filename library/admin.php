@@ -28,7 +28,11 @@ function sweetcaptcha_is_registered() {
 function sweetcaptcha_admin_notices() {
   // If the plugin is not configured yet.
   if (!sweetcaptcha_is_registered()) {
-    echo '<div class="error sweetcaptcha" style="text-align: center;"><p style="color: red; font-size: 14px; font-weight: bold;">' . __('Your SweetCaptcha plugin is not setup yet') . '</p><p>' . __('Click ') . '<a href="options-general.php?page=sweetcaptcha">' . __('here') . '</a> ' . __('to finish setup.') . '</p></div>';
+    echo '<div class="error sweetcaptcha" style="text-align: center; float:left;width:99%;">
+      <p style="color: red; font-size: 14px; font-weight: bold;">' . __('Your SweetCaptcha plugin is not setup yet') 
+      . '</p><p>' . __('Click ') . '<a href="options-general.php?page=sweetcaptcha">' . __('here') . '</a> ' 
+      . __('to finish setup.') . '</p></div>'
+    ;
   }
 }
 
