@@ -152,6 +152,14 @@ each website accordingly.
 
 For example - The Sweet CAPTCHA behaves differen on a weddings blog than on a Bank website.
 
+= Got locked out from your WordPress site for any reason?? Sweet CAPTCHA is here to help =
+
+Do the following:
+A. Connect to your site via FTP.
+B. Delete the relevant plugin folder under - "wp-content"---> "plugins". (This can help with any plugin issues, not just Sweet CAPTCHA...)
+C. After you are in the dashboard, make sure you install the latest Sweet CAPTCHA version by going to into-
+Plugins --> Add new ---> search --> submit " Sweet CAPTCHA " ---> install ---> activate.
+ 
 = Does Sweet CAPTCHA works with Flash? =
 
 No! flash is dead...(we believe on a CAPTCHA who works on a cross platform environment:
