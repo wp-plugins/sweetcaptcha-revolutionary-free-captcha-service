@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 2.4.3.6
+Version: 2.4.3.7
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -38,27 +38,36 @@ define('SWEETCAPTCHA_PHP_PATH', SWEETCAPTCHA_URL . '/library/sweetcaptcha.php');
 define('SWEETCAPTCHA_LIBRARY', SWEETCAPTCHA_ROOT . '/library');
 // define absolute path to plugin templates
 define('SWEETCAPTCHA_TEMPLATE', SWEETCAPTCHA_ROOT . '/template');
+define('SWEETCAPTCHA_ERROR_MESSAGE', 'The solution of task you submitted was incorrect. Please read the instruction and try again.');
+define('SWEETCAPTCHA_ERROR_MESSAGE_BR', 'The solution of task you submitted was incorrect.<br>Please read the instruction and try again.');
 
 // prepare wordpress version for check
 $wp_versions = explode( '.', $wp_version );
 
+add_action('init', 'sweetcaptcha_init', 100);
 function sweetcaptcha_init() {
-  global $wpdb;
+  //global $wpdb;
   wp_enqueue_script('jquery');
   // TODO: http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js -> v1.9.2 - 2012-11-27
   wp_enqueue_script( 'jquery-ui.custom', plugins_url( 'js/jquery-ui.custom.min.js', __FILE__ ) ); // v1.9.2 - 2012-11-27
   wp_enqueue_script( 'swtcptcf', plugins_url( 'js/swtcptcf.js', __FILE__ ) );
 }
 
-add_action('init', 'sweetcaptcha_init');
+add_action( 'plugins_loaded', 'sweetcaptcha_plugins_loaded', 1 );
+function sweetcaptcha_plugins_loaded() {
+  if ( get_option( 'sweetcaptcha_form_contact_7' ) ) { // add SweetCaptcha to Contact Form 7
+    if ( function_exists( 'wpcf7_add_shortcode' ) ) {
+    	wpcf7_add_shortcode( 'sweetcaptcha', 'sweetcaptcha_shortcode_cf7', true );
+  		add_filter( 'wpcf7_validate_sweetcaptcha', 'sweetcaptcha_check', 10, 2 );
+    }
+  }
+}
 
 require_once SWEETCAPTCHA_LIBRARY . '/sweetcaptcha.php';
 wp_enqueue_style( 'sweetcaptcha_Stylesheet', plugins_url( 'css/style.css', __FILE__ ) ); // TODO
 // split action to admin and public part
 if (is_admin()) {
-  
 	require_once SWEETCAPTCHA_LIBRARY . '/admin.php';
-  	
 	// Add admin notices.
 	add_action('admin_notices', 'sweetcaptcha_admin_notices');
 	// add link to settings menu
@@ -112,20 +121,11 @@ if (is_admin()) {
 		add_action('bp_before_registration_submit_buttons', 'sweetcaptcha_before_registration_submit_buttons' );
 		add_action('bp_signup_validate', 'sweetcaptcha_signup_validate' );
 		
-		// adding SweetCaptcha to Network Wordpress registration form - only version >= 3
+		// adding SweetCaptcha to Network Wordpress registration form - WP version >= 3
 		if ( ( $wp_versions[ 0 ] > 2 ) ) {
 			add_action('signup_extra_fields', 'sweetcaptcha_signup_extra_fields' );
 			add_filter('wpmu_validate_user_signup', 'sweetcaptcha_wpmu_validate_user_signup' );
 		}
-	}
-  
-}
-
-// add SweetCaptcha to Contact Form 7 - to both admin and public part of Wordpress
-if ( get_option( 'sweetcaptcha_form_contact_7' ) ) {
-	if ( function_exists( 'wpcf7_add_shortcode' ) ) {
-		wpcf7_add_shortcode( 'sweetcaptcha', 'sweetcaptcha_shortcode', true );
-		add_filter( 'wpcf7_validate_sweetcaptcha', 'sweetcaptcha_validate', 10, 2 );
 	}
 }
 

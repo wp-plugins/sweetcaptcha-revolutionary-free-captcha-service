@@ -61,22 +61,16 @@ function sweetcaptcha_move_submit_button() {
  */
 function sweetcaptcha_comment_form() {
 	global $sweetcaptcha_instance, $user_ID, $wp_version;
-	
 	$wp_versions = explode( '.', $wp_version );
-	
 	if ( get_option( 'sweetcaptcha_form_ommit_users' ) && isset($user_ID) && (int)$user_ID > 0 ) {
 		return TRUE;
 	}
-	
 	echo $sweetcaptcha_instance->get_html();
 	echo sweetcaptcha_move_submit_button();
-	
 	if ( $wp_versions[ 0 ] >= 3 && $wp_versions[ 1 ] >= 0 ) { 
 		echo '<script language="JavaScript">document.getElementById("respond").style.overflow="visible";</script>';
 	}
-	
 	remove_action( 'comment_form', 'sweetcaptcha_comment_form' );
-	
 	return TRUE;
 }
 
@@ -86,25 +80,21 @@ function sweetcaptcha_comment_form() {
  */
 function sweetcaptcha_comment_form_check($comment) {
 	global $sweetcaptcha_instance, $user_ID;
-	
 	if ( get_option( 'sweetcaptcha_form_ommit_users' ) && isset($user_ID) && (int)$user_ID > 0 ) {
 		return $comment;
 	}
-	
 	if ( !empty( $comment[ 'comment_type' ] ) && ( $comment[ 'comment_type' ] != 'comment' ) ) {
 		return $comment;
 	}
-	
 	$scValues = sweetcaptcha_get_values();
-	
 	if ( $sweetcaptcha_instance->check($scValues) != 'false' ) {
         return $comment;
 	} else {
 		// since 2.0.4
 		if (function_exists('wp_die')) {
-			wp_die('<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( 'The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
+			wp_die('<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		} else {
-			die('<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( 'The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ));
+			die('<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ));
 		}
 	}
 }
@@ -130,10 +120,8 @@ function sweetcaptcha_adjust_form() {
  */
 function sweetcaptcha_login_form() {
 	global $sweetcaptcha_instance;
-	
 	echo $sweetcaptcha_instance->get_html();
 	echo '<script language="JavaScript">if (document.getElementById("login")) { document.getElementById("login").style.width = "582px"; } jQuery(document).ready(function(){ jQuery("#sidebar-login-form #captchi li").css("display","block"); jQuery("#sidebar-login-form #captchi").css("max-height","500px");});</script><br>';
-	
 	return true;
 }
 
@@ -158,13 +146,10 @@ function sweetcaptcha_registration_form() {
  */
 function sweetcaptcha_authenticate($user) {
 	global $sweetcaptcha_instance;
-	
 	$scValues = sweetcaptcha_get_values();
-
 	if ( !empty( $_POST ) && $sweetcaptcha_instance->check($scValues) == 'false' ) {
-		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( 'The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
+		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 	}
-	
 	return $user;
 }
 
@@ -175,14 +160,11 @@ function sweetcaptcha_authenticate($user) {
  */
 function sweetcaptcha_lost_password_check($user) {
 	global $sweetcaptcha_instance;
-	
 	$scValues = sweetcaptcha_get_values();
-	
 	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
-		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
+		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		return $user;
 	}
-	
 	return TRUE;
 }
 
@@ -193,13 +175,10 @@ function sweetcaptcha_lost_password_check($user) {
  */
 function sweetcaptcha_register_form_check($errors) {
 	global $sweetcaptcha_instance;
-	
 	$scValues = sweetcaptcha_get_values();
-	
 	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
-		$errors->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );			
+		$errors->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );			
 	}
-	
 	return $errors;
 }
 
@@ -225,8 +204,26 @@ function sweetcaptcha_signup_validate() {
 	global $bp, $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
 	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
-		$bp->signup->errors['signup_username'] = __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' );
+		$bp->signup->errors['signup_username'] = __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' );
 	}
+}
+
+/**
+ * Add SweetCaptcha standard check (use for Contact Form 7)
+ */
+function sweetcaptcha_check($errors, $tag = '') {
+	global $sweetcaptcha_instance;
+	$scValues = sweetcaptcha_get_values();
+	if ( $sweetcaptcha_instance->check( $scValues ) != 'true' ) {
+		if ( !empty( $tag ) ) { 
+			$errors['valid'] = false;
+			$errors['reason']['your-sweetcaptcha'] = __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' );
+		} else {
+			$errors['errors']->add( 'sweetcaptcha', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
+		}
+	}
+  //var_dump($errors); die();
+	return $errors;
 }
 
 /**
@@ -236,15 +233,11 @@ function sweetcaptcha_signup_validate() {
  */
 function sweetcaptcha_signup_extra_fields($errors) {
 	global $sweetcaptcha_instance;
-	
 	$error = $errors->get_error_message( 'captcha_wrong' );
-	
 	echo $sweetcaptcha_instance->get_html();
-	
 	if ( isset($error) && !empty( $error ) ) {
 		echo '<p class="error">' . $error . '</p>';
 	}
-
 	return true;
 }
 
@@ -255,17 +248,24 @@ function sweetcaptcha_signup_extra_fields($errors) {
  */
 function sweetcaptcha_wpmu_validate_user_signup($errors) {
 	global $sweetcaptcha_instance;
-	
 	if ( $_POST['stage'] == 'validate-user-signup' ) {
 		$scValues = sweetcaptcha_get_values();
-	
 		if ( $sweetcaptcha_instance->check( $scValues ) == 'false' ) {
-			$errors['errors']->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
+			$errors['errors']->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		}
 		
 	}
-	
 	return $errors;
+}
+
+/**
+ * Add SweetCaptcha short code to Contact Form 7
+ * @return a string with HTML code
+ */
+function sweetcaptcha_shortcode_cf7() {
+  $input = '<span class="wpcf7-form-control-wrap your-sweetcaptcha"><input type="text" name="your-sweetcaptcha" value="" size="1" class="wpcf7-form-control wpcf7-text" style="display:none;" /></span>';
+  $sc = $input.sweetcaptcha_shortcode();
+	return $sc;
 }
 
 /**
@@ -290,9 +290,9 @@ function sweetcaptcha_validate($errors, $tag = NULL) {
 	if ( $sweetcaptcha_instance->check( $scValues ) != 'true' ) {
 		if ( !empty( $tag ) ) { // if Contact Form 7
 			$errors['valid'] = false;
-			$errors['reason']['your-message'] = __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' );
+			$errors['reason']['your-message'] = __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' );
 		} else {
-			$errors['errors']->add( 'sweetcaptcha', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __('The solution of task you submitted was incorrect. Please read the instruction and try again.', 'sweetcaptcha' ) );
+			$errors['errors']->add( 'sweetcaptcha', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		}
 	}
 	return $errors;

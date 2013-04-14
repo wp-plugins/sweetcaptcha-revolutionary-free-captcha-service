@@ -75,14 +75,15 @@ if (!function_exists('swtcptcf_display_form')) {
       if (isset($error_message['error_captcha'])) {
         $content .= '<div class="error-form">' . $error_message['error_captcha'] . '</div>';
       }
+
+      $content .= sweetcaptcha_shortcode();
+
       if ($swtcptcf_options['swtcptcf_send_copy'] == 1) {
         $content .= '<div style="text-align: left;">
 						<input type="checkbox" value="1" name="swtcptcf_contact_send_copy" id="swtcptcf_contact_send_copy" style="text-align: left; margin: 0;" ' . ( $send_copy == '1' ? " checked=\"checked\" " : "" ) . ' />
 						<label for="swtcptcf_contact_send_copy">' . __("Send me a copy", 'sweetcaptcha') . '</label>
 					</div>';
       }
-
-      $content .= sweetcaptcha_shortcode();
 
       $content .= '<div style="text-align: left; padding-top: 8px;">
 					<input type="hidden" value="send" name="swtcptcf_contact_action"><input type="hidden" value="Version: 3.13" />
@@ -144,11 +145,12 @@ if (!function_exists('swtcptcf_check_form')) {
       unset($error_message['error_message']);
     
     sweetcaptcha_validate_contact_form($error_message);
-    
+
     if (1 == count($error_message)) { // OK
       unset($error_message['error_form']);
       $result = swtcptcf_send_mail();
     }
+
     return $result;
   }
 
@@ -326,8 +328,7 @@ function sweetcaptcha_validate_contact_form(&$errors) {
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
 	if ( $sweetcaptcha_instance->check( $scValues ) != 'true' ) {
-    $errors['error_captcha'] = __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' 
-            . __('The solution of task you submitted was incorrect. <br>Please read the instruction and try again.', 'sweetcaptcha' );
+    $errors['error_captcha'] = '<strong>'.__( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE_BR, 'sweetcaptcha' );
 	}
 	return $errors;
 }
@@ -335,9 +336,7 @@ function sweetcaptcha_validate_contact_form(&$errors) {
 //**********************************************************************************************************************
 
 add_shortcode('sweetcaptcha_contact_form', 'swtcptcf_display_form');
-
 add_action('init', 'swtcptcf_check_and_send');
-
 add_filter('wp_mail_from_name', 'swtcptcf_email_name_filter', 10, 1);
 
 ?>
