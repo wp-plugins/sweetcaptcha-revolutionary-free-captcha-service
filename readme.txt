@@ -1,6 +1,6 @@
 === Sweet Captcha ===
 Contributors: SweetCaptcha
-Version: 2.4.3.7
+Version: 2.4.3.8
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 3.0.0
 Tested up to: 3.5
@@ -89,6 +89,7 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 * Chinese Sweet CAPTCHA translation.
 * Korean Sweet CAPTCHA translation.
 * Norwegian Sweet CAPTCHA translation.
+* Bulgarian Sweet CAPTCHA translation.
 
 
 
@@ -318,6 +319,10 @@ p>Your Name (required)<br />
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= V2.4.3.8- 06.04.2013 =
+Feature: Added website category and website gender fields support.
+Feature: Sweet Captcha Bulgarian language support added to the plugin.
 
 = V2.4.3.7- 13.01.2013 =
 Bugfix : Contact form 7 new version problem - fixed.

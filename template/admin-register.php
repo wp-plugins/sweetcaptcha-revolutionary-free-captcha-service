@@ -35,11 +35,33 @@
 
 </style>
 <script type="text/javascript">
-	jQuery(document).ready(function() {
-		jQuery('#register_submit').click(function () {
-			jQuery('#register').submit();
-		});
-	});
+jQuery(document).ready(function() {
+  jQuery('#register_submit').click(function () {
+  		jQuery("form#register .error").remove();
+    	var hasError = false;
+      jQuery(".requiredField").each(function() {
+  			if(jQuery.trim(jQuery(this).val()) == '') {
+          if ( jQuery(this).attr('name') == 'site_category' ) {
+            jQuery(this).after('<span class="error">Please choose something and then press `Continue`</span>');
+          } else {
+            jQuery(this).after('<span class="error">*</span>');
+          }
+        	hasError = true;
+  			} else 
+        if ( jQuery(this).attr('name') == 'email' ) {
+    			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      		if ( ! emailReg.test(jQuery.trim(jQuery(this).val())) ) {
+        		jQuery(this).after('<span class="error">You entered an invalid email</span>');
+  					hasError = true;
+    			}
+      	}
+      });
+      if ( ! hasError ) {
+        jQuery('form#register').submit();
+      }
+  });
+});
+
 </script>
 <div class="wrap">
 	<h2><?php _e( 'Register to SweetCaptcha', 'sweetcaptcha' ); ?></h2>

@@ -1,16 +1,16 @@
 <script  type="text/javascript">
-jQuery(document).ready(function($) {
-	jQuery('#sweetcaptcha_form_contact').click(function () {
-    //jQuery("#sweetcaptcha_form_contact_options").slideToggle("fast");
-    if (this.checked) {
+  jQuery(document).ready(function($) {
+    jQuery('#sweetcaptcha_form_contact').click(function () {
+      //jQuery("#sweetcaptcha_form_contact_options").slideToggle("fast");
+      if (this.checked) {
       
-    } else {
+      } else {
       
-    }
-  })
-});
+      }
+    })
+  });
 </script>
-  <div class="wrap">
+<div class="wrap">
   <div style="height:66px;">
     <div class="icon32 icon32-bws" id="icon-options-sweetcaptcha"></div>
     <h2 style="height: 100%; padding-left: 150px; padding-top: 20px;"><?php _e('SweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
       by clicking the <a href="javascript:void(0)" onclick="document.formDonate.submit();">donate</a> button.
     </div>
     <!--<a style="display: block; float:left;margin-left: 10px;" href="http://www.paypal.com/" target="_new">
-      <img style="width:100px; height:48px;" src="<?php //echo plugins_url('donate-paypal-100x48.png', __FILE__);   ?>" alt="Donate with PayPal"/>
+      <img style="width:100px; height:48px;" src="<?php //echo plugins_url('donate-paypal-100x48.png', __FILE__);      ?>" alt="Donate with PayPal"/>
     </a>-->
     <div style="float:right; padding:0; margin:0;margin-top: -2px;">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" target="_blank">
@@ -40,11 +40,11 @@ jQuery(document).ready(function($) {
 
   </div>
 
-<?php if (!empty($message)): ?>
-  <div class="updated" style="width:99%; float: left">
-    <p><strong><?php echo $message; ?></strong></p>
-  </div>
-<?php endif; ?>
+  <?php if (!empty($message)): ?>
+    <div class="updated" style="width:99%; float: left">
+      <p><strong><?php echo $message; ?></strong></p>
+    </div>
+  <?php endif; ?>
 
   <form name="form1" method="post" action="">
     <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
@@ -53,63 +53,58 @@ jQuery(document).ready(function($) {
         <?php
         if (!empty($sweetcaptcha_options) && is_array($sweetcaptcha_options)):
           foreach ($sweetcaptcha_options as $opt_name => $opt):
-            ?>
-              
-            <tr valign="top">
-              <th scope="row" style="min-width: 15%"><label for="<?php echo $opt_name ?>"><?php echo $opt['title'] . ':'; ?></label></th>
-              <?php
-              if (!substr_count($opt_name, '_form_')) {
-                $type = 'text';
-                $checked = null;
-                $class = ' class="regular-text"';
-                $value = isset($options_values[$opt_name]) ? $options_values[$opt_name] : null;
-              } else {
-                $type = 'checkbox';
-                $checked = isset($options_values[$opt_name]) && !empty($options_values[$opt_name]) ? ' checked="checked"' : null;
-                $class = null;
-                $value = 1;
-              }
-              ?>
-              <td>
-                <input<?php echo $class ?> id="<?php echo $opt_name ?>" type="<?php echo $type ?>" name="<?php echo $opt_name ?>" value="<?php echo $value ?>" size="50"<?php echo $checked ?> />
-                <?php if (isset($sweetcaptcha_options[$opt_name]['description'])): ?>
-                  <span class="description">
-                    <?php echo $sweetcaptcha_options[$opt_name]['description']; ?>
-                  </span>
-                <?php endif; ?>
-              </td>
-            </tr>
-            <?php
-            if ( $opt_name == 'sweetcaptcha_form_contact_7') {
-            ?>
-            <tr>
-              <td colspan="2" style="padding-top: 0px; padding-left: 20px;">
-                <?php echo __('To integrate SweetCaptcha with Contact Form 7 please do the following:') . '<br />'; ?>
-                <?php echo __('A. Copy the following tag with square brackets [sweetcaptcha]') . '<br />'; ?> 
-                <?php echo __('B. Open the page with settings of Contact Form 7') . '<br />'; ?>
-                <?php echo __('C. Paste the copied tag into "Form" section above the line which contains "&lt;p&gt;[submit "Send"]&lt;/p&gt;"') . '<br />'; ?>
-                <?php printf(__('D. Need more help ?  <a href="%s" title="Contact us" target="_blank">Contact us</a>.'), 'http://www.sweetcaptcha.com/contact.php'); ?>
-              </td>
-            </tr>
-            <?php
+        ?>
+        <tr valign="top">
+          <th scope="row" style="min-width: 15%"><label for="<?php echo $opt_name ?>"><?php echo $opt['title'] . ':'; ?></label></th>
+          <?php
+            if (!substr_count($opt_name, '_form_')) {
+              $type = 'text';
+              $checked = null;
+              $class = ' class="regular-text"';
+              $value = isset($options_values[$opt_name]) ? $options_values[$opt_name] : null;
+            } else {
+              $type = 'checkbox';
+              $checked = isset($options_values[$opt_name]) && !empty($options_values[$opt_name]) ? ' checked="checked"' : null;
+              $class = null;
+              $value = 1;
             }
-            ?>
-
-            <?php
-            if ( $opt_name == 'sweetcaptcha_form_contact') {
-            ?>
-            <tr>
-              <td colspan="2" style="padding-top: 0px; padding-left: 20px;">
-                <?php 
-                  $display_cfoptions = '';//( $checked ) ? '' : 'display:none;';
-                  include 'admin-options-contactform.php';
-                ?>
-              </td>
-            </tr>
-            <?php
-            }
-            ?>
-            <?php
+          ?>
+          <td>
+            <input<?php echo $class ?> id="<?php echo $opt_name ?>" type="<?php echo $type ?>" name="<?php echo $opt_name ?>" value="<?php echo $value ?>" size="50"<?php echo $checked ?> />
+            <?php if (isset($sweetcaptcha_options[$opt_name]['description'])): ?>
+            <span class="description">
+            <?php echo $sweetcaptcha_options[$opt_name]['description']; ?>
+            </span>
+            <?php endif; ?>
+          </td>
+        </tr>
+        
+        <?php
+        if ($opt_name == 'sweetcaptcha_form_contact_7') {
+        ?>
+        <tr>
+          <td colspan="2" style="padding-top: 0px; padding-left: 20px;">
+            <?php echo __('To integrate SweetCaptcha with Contact Form 7 please do the following:') . '<br />'; ?>
+            <?php echo __('A. Copy the following tag with square brackets [sweetcaptcha]') . '<br />'; ?> 
+            <?php echo __('B. Open the page with settings of Contact Form 7') . '<br />'; ?>
+            <?php echo __('C. Paste the copied tag into "Form" section above the line which contains "&lt;p&gt;[submit "Send"]&lt;/p&gt;"') . '<br />'; ?>
+            <?php printf(__('D. Need more help ?  <a href="%s" title="Contact us" target="_blank">Contact us</a>.'), 'http://'.SWEETCAPTCHA_SITE_URL.'/contact.php'); ?>
+          </td>
+        </tr>
+        <?php } ?>
+        
+        <?php if ($opt_name == 'sweetcaptcha_form_contact') { ?>
+        <tr>
+          <td colspan="2" style="padding-top: 0px; padding-left: 20px;">
+          <?php
+          $display_cfoptions = ''; //( $checked ) ? '' : 'display:none;';
+          include 'admin-options-contactform.php';
+          ?>
+          </td>
+        </tr>
+        <?php } ?>
+        
+        <?php
           endforeach;
         endif;
         ?>

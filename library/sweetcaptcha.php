@@ -39,8 +39,8 @@ class Sweetcaptcha {
 	private $secret;
 	private $path;
 	
-	// edited voodoo
-	const API_URL = 'www.sweetcaptcha.com';
+	const API_URL = SWEETCAPTCHA_SITE_URL; //'qa.sweetcaptcha.com';
+  //const API_URL_IP = '109.201.141.91';
 	
 	function __construct($appid, $key, $secret, $path) {
 		$this->appid = $appid;
@@ -69,11 +69,12 @@ class Sweetcaptcha {
 		foreach ($params as $param_name => $param_value) {
 			$param_data .= urlencode($param_name) .'='. urlencode($param_value) .'&'; 
 		}
-		
-		if (  !($fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10) ) ) {
-			die ("Couldn't connect to server");
-        }
-		
+		//echo 'Connecting to '.self::API_URL_IP;
+		$fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10);
+		if ( ! $fs ) {
+			die ("Couldn't connect to server: $errstr ($errno)");
+    }
+    
 		$req = "POST /api.php HTTP/1.0\r\n";
 		$req .= "Host: ".self::API_URL."\r\n";
 		$req .= "Content-Type: application/x-www-form-urlencoded\r\n";

@@ -74,7 +74,7 @@ function sweetcaptcha_register_form() {
 
   $hidden_field_name = 'mt_submit_hidden';
   $form_html = 'Could not load registration form.';
-
+  //var_export($_POST);
   // See if the user has posted us some information
   // If they did, this hidden field will be set to 'Y'
   if ((isset($_POST[$hidden_field_name])) && ($_POST[$hidden_field_name] == 'Y')) {
@@ -102,11 +102,16 @@ function sweetcaptcha_register_form() {
   } else {
     $form_html = $sweetcaptcha_instance->get_register_form();
   }
-
-  // Fill the fields.
+  // Fill Register Form fields
   $website = json_encode(empty($_POST['website']) ? "http://{$_SERVER['SERVER_NAME']}/" : $_POST['website']);
   $email = json_encode($_POST['email']);
+  
+  //jQuery('<div><input type="text" class="field" name="dynamic[]" value="' + i + '" /></div>').fadeIn('slow').appendTo('.inputs');
   $form_html .= "<script type=\"text/javascript\" language=\"javascript\">\n";
+  $form_html .= "    jQuery('input[name=website]').addClass('requiredField');\n";
+  $form_html .= "    jQuery('input[name=email]').addClass('requiredField');\n";
+  $form_html .= "    jQuery('select[name=site_category]').addClass('requiredField');\n";
+    
   $form_html .= "    jQuery('input[name=website]').val($website);\n";
   $form_html .= "    jQuery('input[name=email]').val($email);\n";
 
@@ -119,15 +124,23 @@ function sweetcaptcha_register_form() {
     $form_html .= "    jQuery('select[name=category]').val($category);\n";
   }
   if (isset($_POST['site_category'])) {
-    $site_category = $_POST['site_category'];
+    $site_category = (int) $_POST['site_category'];
     $form_html .= "    jQuery('select[name=site_category]').val($site_category);\n";
+  }
+  if (isset($_POST['gender'])) {
+    $gender = (int) $_POST['gender'];
+    $form_html .= "    jQuery('select[name=gender]').val($gender);\n";
   }
   $form_html .= "</script>\n";
   
-  $form_html = preg_replace('/category:/', 'SweetCaptcha theme:', $form_html);
-  $form_html = preg_replace('/Please fill in your site details/', 'Fill in your SweetCaptcha details to activate:', $form_html);
+  $form_html = preg_replace('/category:/', 'SweetCaptcha design:', $form_html);
+  //$form_html = preg_replace('/Please fill in your site details/', 'Fill in your SweetCaptcha details to activate:', $form_html);
   $form_html = preg_replace('/language:/', 'SweetCaptcha language:', $form_html);
-  $form_html = preg_replace('/SweetCaptcha theme:/', 'SweetCaptcha design:', $form_html);
+  //$form_html = preg_replace('/SweetCaptcha theme:/', 'SweetCaptcha design:', $form_html);
+  //$form_html = str_lreplace("</tr>", '</tr><tr><td class="left">Website category:</td><td class="right"><select name="site_category">'.$select_html.'</select></td></tr>',$form_html);
+  
+  $form_html .= "<script type=\"text/javascript\">\n jQuery('input[name=email_verify]').val(jQuery('input[name=email]').val()); jQuery('input[name=email_verify]').parent().parent().hide(); </script>\n";
+  $form_html .= "<script type=\"text/javascript\">\n jQuery('input[name=email]').change(function() {jQuery('input[name=email_verify]').val(jQuery(this).val());}); </script>\n";
   
   /*
   $cats = file(SWEETCAPTCHA_ROOT.'/site-categories.txt');
@@ -393,7 +406,7 @@ function sweetaptcha_share_buttons() {
   ?>
 
   <div id="share">
-    <a name="fb_share" class="fb-share" type="button_count" href="#" onclick="window.open( 'http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.sweetcaptcha.com&amp;t=Check%20this%20cool%20service%20out!', 'sharer', 'toolbar=0, status=0, width=626, height=436' ); return false;"><img src="<?php echo plugins_url('fbshare.jpg', dirname(__FILE__)); ?>" alt="Share" style="vertical-align: middle;" /></a>
+    <a name="fb_share" class="fb-share" type="button_count" href="#" onclick="window.open( 'http://www.facebook.com/sharer.php?u=http%3A%2F%2F<?php echo SWEETCAPTCHA_SITE_URL;?>&amp;t=Check%20this%20cool%20service%20out!', 'sharer', 'toolbar=0, status=0, width=626, height=436' ); return false;"><img src="<?php echo plugins_url('fbshare.jpg', dirname(__FILE__)); ?>" alt="Share" style="vertical-align: middle;" /></a>
 
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-text="Check out this cool service!" data-via="sweetcaptcha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   </div>
