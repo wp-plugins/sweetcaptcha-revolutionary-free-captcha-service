@@ -40,6 +40,8 @@ Sweet Captcha is an anti-spam CAPTCHA solution for Wordpress forms,Contact Form 
 
 Sweet Captcha protects the following:
 ----------------------------------------
+* NEW!!! Sweet From - Sweet Captcha has its own integrated form.
+(Check it out under Sweet Captcha settings)
 * Sweet Captcha for Registration form 
 * Sweet Captcha for Comment form
 * Sweet Captcha for Login form
