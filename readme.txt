@@ -1,6 +1,6 @@
 === Sweet Captcha ===
 Contributors: SweetCaptcha
-Version: 2.4.3.8
+Version: 2.4.3.9
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 3.0.0
 Tested up to: 3.5
@@ -321,6 +321,9 @@ p>Your Name (required)<br />
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= V2.4.3.9- 01.08.2013 =
+Feature: Added HTTPS support to SweetCaptcha sites(SSL).
 
 = V2.4.3.8- 06.04.2013 =
 Feature: Added website category and website gender fields support.
