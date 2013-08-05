@@ -4,7 +4,7 @@
  * Add SweetCaptcha jQuery - version >= 1.4 is required to login pages
  * @return void
  */
- 
+/* DEPRECATED
 function sweetcaptcha_login_head() {
 	global $wp_version;
 	$wp_versions = explode( '.', $wp_version );
@@ -16,6 +16,7 @@ function sweetcaptcha_login_head() {
 	}
 	echo '<script type="text/javascript" src="' . $jquery . '"></script>';
 }
+*/
 
 /**
  * Add Sweetcaptcha jQuery - version >= 1.4 is required to wordpress pages
@@ -63,15 +64,15 @@ function sweetcaptcha_comment_form() {
 	global $sweetcaptcha_instance, $user_ID, $wp_version;
 	$wp_versions = explode( '.', $wp_version );
 	if ( get_option( 'sweetcaptcha_form_ommit_users' ) && isset($user_ID) && (int)$user_ID > 0 ) {
-		return TRUE;
+		return true;
 	}
 	echo $sweetcaptcha_instance->get_html();
 	echo sweetcaptcha_move_submit_button();
 	if ( $wp_versions[ 0 ] >= 3 && $wp_versions[ 1 ] >= 0 ) { 
-		echo '<script language="JavaScript">document.getElementById("respond").style.overflow="visible";</script>';
+		echo '<script type="text/javascript">document.getElementById("respond").style.overflow="visible";</script>';
 	}
 	remove_action( 'comment_form', 'sweetcaptcha_comment_form' );
-	return TRUE;
+	return true;
 }
 
 /**
@@ -104,14 +105,7 @@ function sweetcaptcha_comment_form_check($comment) {
  * @return boolean
  */
 function sweetcaptcha_adjust_form() {
-	return '
-  <script language="JavaScript">
-    jQuery(document).ready(function() { 
-      jQuery("#sidebar-login-form #captchi li").css("display","block"); 
-      jQuery("#sidebar-login-form #captchi").css("max-height","500px");
-    });
-  </script><br>'
-  ;
+	return '';
 }
 
 /**
@@ -121,7 +115,6 @@ function sweetcaptcha_adjust_form() {
 function sweetcaptcha_login_form() {
 	global $sweetcaptcha_instance;
 	echo $sweetcaptcha_instance->get_html();
-	echo '<script language="JavaScript">if (document.getElementById("login")) { document.getElementById("login").style.width = "582px"; } jQuery(document).ready(function(){ jQuery("#sidebar-login-form #captchi li").css("display","block"); jQuery("#sidebar-login-form #captchi").css("max-height","500px");});</script><br>';
 	return true;
 }
 

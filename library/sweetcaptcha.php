@@ -60,7 +60,6 @@ class Sweetcaptcha {
 			'is_mobile' => preg_match('/mobile/i', $_SERVER['HTTP_USER_AGENT']) ? 'true' : 'false',
 			'user_ip' => $_SERVER['REMOTE_ADDR'],
 		);
-		
 		return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
 	}
 	
@@ -69,7 +68,6 @@ class Sweetcaptcha {
 		foreach ($params as $param_name => $param_value) {
 			$param_data .= urlencode($param_name) .'='. urlencode($param_value) .'&'; 
 		}
-		//echo 'Connecting to '.self::API_URL_IP;
 		$fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10);
 		if ( ! $fs ) {
 			die ("Couldn't connect to server: $errstr ($errno)");
@@ -84,15 +82,15 @@ class Sweetcaptcha {
 	
 		$response = '';
 		fwrite($fs, $req);
-		
 		while ( !feof($fs) ) {
 			$response .= fgets($fs, 1160);
 		}
-		
 		fclose($fs);
 		
 		$response = explode("\r\n\r\n", $response, 2);
-		
+ 		
+    $response[1] = str_replace ('<script type="text/javascript" src="http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js"></script>', '', $response[1] );
+    
 		return $response[1];	
 	}
 	

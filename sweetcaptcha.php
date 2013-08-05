@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 2.4.3.9
+Version: 3.0.1
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -45,12 +45,17 @@ define('SWEETCAPTCHA_ERROR_MESSAGE_BR', 'The solution of task you submitted was 
 // prepare wordpress version for check
 $wp_versions = explode( '.', $wp_version );
 
-add_action('init', 'sweetcaptcha_init', 100);
+add_action('init', 'sweetcaptcha_init', 10);
 function sweetcaptcha_init() {
   //global $wpdb;
   wp_enqueue_script('jquery');
   // TODO: http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js -> v1.9.2 - 2012-11-27
-  wp_enqueue_script( 'jquery-ui.custom', plugins_url( 'js/jquery-ui.custom.min.js', __FILE__ ) ); // v1.9.2 - 2012-11-27
+  //wp_enqueue_script( 'jquery-ui.custom', plugins_url( 'js/jquery-ui.custom.min.js', __FILE__ ) ); // v1.9.2 - 2012-11-27
+  //wp_enqueue_script('jquery-ui-core'); // use WP jquery.ui.core.min.js
+  
+  wp_enqueue_script('jquery-ui-core', false, array('jquery'));
+  wp_enqueue_script('jquery-ui-draggable', false, array('jquery'));
+  wp_enqueue_script('jquery-ui-droppable', false, array('jquery'));
   wp_enqueue_script( 'swtcptcf', plugins_url( 'js/swtcptcf.js', __FILE__ ) );
 }
 
