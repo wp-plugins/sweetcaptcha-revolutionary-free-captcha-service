@@ -1,6 +1,6 @@
 === Sweet Captcha ===
 Contributors: SweetCaptcha
-Version: 3.0.1
+Version: 3.0.2
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security,captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capcha, 
 Requires at least: 3.0.0
 Tested up to: 3.5
@@ -62,8 +62,12 @@ Sweet Captcha design categories:
 * Sweet Captcha "Music" category.
 * Sweet Captcha "Movies" category.
 * Sweet Captcha "Shopping" category.
-* Sweet Captcha "Wedding" category.
 * Sweet Captcha "Food" category.
+* Sweet Captcha "Wedding" category.
+* Sweet Captcha "Games" category.
+* Sweet Captcha "Sports" category.
+* Sweet Captcha "Animals" category.
+* Sweet Captcha "Finance" category.
 * Sweet Captcha "Random" category.
 
 
@@ -321,6 +325,12 @@ p>Your Name (required)<br />
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= V3.0.2 - 20.08.2013 =
+* NEW : Sweet Captcha Animals category added to the plugin.
+* NEW : Sweet Captcha Finance category added to the plugin.
+* NEW : Sweet Captcha Sports category added to the plugin.
+* NEW : Sweet Captcha Games category added to the plugin.
 
 = V3.0.1- 05.08.2013 =
 Bugfix : Sweet Captcha Ajax based conflicts with Themes and other plugins - fixed.
