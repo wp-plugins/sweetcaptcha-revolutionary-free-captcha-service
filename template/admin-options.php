@@ -11,10 +11,8 @@
   });
 </script>
 <div class="wrap">
-  <div style="height:66px;">
-    <div class="icon32 icon32-bws" id="icon-options-sweetcaptcha"></div>
-    <h2 style="height: 100%; padding-left: 150px; padding-top: 20px;"><?php _e('SweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
-  </div>
+  <div class="icon32 icon32-bws" id="icon-options-sweetcaptcha"></div>
+  <h2 style="height: 100%; padding-left: 150px; padding-top: 20px; line-height: 40px;"><?php _e('SweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
   <p style="margin-top: 5px; "><?php _e('Congratulations on your new SweetCaptcha!', 'sweetcaptcha'); ?></p>
 
   <div style="font-style: italic; margin-left: 10px; background: #eeeeee; padding:6px 4px 4px 4px; height:52px; width:410px; clear: both;
@@ -26,9 +24,6 @@
       If you like this plug-in and find it useful, help <br>keep this plug-in free and actively developed <br>
       by clicking the <a href="javascript:void(0)" onclick="document.formDonate.submit();">donate</a> button.
     </div>
-    <!--<a style="display: block; float:left;margin-left: 10px;" href="http://www.paypal.com/" target="_new">
-      <img style="width:100px; height:48px;" src="<?php //echo plugins_url('donate-paypal-100x48.png', __FILE__);      ?>" alt="Donate with PayPal"/>
-    </a>-->
     <div style="float:right; padding:0; margin:0;margin-top: -2px;">
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" target="_blank">
         <input type="hidden" name="cmd" value="_s-xclick">
