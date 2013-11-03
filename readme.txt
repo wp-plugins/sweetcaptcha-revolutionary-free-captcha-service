@@ -323,86 +323,78 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
-= V3.0.4- 03.11.2013 =
+= V3.0.4 - 03.11.2013 =
 * NEW: Mobile and tablets support - will show and handle "click" interaction instead of "drag".
 * NEW: Sweet Captcha Danish language support added to the plug-in.
-Feature: Native HTML5 drag-n-drop support (Removing jQuery-UI dependency and avoiding plug-ins conflicts). 
-Feature: Improved security. 
-Bugfix: Log on sweet CAPTCHA has been disabled. 
-Bugfix: Improved javascript behaviour, resolving conflicts. 
+* Feature: Native HTML5 drag-n-drop support (Removing jQuery-UI dependency and avoiding plug-ins conflicts). 
+* Feature: Improved security. 
+* Bugfix: Log on sweet CAPTCHA has been disabled. 
+* Bugfix: Improved javascript behaviour, resolving conflicts. 
 
+= V3.0.3 - 01.10.2013 =
+* Bugfix : HTTPS support for Sweet Captcha is now fixed.
+* Bugfix : Donation button in the settings - fixed. (was offsite)
 
-= V3.0.3- 01.10.2013 =
-Bugfix : HTTPS support for Sweet Captcha is now fixed.
-Bugfix : Donation button in the settings - fixed. (was offsite)
-
-
-= V3.0.2- 20.08.2013 =
+= V3.0.2 - 20.08.2013 =
 * NEW : Sweet Captcha Animals category added to the plugin.
 * NEW : Sweet Captcha Finance category added to the plugin.
 * NEW : Sweet Captcha Sports category added to the plugin.
 * NEW : Sweet Captcha Games category added to the plugin.
 
-= V3.0.1- 05.08.2013 =
-Bugfix : Sweet Captcha Ajax based conflicts with Themes and other plugins - fixed.
-Feature: Wordpress 3.6 compatibility for Sweet Captcha .
+= V3.0.1 - 05.08.2013 =
+* Bugfix : Sweet Captcha Ajax based conflicts with Themes and other plugins - fixed.
+* Feature: Wordpress 3.6 compatibility for Sweet Captcha .
 
+= V2.4.3.9 - 01.08.2013 =
+* Feature: Added HTTPS support to Sweet Captcha sites(SSL).
 
-= V2.4.3.9- 01.08.2013 =
-Feature: Added HTTPS support to Sweet Captcha sites(SSL).
+= V2.4.3.8 - 06.04.2013 =
+* Feature: Added website category and website gender fields support.
+* Feature: Sweet Captcha Bulgarian language support added to the plugin.
 
-= V2.4.3.8- 06.04.2013 =
-Feature: Added website category and website gender fields support.
-Feature: Sweet Captcha Bulgarian language support added to the plugin.
+= V2.4.3.7 - 13.01.2013 =
+* Bugfix : Contact form 7 new version problem - fixed.
+* Feature: Added integrated Sweet Form.
 
-= V2.4.3.7- 13.01.2013 =
-Bugfix : Contact form 7 new version problem - fixed.
-Feature: Added integrated Sweet Form.
+= V2.4.3.6 - 13.01.2013 =
+* Bugfix : Plugins Conflict - fixed.
 
-= V2.4.3.6- 13.01.2013 =
-Bugfix : Plugins Conflict - fixed.
+= V2.4.3.5 - 17.12.2012 =
+* Bugfix : Login and lost password issues - fixed.
 
-= V2.4.3.5- 17.12.2012 =
-Bugfix : Login and lost password issues - fixed.
-
-= V2.4.3.5- 14.12.2012 =
+= V2.4.3.5 - 14.12.2012 =
 Bugfix : Sweet Captcha is now compatible to Wordpress 3.5.
 
-= V2.4.3.4- 02.11.2012 =
-Bugfix : Sweet Captcha bug, "no such a user" after pressing "save changes" - solved.
+= V2.4.3.4 - 02.11.2012 =
+* Bugfix : Sweet Captcha bug, "no such a user" after pressing "save changes" - solved.
 
-= V2.4.3.3- 02.11.2012 =
-Bugfix : Sweet Captcha Reset button is now working.
-Bugfix: Buddypress, Sweet Captcha remove from above log in upper right side
+= V2.4.3.3 - 02.11.2012 =
+* Bugfix : Sweet Captcha Reset button is now working.
+* Bugfix: Buddypress, Sweet Captcha remove from above log in upper right side
 
 = V2.4.3 - 09.10.2012 =
-Bugfix : Sweet Captcha PHP error on Dashboard, 4.2.1 upgrade.
-
+* Bugfix : Sweet Captcha PHP error on Dashboard, 4.2.1 upgrade.
 
 = V2.4.2 - 09.10.2012 =
-Bugfix : Sweet Captcha PHP error on Dashboard.
+* Bugfix : Sweet Captcha PHP error on Dashboard.
 
 = V2.4.1 - 15.09.2012 =
 * NEW : Sweet Captcha Italian language support added to the plugin.
 * Bugfix : Updated all Sweet Captcha functionality for wordpress 3.4.2.
 
 = V1.0.8 - 30.03.2012 =
-
 * Bugfix : theme issues plus ajax conflicts - Sweet Captcha bug was fixed.
 * Bugfix : "domain not regitered" issues - Sweet Captchabug was fixed. 
 
 = V1.0.7 - 27.02.2012 =
-
 * Bugfix : theme issues plus ajax conflicts - Sweet Captcha bug was fixed.
 * Bugfix : "domain not regitered" issues - Sweet Captcha bug was fixed.
 
 = V1.0.6 - 27.02.2012 =
-
 * NEW : Sweet Captcha French language support added to the plugin.
 * Bugfix : CSS issues on black Sweet Captcha bug was fixed.
 
 = V1.0.5 - 27.04.2011 =
-
 * NEW : added Sweet CAPTCHA language translation support.
 
 = 1.0 =
@@ -427,6 +419,7 @@ Current Sweet CAPTCHA version.
 * NEW added Sweet CAPTCHA language support.
 * Stable Sweet CAPTCHA with WordPress 3.4.1
 * Security tightened up even more on Sweet CAPTCHA
+
 == Upgrade Notice ==
 
 * Security tightened up even more on Sweet CAPTCHA
