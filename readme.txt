@@ -323,21 +323,21 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
-= V3.0.4 - 03.11.2013 =
-* NEW : Sweet Captcha Danish language support added to the plug-in.
-Feature : Mobile support - will show and handle "click" interaction instead of "drag" on mobile devices.
-Feature : Native HTML5 drag-n-drop support (Removed jQuery-UI dependency).
-Feature : Extra security characteristic added.
-Bugfix : Log on sweet CAPTCHA has been disabled.
-Bugfix : Javascript enhancments avoiding conficts with other plug-ins.
+= V3.0.4- 03.11.2013 =
+* NEW: Mobile and tablets support - will show and handle "click" interaction instead of "drag".
+* NEW: Sweet Captcha Danish language support added to the plug-in.
+Feature: Native HTML5 drag-n-drop support (Removing jQuery-UI dependency and avoiding plug-ins conflicts). 
+Feature: Improved security. 
+Bugfix: Log on sweet CAPTCHA has been disabled. 
+Bugfix: Improved javascript behaviour, resolving conflicts. 
 
 
-= V3.0.3 - 01.10.2013 =
+= V3.0.3- 01.10.2013 =
 Bugfix : HTTPS support for Sweet Captcha is now fixed.
 Bugfix : Donation button in the settings - fixed. (was offsite)
 
 
-= V3.0.2 - 20.08.2013 =
+= V3.0.2- 20.08.2013 =
 * NEW : Sweet Captcha Animals category added to the plugin.
 * NEW : Sweet Captcha Finance category added to the plugin.
 * NEW : Sweet Captcha Sports category added to the plugin.
