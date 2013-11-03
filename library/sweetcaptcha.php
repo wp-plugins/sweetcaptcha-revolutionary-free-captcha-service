@@ -21,10 +21,10 @@ $sweetcaptcha_instance = new Sweetcaptcha(
  */
 
 /**
- * Handles remote negotiation with Sweetcaptcha.com.
+ * Handles remote negotiation with sweetCaptcha.com
  *
- * @version 1.0
- * @since December 14th, 2010
+ * @version 1.1
+ * @updated November 3, 2013
  * 
  */
 
@@ -39,8 +39,7 @@ class Sweetcaptcha {
 	private $secret;
 	private $path;
 	
-	const API_URL = SWEETCAPTCHA_SITE_URL; //'qa.sweetcaptcha.com';
-  //const API_URL_IP = '109.201.141.91';
+	const API_URL = SWEETCAPTCHA_SITE_URL; 
 	
 	function __construct($appid, $key, $secret, $path) {
 		$this->appid = $appid;
@@ -55,10 +54,10 @@ class Sweetcaptcha {
 			'method' => $method,
 			'appid' => $this->appid,
 			'key' => $this->key,
-			'secret' => $this->secret,
 			'path' => $this->path,
-			'is_mobile' => preg_match('/mobile/i', $_SERVER['HTTP_USER_AGENT']) ? 'true' : 'false',
 			'user_ip' => $_SERVER['REMOTE_ADDR'],
+			'user_agent' => $_SERVER['HTTP_USER_AGENT'],
+			'platform' => 'wordpress'
 		);
 		return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
 	}
@@ -88,8 +87,6 @@ class Sweetcaptcha {
 		fclose($fs);
 		
 		$response = explode("\r\n\r\n", $response, 2);
- 		
-    $response[1] = str_replace ('<script type="text/javascript" src="http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js"></script>', '', $response[1] );
     
 		return $response[1];	
 	}

@@ -46,14 +46,21 @@ function sweetcaptcha_get_values() {
  * @return string
  */
 function sweetcaptcha_move_submit_button() {
-	return '<div id="sweetcaptcha-submit-button" class="form-submit"><br /></div>'.
-		'<script type="text/javascript">'.
-			'var sub = document.getElementById("submit");'.
-			'if (sub!=undefined){'.
-			'sub.parentNode.removeChild(sub);'.
-			'document.getElementById("sweetcaptcha-submit-button").appendChild (sub);'.
-			'document.getElementById("submit").tabIndex = 6;}'.
-		'</script>';
+	return '
+		<div id="sweetcaptcha-submit-button" class="form-submit"><br /></div>
+		<script type="text/javascript">
+		;(function(){
+			try {
+				var sub = document.getElementById("submit");
+				if (sub) {
+					sub.parentNode.removeChild(sub);
+					document.getElementById("sweetcaptcha-submit-button").appendChild (sub);
+					document.getElementById("submit").tabIndex = 6;
+				}
+			}
+			catch (e) {}
+		})();
+	';
 }
 
 /**
@@ -69,7 +76,18 @@ function sweetcaptcha_comment_form() {
 	echo $sweetcaptcha_instance->get_html();
 	echo sweetcaptcha_move_submit_button();
 	if ( $wp_versions[ 0 ] >= 3 && $wp_versions[ 1 ] >= 0 ) { 
-		echo '<script type="text/javascript">document.getElementById("respond").style.overflow="visible";</script>';
+		echo '
+		<script type="text/javascript">
+		;(function(){
+			try {
+				var respond = document.getElementById("respond");
+			  if (respond) {
+				  document.getElementById("respond").style.overflow="visible";
+				}
+			}
+			catch (e) {}
+		})();
+		</script>';
 	}
 	remove_action( 'comment_form', 'sweetcaptcha_comment_form' );
 	return true;
@@ -88,7 +106,7 @@ function sweetcaptcha_comment_form_check($comment) {
 		return $comment;
 	}
 	$scValues = sweetcaptcha_get_values();
-	if ( $sweetcaptcha_instance->check($scValues) != 'false' ) {
+	if ( $sweetcaptcha_instance->check($scValues) == 'true' ) {
         return $comment;
 	} else {
 		// since 2.0.4
@@ -140,7 +158,7 @@ function sweetcaptcha_registration_form() {
 function sweetcaptcha_authenticate($user) {
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
-	if ( !empty( $_POST ) && $sweetcaptcha_instance->check($scValues) == 'false' ) {
+	if ( !empty( $_POST ) && $sweetcaptcha_instance->check($scValues) != 'true' ) {
 		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __( SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 	}
 	return $user;
@@ -154,7 +172,7 @@ function sweetcaptcha_authenticate($user) {
 function sweetcaptcha_lost_password_check($user) {
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
-	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
+	if ( $sweetcaptcha_instance->check($scValues) != 'true' ) {
 		$user = new WP_Error( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		return $user;
 	}
@@ -169,7 +187,7 @@ function sweetcaptcha_lost_password_check($user) {
 function sweetcaptcha_register_form_check($errors) {
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
-	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
+	if ( $sweetcaptcha_instance->check($scValues) != 'ארוק' ) {
 		$errors->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );			
 	}
 	return $errors;
@@ -196,7 +214,7 @@ function sweetcaptcha_before_registration_submit_buttons() {
 function sweetcaptcha_signup_validate() {
 	global $bp, $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
-	if ( $sweetcaptcha_instance->check($scValues) == 'false' ) {
+	if ( $sweetcaptcha_instance->check($scValues) != 'true' ) {
 		$bp->signup->errors['signup_username'] = __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' );
 	}
 }
@@ -243,7 +261,7 @@ function sweetcaptcha_wpmu_validate_user_signup($errors) {
 	global $sweetcaptcha_instance;
 	if ( $_POST['stage'] == 'validate-user-signup' ) {
 		$scValues = sweetcaptcha_get_values();
-		if ( $sweetcaptcha_instance->check( $scValues ) == 'false' ) {
+		if ( $sweetcaptcha_instance->check( $scValues ) != 'true' ) {
 			$errors['errors']->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );
 		}
 		

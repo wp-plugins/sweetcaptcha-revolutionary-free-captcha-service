@@ -1,9 +1,9 @@
 === Sweet Captcha ===
-Contributors: SweetCaptcha
-Version: 3.0.3
-Tags: captcha, antispam, comment, catcha, registration, match captcha, lost password, login, spam, images captcha, capcha, captha 
+Contributors: Sweet Captcha
+Version: 3.0.4
+Tags: captcha, antispam, comment, catcha, registration, match captcha, lost password, login, spam, images captcha, capcha 
 Requires at least: 3.0.0
-Tested up to: 3.5
+Tested up to: 3.7.1
 Stable tag: trunk
 
 Sweet Captcha - Design your own CAPTCHA and put your users and your website at first priority.
@@ -15,7 +15,7 @@ Sweet Captcha is a free Captcha service putting your users and your website at f
 We dont think CAPTCHA should be hard to users,captcha
 should be hard to machines! 
 
-= Help Keep SweetCaptcha Plugin Free =
+= Help Keep Sweet Captcha Plugin Free =
 
 If you find this plugin useful to you, please consider [__making a small donation__](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76) to help contribute to our time invested and to further development. Thanks for your kind support!
 
@@ -87,7 +87,7 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 * Czech Sweet CAPTCHA translation.
 * Hebrew Sweet CAPTCHA translation.
 * Slovak Sweet CAPTCHA translation.
-* Arab Sweet CAPTCHA translation.
+* Arabic Sweet CAPTCHA translation.
 * Italian Sweet CAPTCHA translation.
 * Romanian Sweet CAPTCHA translation.
 * Spanish Sweet CAPTCHA translation.
@@ -96,6 +96,7 @@ you want to contribute a Sweet Captcha translation,drop us a mail)
 * Korean Sweet CAPTCHA translation.
 * Norwegian Sweet CAPTCHA translation.
 * Bulgarian Sweet CAPTCHA translation.
+* Danish Sweet CAPTCHA translation
 
 
 
@@ -117,7 +118,7 @@ For Sweet Captcha news and updates follow us on Facebook and Twitter:
 
 1. Install and activate Sweet Captcha.
 
-1. Go to Sweet captcha settings (under "Settings") , make sure  you have the 3 values in order to activate it.
+1. Go to Sweet captcha settings (under "Settings") , make sure you have the 3 values in order to activate it.
 
 * Sweet Captcha Application ID
 * Sweet Captcha Key
@@ -216,15 +217,15 @@ Yes!
 When you install the Sweet Captcha plugin, choose your desire language from more than 17 languages.
 
 = Can I change my current language for my Sweet captcha? =
-Yes, just drop us a mail at: support@SweetCaptcha.com and we will do it for you ;-) .
+Yes, just drop us a mail at: support@sweetcaptcha.com and we will do it for you ;-) .
 
 = I cannot find my language on Sweet CAPTCHA translations. What can i do? =
 
 All Sweet CAPTCHA translations came from users just like you ;-) ,so, if you want to contribute a new Sweet CAPTCHA language,
-just drop us a mail to: support@SweetCAPTCHA.com
+just drop us a mail to: support@sweetcaptcha.com
 
 = How can i change my current design category of Sweet Captcha? = 
-Just drop us a mail at: support@SweetCaptcha.com and we will do it for you ;-)
+Just drop us a mail at: support@sweetcaptcha.com and we will do it for you ;-)
 
 = May I use my own images in your CAPTCHA? =
 
@@ -310,21 +311,26 @@ p>Your Name (required)<br />
 
 == Screenshots ==
 
-1. Sweet Captcha Dashboard Settings.
-2. sweet cpatcha.php file values.
-3. Sweet Captcha values under Settings. 
-4. Sweet Captcha on contact form 7.
-5. Sweet Captcha on login form.
-6. Go to the [Sweet Captcha](http://www.sweetcaptcha.com) website
-7. Register your website on Sweet Captcha
-8. Download the Sweet Captcha.php file
-9. Sweet Captcha infographics
+1. Sweet Captcha Dashboard Settings
+2. Sweet Captcha on contact form 7
+3. Sweet Captcha infographics
+4. Visit [Sweet Captcha](http://www.sweetcaptcha.com) website
+
 
 == Requirements ==
 
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= V3.0.4 - 03.11.2013 =
+* NEW : Sweet Captcha Danish language support added to the plug-in.
+Feature : Mobile support - will show and handle "click" interaction instead of "drag" on mobile devices.
+Feature : Native HTML5 drag-n-drop support (Removed jQuery-UI dependency).
+Feature : Extra security characteristic added.
+Bugfix : Log on sweet CAPTCHA has been disabled.
+Bugfix : Javascript enhancments avoiding conficts with other plug-ins.
+
 
 = V3.0.3 - 01.10.2013 =
 Bugfix : HTTPS support for Sweet Captcha is now fixed.
@@ -343,7 +349,7 @@ Feature: Wordpress 3.6 compatibility for Sweet Captcha .
 
 
 = V2.4.3.9- 01.08.2013 =
-Feature: Added HTTPS support to SweetCaptcha sites(SSL).
+Feature: Added HTTPS support to Sweet Captcha sites(SSL).
 
 = V2.4.3.8- 06.04.2013 =
 Feature: Added website category and website gender fields support.
