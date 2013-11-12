@@ -24,7 +24,7 @@ $sweetcaptcha_instance = new Sweetcaptcha(
  * Handles remote negotiation with sweetCaptcha.com
  *
  * @version 1.1
- * @updated November 3, 2013
+ * @updated November 12, 2013
  * 
  */
 
