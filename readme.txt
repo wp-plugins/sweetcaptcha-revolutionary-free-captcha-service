@@ -1,5 +1,5 @@
 === Sweet Captcha ===
-Contributors: sweetcaptcha, zvysha
+Contributors: SweetCaptcha
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76
 Tags: captsha, antispam, kaptcha, captcha, comment, catcha, registration, registration captcha, security, captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capch
 Requires at least: 3.0
@@ -12,7 +12,7 @@ Protect your website from spam using our human friendly, fun and designed Captch
 
 == Description ==
 
-Sweet Captcha is a free captcha service putting your users and your website at first priority.
+Sweet Captcha is a free image captcha service putting your users and your website at first priority.
 
 Our Captcha protects your website from spam, using a fun and illustrated protecting plugin!
 
