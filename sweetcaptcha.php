@@ -3,7 +3,7 @@
 Plugin Name: SweetCaptcha
 Plugin URI: http://www.sweetcaptcha.com
 Description: Adds SweetCaptcha anti-spam solution to WordPress on the comment form, registration form, and other forms. Is compatible with Contact Form 7 and BuddyPress plug-ins. Wordpress network is also supported.
-Version: 3.0.4
+Version: 3.0.5
 Author: Sweet Captcha.com ltd.
 Author URI: http://www.sweetcaptcha.com
 License: GNU GPL2
@@ -26,6 +26,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 define('SWEETCAPTCHA_SITE_URL', 'www.sweetcaptcha.com');
+
 // for backward compatibility - 2.0
 defined('WP_PLUGIN_DIR') or define('WP_PLUGIN_DIR', ABSPATH . '/wp-content/plugins');
 
@@ -47,15 +48,7 @@ $wp_versions = explode( '.', $wp_version );
 
 add_action('init', 'sweetcaptcha_init', 10);
 function sweetcaptcha_init() {
-  //global $wpdb;
   wp_enqueue_script('jquery');
-  // TODO: http://www.sweetcaptcha.com/min/?f=res/js/captchi.jquery-ui-1.8.6.custom.min.js -> v1.9.2 - 2012-11-27
-  //wp_enqueue_script( 'jquery-ui.custom', plugins_url( 'js/jquery-ui.custom.min.js', __FILE__ ) ); // v1.9.2 - 2012-11-27
-  //wp_enqueue_script('jquery-ui-core'); // use WP jquery.ui.core.min.js
-  
-  // wp_enqueue_script('jquery-ui-core', false, array('jquery'));
-  // wp_enqueue_script('jquery-ui-draggable', false, array('jquery'));
-  // wp_enqueue_script('jquery-ui-droppable', false, array('jquery'));
   wp_enqueue_script( 'swtcptcf', plugins_url( 'js/swtcptcf.js', __FILE__ ) );
 }
 
@@ -103,7 +96,7 @@ if (is_admin()) {
 	}
 	
 	// add Sweet Captcha to login form
-  /*
+  
 	if ( get_option( 'sweetcaptcha_form_login' ) ) {
     // only for version >= 2.8
 		if ( ( ( $wp_versions[ 0 ] >= 2 ) || ( $wp_versions[ 1 ] > 7 ) ) ) {
@@ -113,7 +106,7 @@ if (is_admin()) {
     // add SweetCaptcha to BuddyPress login form
     add_action( 'bp_sidebar_login_form', 'sweetcaptcha_login_form' );
 	}
-  */
+  
 	
 	// add Sweet Captcha to lost password form
 	if ( get_option( 'sweetcaptcha_form_lost' ) ) {

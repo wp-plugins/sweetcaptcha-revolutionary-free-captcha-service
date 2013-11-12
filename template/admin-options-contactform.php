@@ -3,7 +3,7 @@
 global $error, $wpdb; 
 $userslogin = $wpdb->get_col("SELECT user_login FROM  $wpdb->users ", 0);
 ?>
-<div class="wrap" id="sweetcaptcha_form_contact_options" style="<?php echo $display_cfoptions;?>">
+<div class="wrap" id="sweetcaptcha_form_contact_options">
   <div class="error" style="width:99%; float: left; <?php if (empty($error)) echo 'display:none'; ?>" ><p><strong><?php echo $error; ?></strong></p></div>
   <p><?php _e("If you would like to add a Contact Form to your website, just copy and put this shortcode onto your post or page:", 'sweetcaptcha'); ?> <b>[sweetcaptcha_contact_form]</b></p>
   <br>

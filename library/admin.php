@@ -8,7 +8,7 @@ $sweetcaptcha_options = array(
     'sweetcaptcha_form_omit_users' => array('title' => __('Omit captcha for registered users', 'sweetcaptcha'), 'description' => __('Disable SweetCaptcha for registered users.', 'sweetcaptcha')),
     'sweetcaptcha_form_registration' => array('title' => __('SweetCaptcha for Registration Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for registration form.', 'sweetcaptcha')),
     'sweetcaptcha_form_comment' => array('title' => __('SweetCaptcha for Comment Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for comment form.', 'sweetcaptcha')),
-    //'sweetcaptcha_form_login' => array('title' => __('SweetCaptcha for Login Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for login form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_login' => array('title' => __('SweetCaptcha for Login Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for login form<br/><b>please make sure SweetCaptcha works on your site before enabling this</b>', 'sweetcaptcha')),
     'sweetcaptcha_form_lost' => array('title' => __('SweetCaptcha for Lost Password Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for lost password form.', 'sweetcaptcha')),
     'sweetcaptcha_form_contact_7' => array('title' => __('SweetCaptcha for Contact Form 7', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for contact form 7 plug-in.', 'sweetcaptcha')),
     'sweetcaptcha_form_contact' => array('title' => __('<b style="color:brown;">SweetCaptcha Contact Form</b>', 'sweetcaptcha'), 'description' => __('Do you want a contact form with SweetCaptcha? Check the check box, configure and save settings.', 'sweetcaptcha')),
@@ -34,6 +34,7 @@ function sweetcaptcha_admin_notices() {
       . __('to finish setup.') . '</p></div>'
     ;
   }
+  echo '<style type="text/css">body.wp-admin #wpfooter {display: none}</style>';
 }
 
 /**
@@ -110,8 +111,7 @@ function sweetcaptcha_register_form() {
   $form_html .= "<script type=\"text/javascript\" language=\"javascript\">\n";
   $form_html .= "    jQuery('input[name=website]').addClass('requiredField');\n";
   $form_html .= "    jQuery('input[name=email]').addClass('requiredField');\n";
-  $form_html .= "    jQuery('select[name=site_category]').addClass('requiredField');\n";
-    
+  // $form_html .= "    jQuery('select[name=site_category]').addClass('requiredField');\n";
   $form_html .= "    jQuery('input[name=website]').val($website);\n";
   $form_html .= "    jQuery('input[name=email]').val($email);\n";
 
@@ -123,19 +123,19 @@ function sweetcaptcha_register_form() {
     $category = (int) $_POST['category'];
     $form_html .= "    jQuery('select[name=category]').val($category);\n";
   }
-  if (isset($_POST['site_category'])) {
-    $site_category = (int) $_POST['site_category'];
-    $form_html .= "    jQuery('select[name=site_category]').val($site_category);\n";
-  }
-  if (isset($_POST['gender'])) {
-    $gender = (int) $_POST['gender'];
-    $form_html .= "    jQuery('select[name=gender]').val($gender);\n";
-  }
+  // if (isset($_POST['site_category'])) {
+  //   $site_category = (int) $_POST['site_category'];
+  //   $form_html .= "    jQuery('select[name=site_category]').val($site_category);\n";
+  // }
+  // if (isset($_POST['gender'])) {
+  //   $gender = (int) $_POST['gender'];
+  //   $form_html .= "    jQuery('select[name=gender]').val($gender);\n";
+  // }
   $form_html .= "</script>\n";
   
-  $form_html = preg_replace('/category:/', 'SweetCaptcha design:', $form_html);
+  // $form_html = preg_replace('/category:/', 'SweetCaptcha design:', $form_html);
   //$form_html = preg_replace('/Please fill in your site details/', 'Fill in your SweetCaptcha details to activate:', $form_html);
-  $form_html = preg_replace('/language:/', 'SweetCaptcha language:', $form_html);
+  // $form_html = preg_replace('/language:/', 'SweetCaptcha language:', $form_html);
   //$form_html = preg_replace('/SweetCaptcha theme:/', 'SweetCaptcha design:', $form_html);
   //$form_html = str_lreplace("</tr>", '</tr><tr><td class="left">Website category:</td><td class="right"><select name="site_category">'.$select_html.'</select></td></tr>',$form_html);
   
@@ -368,7 +368,7 @@ function sweetcaptcha_activate() {
       'sweetcaptcha_form_omit_users' => '1',
       'sweetcaptcha_form_registration' => '1',
       'sweetcaptcha_form_comment' => '1',
-      //'sweetcaptcha_form_login' => '',
+      'sweetcaptcha_form_login' => '0',
       'sweetcaptcha_form_lost' => '1',
       'sweetcaptcha_form_contact_7' => '1',
       'sweetcaptcha_form_contact' => '0',
@@ -403,8 +403,7 @@ function sweetcaptcha_uninstall() {
  * @return void
  */
 function sweetaptcha_share_buttons() {
-  ?>
-
+  /*
   <div id="share">
     <a name="fb_share" class="fb-share" type="button_count" href="#" onclick="window.open( 'http://www.facebook.com/sharer.php?u=http%3A%2F%2F<?php echo SWEETCAPTCHA_SITE_URL;?>&amp;t=Check%20this%20cool%20service%20out!', 'sharer', 'toolbar=0, status=0, width=626, height=436' ); return false;"><img src="<?php echo plugins_url('fbshare.jpg', dirname(__FILE__)); ?>" alt="Share" style="vertical-align: middle;" /></a>
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-text="Check out this cool service!" data-via="sweetcaptcha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
@@ -414,6 +413,5 @@ function sweetaptcha_share_buttons() {
     #share { text-align: left; padding-bottom: 2px; }
     .twitter-share-button, fb-share { vertical-align: middle }
   </style>
-
-  <?php
+  */
 }

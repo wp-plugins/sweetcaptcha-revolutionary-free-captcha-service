@@ -187,7 +187,7 @@ function sweetcaptcha_lost_password_check($user) {
 function sweetcaptcha_register_form_check($errors) {
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
-	if ( $sweetcaptcha_instance->check($scValues) != 'ארוק' ) {
+	if ( $sweetcaptcha_instance->check($scValues) != 'true' ) {
 		$errors->add( 'captcha_wrong', '<strong>' . __( 'ERROR', 'sweetcaptcha' ) . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha' ) );			
 	}
 	return $errors;

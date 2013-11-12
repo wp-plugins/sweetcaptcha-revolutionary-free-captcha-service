@@ -59,6 +59,7 @@ class Sweetcaptcha {
 			'user_agent' => $_SERVER['HTTP_USER_AGENT'],
 			'platform' => 'wordpress'
 		);
+
 		return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
 	}
 	
