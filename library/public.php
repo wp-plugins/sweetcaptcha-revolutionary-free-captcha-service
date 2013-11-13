@@ -54,13 +54,13 @@ function sweetcaptcha_move_submit_button() {
 				var sub = document.getElementById("submit");
 				if (sub) {
 					sub.parentNode.removeChild(sub);
-					document.getElementById("sweetcaptcha-submit-button").appendChild (sub);
+					document.getElementById("sweetcaptcha-submit-button").appendChild(sub);
 					document.getElementById("submit").tabIndex = 6;
 				}
 			}
 			catch (e) {}
 		})();
-	</script>';
+	  </script>';
 }
 
 /**
