@@ -60,7 +60,7 @@ function sweetcaptcha_move_submit_button() {
 			}
 			catch (e) {}
 		})();
-	';
+	</script>';
 }
 
 /**
