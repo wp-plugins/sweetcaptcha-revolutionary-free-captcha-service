@@ -12,11 +12,7 @@ Protect your website from spam using our human friendly, fun and designed Captch
 
 == Description ==
 
-Sweet Captcha is a free image captcha service putting your users and your website at first priority.
-
-Our Captcha protects your website from spam, using a fun and illustrated protecting plugin!
-
-No typing required, our Captcha is fully interactive, sweet and easy to use!
+Sweet Captcha is a free image captcha service putting your users and your website at first priority. Our CAPTCHA protects your website from spam, using a fun and illustrated widget! No typing is required, our Captcha is fully interactive, sweet and easy to use! Sweet Captcha is fully integrated as a contact form 7 captcha, comments captcha, log-in captcha, registration captcha, password recovery captcha, custom contact form and more. You can customize your captcha language translation and theme, to have your users interact with any captcha in a fun and playful manner.
 
 <a href="http://www.sweetcaptcha.com/?ref=wordpress-plugin" target="_blank">See a live demo</a>
 
