@@ -82,6 +82,8 @@ If you like to contribute your translations please contact us at support@sweetca
 * Norwegian Sweet Captcha translation
 * Bulgarian Sweet Captcha translation
 * Danish Sweet Captcha translation
+* Finnish Sweet Captcha translation
+* Greek Sweet Captcha translation
 
 = IMPORTANT =
 

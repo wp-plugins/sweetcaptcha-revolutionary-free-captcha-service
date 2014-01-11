@@ -2,20 +2,21 @@
 // settings definiiton
 $sweetcaptcha_options = array(
     'sweetcaptcha_app_id' => array('title' => __('Application ID', 'sweetcaptcha'), 'description' => __('Insert your Application ID', 'sweetcaptcha')),
-    'sweetcaptcha_key' => array('title' => __('SweetCaptcha Key', 'sweetcaptcha'), 'description' => __('Insert SweetCaptcha Key', 'sweetcaptcha')),
-    'sweetcaptcha_secret' => array('title' => __('SweetCaptcha Secret', 'sweetcaptcha'), 'description' => __('Insert SweetCaptcha Secret', 'sweetcaptcha')),
-//    'sweetcaptcha_public_url'			=> array('title' => __('SweetCaptcha Public URL', 'sweetcaptcha'), 'description' => __('Default values is "/wp-content/plugins/sweetcaptcha/library/sweetcaptcha.php" - don\'t change it unless you know what are you doing.', 'sweetcaptcha')),
-    'sweetcaptcha_form_omit_users' => array('title' => __('Omit captcha for registered users', 'sweetcaptcha'), 'description' => __('Disable SweetCaptcha for registered users.', 'sweetcaptcha')),
-    'sweetcaptcha_form_registration' => array('title' => __('SweetCaptcha for Registration Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for registration form.', 'sweetcaptcha')),
-    'sweetcaptcha_form_comment' => array('title' => __('SweetCaptcha for Comment Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for comment form.', 'sweetcaptcha')),
-    'sweetcaptcha_form_login' => array('title' => __('SweetCaptcha for Login Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for login form<br/><b>please make sure SweetCaptcha works on your site before enabling this</b>', 'sweetcaptcha')),
-    'sweetcaptcha_form_lost' => array('title' => __('SweetCaptcha for Lost Password Form', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for lost password form.', 'sweetcaptcha')),
-    'sweetcaptcha_form_contact_7' => array('title' => __('SweetCaptcha for Contact Form 7', 'sweetcaptcha'), 'description' => __('Enable SweetCaptcha for contact form 7 plug-in.', 'sweetcaptcha')),
-    'sweetcaptcha_form_contact' => array('title' => __('<b style="color:brown;">SweetCaptcha Contact Form</b>', 'sweetcaptcha'), 'description' => __('Do you want a contact form with SweetCaptcha? Check the check box, configure and save settings.', 'sweetcaptcha')),
+    'sweetcaptcha_key' => array('title' => __('sweetCaptcha Key', 'sweetcaptcha'), 'description' => __('Insert sweetCaptcha Key', 'sweetcaptcha')),
+    'sweetcaptcha_secret' => array('title' => __('sweetCaptcha Secret', 'sweetcaptcha'), 'description' => __('Insert sweetCaptcha Secret', 'sweetcaptcha')),
+//    'sweetcaptcha_public_url'			=> array('title' => __('sweetCaptcha Public URL', 'sweetcaptcha'), 'description' => __('Default values is "/wp-content/plugins/sweetcaptcha/library/sweetcaptcha.php" - don\'t change it unless you know what are you doing.', 'sweetcaptcha')),
+    'sweetcaptcha_additional_settings' => array('title' => 'Additional Settings'),
+    'sweetcaptcha_form_omit_users' => array('title' => __('Omit captcha for registered users', 'sweetcaptcha'), 'description' => __('Disable sweetCaptcha for registered users.', 'sweetcaptcha')),
+    'sweetcaptcha_form_registration' => array('title' => __('sweetCaptcha for Registration Form', 'sweetcaptcha'), 'description' => __('Enable sweetCaptcha for registration form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_comment' => array('title' => __('sweetCaptcha for Comment Form', 'sweetcaptcha'), 'description' => __('Enable sweetCaptcha for comment form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_login' => array('title' => __('sweetCaptcha for Login Form', 'sweetcaptcha'), 'description' => __('Enable sweetCaptcha for login form<br/><b>please make sure sweetCaptcha works on your site before enabling this</b>', 'sweetcaptcha')),
+    'sweetcaptcha_form_lost' => array('title' => __('sweetCaptcha for Lost Password Form', 'sweetcaptcha'), 'description' => __('Enable sweetCaptcha for lost password form.', 'sweetcaptcha')),
+    'sweetcaptcha_form_contact_7' => array('title' => __('sweetCaptcha for Contact Form 7', 'sweetcaptcha'), 'description' => __('Enable sweetCaptcha for contact form 7 plug-in.', 'sweetcaptcha')),
+    'sweetcaptcha_form_contact' => array('title' => __('<b style="color:brown;">sweetCaptcha Contact Form</b>', 'sweetcaptcha'), 'description' => __('Do you want a contact form with sweetCaptcha? Check the check box, configure and save settings.', 'sweetcaptcha')),
 );
 
 /**
- * @return true if SweetCaptcha is properly registered.
+ * @return true if sweetCaptcha is properly registered.
  */
 function sweetcaptcha_is_registered() {
   return ((get_option('sweetcaptcha_app_id', '')) && (get_option('sweetcaptcha_key', '')) && (get_option('sweetcaptcha_secret', '')));
@@ -38,18 +39,18 @@ function sweetcaptcha_admin_notices() {
 }
 
 /**
- * Add SweetCaptcha settings link to admin menu
+ * Add sweetCaptcha settings link to admin menu
  * @return void
  */
 function sweetcaptcha_admin_menu() {
-  //$menu_item = "<div class='admin-menu-item'>SweetCaptcha</div>";
-  //add_options_page(__('SweetCaptcha', 'sweetcaptcha'), __($menu_item, 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page');
-  add_menu_page(__('SweetCaptcha', 'sweetcaptcha'), __('SweetCaptcha', 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page', 
+  //$menu_item = "<div class='admin-menu-item'>sweetCaptcha</div>";
+  //add_options_page(__('sweetCaptcha', 'sweetcaptcha'), __($menu_item, 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page');
+  add_menu_page(__('sweetCaptcha', 'sweetcaptcha'), __('sweetCaptcha', 'sweetcaptcha'), 'manage_options', 'sweetcaptcha', 'sweetcaptcha_options_page', 
           SWEETCAPTCHA_URL.'/images/menu-icon.png');
 }
 
 /**
- * SweetCaptcha options page logic
+ * sweetCaptcha options page logic
  * @return void
  */
 function sweetcaptcha_options_page() {
@@ -67,7 +68,7 @@ function sweetcaptcha_options_page() {
 }
 
 /**
- * Displays the SweetCaptcha register form.
+ * Displays the sweetCaptcha register form.
  * @return void
  */
 function sweetcaptcha_register_form() {
@@ -133,10 +134,10 @@ function sweetcaptcha_register_form() {
   // }
   $form_html .= "</script>\n";
   
-  // $form_html = preg_replace('/category:/', 'SweetCaptcha design:', $form_html);
-  //$form_html = preg_replace('/Please fill in your site details/', 'Fill in your SweetCaptcha details to activate:', $form_html);
-  // $form_html = preg_replace('/language:/', 'SweetCaptcha language:', $form_html);
-  //$form_html = preg_replace('/SweetCaptcha theme:/', 'SweetCaptcha design:', $form_html);
+  // $form_html = preg_replace('/category:/', 'sweetCaptcha design:', $form_html);
+  //$form_html = preg_replace('/Please fill in your site details/', 'Fill in your sweetCaptcha details to activate:', $form_html);
+  // $form_html = preg_replace('/language:/', 'sweetCaptcha language:', $form_html);
+  //$form_html = preg_replace('/sweetCaptcha theme:/', 'sweetCaptcha design:', $form_html);
   //$form_html = str_lreplace("</tr>", '</tr><tr><td class="left">Website category:</td><td class="right"><select name="site_category">'.$select_html.'</select></td></tr>',$form_html);
   
   $form_html .= "<script type=\"text/javascript\">\n jQuery('input[name=email_verify]').val(jQuery('input[name=email]').val()); jQuery('input[name=email_verify]').parent().parent().hide(); </script>\n";
@@ -163,7 +164,7 @@ function str_lreplace($search, $replace, $subject) {
 }
 
 /**
- * Displays the main SweetCaptcha settings.
+ * Displays the main sweetCaptcha settings.
  * @return void
  */
 function sweetcatpcha_main_settings($ignore_post = false) {
@@ -343,7 +344,7 @@ function swtcptcf_settings_save() {
 }
 
 /**
- * Get all SweetCaptcha options values as asociative array
+ * Get all sweetCaptcha options values as asociative array
  * @return array
  */
 function sweetcaptcha_options() {
@@ -356,7 +357,7 @@ function sweetcaptcha_options() {
 }
 
 /**
- * SweetCaptcha plug-in activation hook
+ * sweetCaptcha plug-in activation hook
  * @return void
  */
 function sweetcaptcha_activate() {
@@ -385,7 +386,7 @@ function sweetcaptcha_activate() {
 }
 
 /**
- * Delete SweetCaptcha options from database
+ * Delete sweetCaptcha options from database
  * @return void
  */
 function sweetcaptcha_uninstall() {

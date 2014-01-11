@@ -5,19 +5,11 @@
   <?php endif; ?>
 
   <div class="icon32 icon32-bws" id="icon-options-sweetcaptcha"></div>
-  <h2 style="height: 100%; padding-left: 150px; padding-top: 20px; line-height: 40px;"><?php _e('SweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
+  <h2 style="height: 100%; padding-left: 150px; padding-top: 20px; line-height: 40px;"><?php _e('sweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
 
-  <div style="padding: 4px; background: #FAF6E5; width: 660px; border-radius: 5px; overflow: hidden;">
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" target="_blank" style="float: left">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="KJ9FG7STBXQ76">
-      <input type="image" style="float: left" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
-      <img style="width:1; height:1px; border:none; padding:0; margin:0;" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-    </form>
-    <div style="float: left; margin-top: 10px; color: #666; font-style: italic">
-      to help keep Sweet Captcha free
-    </div>
-  </div>
+  <!-- <div style="padding: 4px; background: #FAF6E5; width: 660px; border-radius: 5px; overflow: hidden;">
+    
+  </div> -->
 
   <form name="form1" method="post" action="">
     <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
@@ -27,6 +19,31 @@
         if (!empty($sweetcaptcha_options) && is_array($sweetcaptcha_options)):
           foreach ($sweetcaptcha_options as $opt_name => $opt):
         ?>
+
+        <?php if ($opt_name == 'sweetcaptcha_additional_settings') { ?>
+          <tr>
+            <td valign="top">Language, themes, statistics</td>
+            <td colspan="2">
+              <a href="http://www.sweetcaptcha.com/accounts/signin?ref=wordpress", style="font-weight: bold">Login to your sweetCaptcha account</a> for additional settings
+              <div style="color: #999">
+                Your password was sent to you in your welcome email
+              </div>
+              <div style="padding: 20px 0 10px; overflow: hidden;">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" target="_blank" style="float: left">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="KJ9FG7STBXQ76">
+                  <input type="image" style="float: left" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img style="width:1; height:1px; border:none; padding:0; margin:0;" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+                </form>
+                <div style="float: left; margin-top: 7px; color: #777; font-style: italic">
+                  to help keep sweetCaptcha free
+                </div>
+              </div>
+              <div style="height: 1px; background: #ddd; margin: 20px 0; width: 450px"></div>
+            </td>
+          </tr>
+        <?php continue; }?>
+
         <tr valign="top">
           <th scope="row" style="min-width: 15%"><label for="<?php echo $opt_name ?>"><?php echo $opt['title'] . ':'; ?></label></th>
           <?php
@@ -77,7 +94,7 @@
           </td>
         </tr>
         <?php } ?>
-        
+
         <?php
           endforeach;
         endif;
