@@ -24,7 +24,7 @@
           <tr>
             <td valign="top">Language, themes, statistics</td>
             <td colspan="2">
-              <a href="http://www.sweetcaptcha.com/accounts/signin?ref=wordpress", style="font-weight: bold">Login to your sweetCaptcha account</a> for additional settings
+              <a href="http://www.sweetcaptcha.com/accounts/signin?ref=wordpress" target="_blank" style="font-weight: bold">Login</a> to your sweetCaptcha account for changing your language, design and additional settings
               <div style="color: #999">
                 Your password was sent to you in your welcome email
               </div>
