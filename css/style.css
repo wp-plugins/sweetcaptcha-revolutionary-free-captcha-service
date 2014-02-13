@@ -128,3 +128,11 @@ span.error {
 #reg_passmail {
   padding-top: 10px;
 }
+
+div.sweetcaptcha ul li {
+	clear: none !important;
+}
+div.sweetcaptcha {
+	margin-bottom: 10px !important;
+	/*min-width: 270px !important;*/
+}

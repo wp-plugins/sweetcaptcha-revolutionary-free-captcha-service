@@ -157,6 +157,11 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
+= 3.0.7 =
+* Fix (on some themes): Captcha should always appear before submit button
+* New languages introduced
+* Better error messages
+
 = 3.0.6 =
 * Compatible with WordPress 3.8
 * Compatible with Contact Form 7 version 3.6

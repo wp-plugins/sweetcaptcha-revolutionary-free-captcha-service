@@ -8,9 +8,18 @@
   <h2 style="height: 100%; padding-left: 150px; padding-top: 20px; line-height: 40px;"><?php _e('sweetCaptcha Settings', 'sweetcaptcha'); ?></h2>
 
   <!-- <div style="padding: 4px; background: #FAF6E5; width: 660px; border-radius: 5px; overflow: hidden;">
-    
   </div> -->
-
+  
+	<div style="position: relative;">
+	<div style="padding: 0px 0px 10px 0px; overflow: hidden; position: absolute; left: 270px;top: 250px;border-bottom: 1px solid #DDDDDD; width: 400px;">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" id="formDonate" target="_blank" style="float: left">
+			<input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="KJ9FG7STBXQ76">
+      <input type="image" style="float: left; padding: 3px 0px 3px 0px;" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submitDonate" id="submitDonate" alt="PayPal - The safer, easier way to pay online!">
+      <img style="width:1; height:1px; border:none; padding:0; margin:0;" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+    </form>
+    <div style="float: left; margin: 7px 0px 0px 10px; color: #777; font-style: italic">to help keep sweetCaptcha free</div>
+  </div>
   <form name="form1" method="post" action="">
     <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
     <table class="form-table">
@@ -22,24 +31,10 @@
 
         <?php if ($opt_name == 'sweetcaptcha_additional_settings') { ?>
           <tr>
-            <td valign="top">Language, themes, statistics</td>
-            <td colspan="2">
+						<th scope="row"><label>Language, themes, statistics</label></th>
+            <td style="padding: 20px 10px 60px 10px;">
               <a href="http://www.sweetcaptcha.com/accounts/signin?ref=wordpress" target="_blank" style="font-weight: bold">Login</a> to your sweetCaptcha account for changing your language, design and additional settings
-              <div style="color: #999">
-                Your password was sent to you in your welcome email
-              </div>
-              <div style="padding: 20px 0 10px; overflow: hidden;">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" name="formDonate" target="_blank" style="float: left">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="KJ9FG7STBXQ76">
-                  <input type="image" style="float: left" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                  <img style="width:1; height:1px; border:none; padding:0; margin:0;" alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-                </form>
-                <div style="float: left; margin-top: 7px; color: #777; font-style: italic">
-                  to help keep sweetCaptcha free
-                </div>
-              </div>
-              <div style="height: 1px; background: #ddd; margin: 20px 0; width: 450px"></div>
+              <div style="color: #999">Your password was sent to you in your welcome email</div>
             </td>
           </tr>
         <?php continue; }?>
@@ -62,9 +57,7 @@
           <td>
             <input<?php echo $class ?> id="<?php echo $opt_name ?>" type="<?php echo $type ?>" name="<?php echo $opt_name ?>" value="<?php echo $value ?>" size="50" <?php echo $checked ?> />
             <?php if (isset($sweetcaptcha_options[$opt_name]['description'])): ?>
-              <span class="description">
-                <?php echo $sweetcaptcha_options[$opt_name]['description']; ?>
-              </span>
+              <span class="description"><?php echo $sweetcaptcha_options[$opt_name]['description']; ?></span>
             <?php endif; ?>
           </td>
         </tr>
@@ -106,4 +99,4 @@
       <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
     </p>
   </form>
-</div>
+	</div>
