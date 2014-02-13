@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: captcha, sweetcaptcha, sweet captcha, captsha, antispam, kaptcha, comment, catcha, registration, registration captcha, security, captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capch, captcha comics, php captcha, wordpress captcha, contact form 7 captcha
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 3.0.6
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -156,11 +156,6 @@ Feel free to drop us a line at support@sweetcaptcha.com
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
-
-= 3.0.7 =
-* Fix (on some themes): Captcha should always appear before submit button
-* New languages introduced
-* Better error messages
 
 = 3.0.6 =
 * Compatible with WordPress 3.8

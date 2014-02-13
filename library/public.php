@@ -52,9 +52,6 @@ function sweetcaptcha_move_submit_button() {
 		;(function(){
 			try {
 				var sub = document.getElementById("submit");
-				if (! sub) { sub = document.getElementById("submitcomment"); }
-				if (! sub) { sub = document.getElementById("wp-submit"); }
-				if (! sub) { sub = document.getElementById("login"); }
 				if (sub) {
 					sub.parentNode.removeChild(sub);
 					document.getElementById("sweetcaptcha-submit-button").appendChild(sub);
@@ -136,7 +133,6 @@ function sweetcaptcha_adjust_form() {
 function sweetcaptcha_login_form() {
 	global $sweetcaptcha_instance;
 	echo $sweetcaptcha_instance->get_html();
-	//echo sweetcaptcha_move_submit_button();
 	return true;
 }
 
@@ -150,7 +146,6 @@ function sweetcaptcha_registration_form() {
 		return true;
 	}
 	echo $sweetcaptcha_instance->get_html();
-	//echo sweetcaptcha_move_submit_button();
   //echo sweetcaptcha_adjust_form();
 	return true;
 }

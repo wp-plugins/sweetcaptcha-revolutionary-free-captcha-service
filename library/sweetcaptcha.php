@@ -64,14 +64,13 @@ class Sweetcaptcha {
 	}
 	
 	private function call($params) {
-		//die("default_socket_timeout: ".ini_get("default_socket_timeout"));
 		$param_data = "";		
 		foreach ($params as $param_name => $param_value) {
 			$param_data .= urlencode($param_name) .'='. urlencode($param_value) .'&'; 
 		}
-		$fs = fsockopen( self::API_URL, 80, $errno, $errstr, 10 /* The connection timeout, in seconds */ );
+		$fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10);
 		if ( ! $fs ) {
-			return $this->call_error($errstr, $errno);
+			die ("Couldn't connect to server: $errstr ($errno)");
     }
     
 		$req = "POST /api.php HTTP/1.0\r\n";
@@ -92,11 +91,7 @@ class Sweetcaptcha {
     
 		return $response[1];	
 	}
-
-	private function call_error($errstr, $errno) {
-		return "<p style='color:red;'>".SWEETCAPTCHA_CONNECT_ERROR."</p><a style='text-decoration:underline;' href='javascript:void(0)' onclick='javascript:jQuery(\"#sweetcaptcha-error-details\").toggle();'>Details</a><span id='sweetcaptcha-error-details' style='display: none;'><br>$errstr ($errno)</span>";
-	}
-
+	
 	public function __call($method, $params) {
 		return $this->api($method, $params);
 	}
