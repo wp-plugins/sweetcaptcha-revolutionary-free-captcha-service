@@ -157,7 +157,7 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
-= 3.0.8
+= 3.0.8 =
 * Compatible with WordPress 3.9.1
 * NEW: sweet Captcha Slovenian language support added to the plug-in.
 * NEW: Gravity Forms support added to the sweet Captcha plug-in.
