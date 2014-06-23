@@ -124,8 +124,7 @@ if (!function_exists('swtcptcf_check_form')) {
     global $error_message;
     global $swtcptcf_options;
     //$path_of_uploaded_file = '';
-    if (empty($swtcptcf_options))
-      $swtcptcf_options = get_option('sweetcaptcha_form_contact_options');
+    if (empty($swtcptcf_options)) $swtcptcf_options = get_option('sweetcaptcha_form_contact_options');
     $result = "";
     // Error messages array
     $error_message = array();
@@ -135,14 +134,11 @@ if (!function_exists('swtcptcf_check_form')) {
     $error_message['error_message'] = __("Message text required.", 'sweetcaptcha');
     $error_message['error_form'] = __("Please correct your input data below and try again.", 'sweetcaptcha');
     // Check information
-    if ("" != $_REQUEST['swtcptcf_contact_name'])
-      unset($error_message['error_name']);
+    if ("" != $_REQUEST['swtcptcf_contact_name']) unset($error_message['error_name']);
     if ("" != $_REQUEST['swtcptcf_contact_email'] && preg_match("/^(?:[a-z0-9]+(?:[a-z0-9\-_\.]+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})$/i", trim($_REQUEST['swtcptcf_contact_email'])))
       unset($error_message['error_email']);
-    if ("" != $_REQUEST['swtcptcf_contact_subject'])
-      unset($error_message['error_subject']);
-    if ("" != $_REQUEST['swtcptcf_contact_message'])
-      unset($error_message['error_message']);
+    if ("" != $_REQUEST['swtcptcf_contact_subject']) unset($error_message['error_subject']);
+    if ("" != $_REQUEST['swtcptcf_contact_message']) unset($error_message['error_message']);
     
     sweetcaptcha_validate_contact_form($error_message);
 
@@ -163,15 +159,12 @@ if (!function_exists('swtcptcf_send_mail')) {
   function swtcptcf_send_mail() {
     global $swtcptcf_options, $path_of_uploaded_file;
     $to = "";
-    if (isset($_SESSION['swtcptcf_send_mail']) && $_SESSION['swtcptcf_send_mail'] == true)
-      return true;
+    if (isset($_SESSION['swtcptcf_send_mail']) && $_SESSION['swtcptcf_send_mail'] == true) return true;
     if ($swtcptcf_options['swtcptcf_select_email'] == 'user') {
-      if (function_exists('get_userdatabylogin') && false !== $user = get_userdatabylogin($swtcptcf_options['swtcptcf_user_email'])) {
-        $to = $user->user_email;
-      } else if (false !== $user = get_user_by('login', $swtcptcf_options_submit['swtcptcf_user_email']))
-        $to = $user->user_email;
-    }
-    else {
+      if (false !== $user = get_user_by('login', $swtcptcf_options_submit['swtcptcf_user_email'])) {
+				$to = $user->user_email;
+			}
+    } else {
       $to = $swtcptcf_options['swtcptcf_custom_email'];
     }
     if ("" == $to) {
@@ -308,9 +301,7 @@ function swtcptcf_clean_input($string, $preserve_space = 0) {
 // protect and validate form vars
 
 function swtcptcf_sanitize_string($string, $preserve_space = 0) {
-  if (!$preserve_space)
-    $string = preg_replace("/ +/", ' ', trim($string));
-
+  if (!$preserve_space) $string = preg_replace("/ +/", ' ', trim($string));
   return preg_replace("/[<>]/", '_', $string);
 }
 

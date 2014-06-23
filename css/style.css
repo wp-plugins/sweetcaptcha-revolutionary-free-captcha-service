@@ -128,3 +128,20 @@ span.error {
 #reg_passmail {
   padding-top: 10px;
 }
+
+div.sweetcaptcha ul li {
+	clear: none !important;
+}
+div.sweetcaptcha {
+	margin-bottom: 10px !important;
+	/*min-width: 270px !important;*/
+}
+.sweetcaptcha-after {
+	height: 10px;
+}
+
+#register table td.right {
+	text-align: inherit;
+}
+
+body.login div.sweetcaptcha ul li {background: inherit;width: auto;height: auto;} body.login div.sweetcaptcha ul li img {width: 34px !important;height: auto !important;}

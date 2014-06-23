@@ -1,5 +1,4 @@
 <?php
-
 // in case this is called like standalone script - we need wordpress functions available
 if ( ! function_exists( 'get_option' ) ) {
 	// absolute path to wp installation root
@@ -38,6 +37,7 @@ class Sweetcaptcha {
 	private $key;
 	private $secret;
 	private $path;
+	private $registered;
 	
 	const API_URL = SWEETCAPTCHA_SITE_URL; 
 	
@@ -46,10 +46,10 @@ class Sweetcaptcha {
 		$this->key = $key;
 		$this->secret = $secret;
 		$this->path = $path;
+		$this->registered = ( !empty($appid) && !empty($key) && !empty($secret) );
 	}
 	
 	private function api($method, $params) {
-		
 		$basic = array(
 			'method' => $method,
 			'appid' => $this->appid,
@@ -59,8 +59,17 @@ class Sweetcaptcha {
 			'user_agent' => $_SERVER['HTTP_USER_AGENT'],
 			'platform' => 'wordpress'
 		);
-
-		return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
+		
+		if (is_admin()) {
+			return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
+		} else {
+			if ( $this->registered ) {
+				return $this->call(array_merge(isset($params[0]) ? $params[0] : $params, $basic));
+			} else {
+				//return '<span style="color: red;">'.__('Your sweetCaptcha plugin is not setup yet', 'sweetcaptcha').'</span>';
+				return '';
+			}
+		}
 	}
 	
 	private function call($params) {
@@ -68,10 +77,17 @@ class Sweetcaptcha {
 		foreach ($params as $param_name => $param_value) {
 			$param_data .= urlencode($param_name) .'='. urlencode($param_value) .'&'; 
 		}
-		$fs = fsockopen(self::API_URL, 80, $errno, $errstr, 10);
+
+		$fs = fsockopen( self::API_URL, 80, $errno, $errstr, 10 /* The connection timeout, in seconds */ );
 		if ( ! $fs ) {
-			die ("Couldn't connect to server: $errstr ($errno)");
-    }
+			if ( isset($params['check']) ) {
+				return '<div class="error sweetcaptcha" style="text-align: left; ">'.$this->call_error($errstr, $errno).'</div>';
+			}
+			return ''; //$this->call_error($errstr, $errno);
+    } else
+		if ( isset($params['check']) ) {
+			return '';
+		}
     
 		$req = "POST /api.php HTTP/1.0\r\n";
 		$req .= "Host: ".self::API_URL."\r\n";
@@ -86,13 +102,21 @@ class Sweetcaptcha {
 			$response .= fgets($fs, 1160);
 		}
 		fclose($fs);
-		
-		$response = explode("\r\n\r\n", $response, 2);
-    
-		return $response[1];	
-	}
 	
+		$response_arr = explode("\r\n\r\n", $response, 2);
+		return $response_arr[1];	
+	}
+
+	private function call_error($errstr, $errno) {
+		return "<p style='color:red;'>".SWEETCAPTCHA_CONNECT_ERROR."</p><a style='text-decoration:underline;' href='javascript:void(0)' onclick='javascript:jQuery(\"#sweetcaptcha-error-details\").toggle();'>Details</a><span id='sweetcaptcha-error-details' style='display: none;'><br>$errstr ($errno)</span>";
+	}
+
 	public function __call($method, $params) {
 		return $this->api($method, $params);
 	}
+	
+	public function check_access() {
+		echo $this->api('get_html', array('check'=>1));
+	}
 }
+?>

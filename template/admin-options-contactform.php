@@ -51,8 +51,8 @@ $userslogin = $wpdb->get_col("SELECT user_login FROM  $wpdb->users ", 0);
         <input type='radio' name='swtcptcf_mail_method' value='wp-mail' <?php if ($swtcptcf_options['swtcptcf_mail_method'] == 'wp-mail') echo "checked=\"checked\" "; ?>/>
       </td>
       <td>
-        <?php _e('Wp-mail', 'mail-send'); ?> 
-        <span  class="swtcptcf_info">(<?php _e('To send mail you can use the wordpress wp_mail function', 'mail_send'); ?>)</span>
+        <?php _e('Wp-mail', 'sweetcaptcha'); ?> 
+        <span  class="swtcptcf_info">(<?php _e('To send mail you can use the wordpress wp_mail function', 'sweetcaptcha'); ?>)</span>
       </td>
     </tr>
     <tr class="swtcptcf_additions_block <?php if ($swtcptcf_options['swtcptcf_additions_options'] == '0') echo "swtcptcf_hidden"; ?>">
@@ -60,8 +60,8 @@ $userslogin = $wpdb->get_col("SELECT user_login FROM  $wpdb->users ", 0);
         <input type='radio' name='swtcptcf_mail_method' value='mail' <?php if ($swtcptcf_options['swtcptcf_mail_method'] == 'mail') echo "checked=\"checked\" "; ?>/>
       </td>
       <td>
-        <?php _e('Mail', 'mail-send'); ?> 
-        <span  class="swtcptcf_info">(<?php _e('To send mail you can use the php mail function', 'mail_send'); ?>)</span>
+        <?php _e('Mail', 'sweetcaptcha'); ?> 
+        <span  class="swtcptcf_info">(<?php _e('To send mail you can use the php mail function', 'sweetcaptcha'); ?>)</span>
       </td>
     </tr>
     <tr valign="top" class="swtcptcf_additions_block <?php if ($swtcptcf_options['swtcptcf_additions_options'] == '0') echo "swtcptcf_hidden"; ?>">
