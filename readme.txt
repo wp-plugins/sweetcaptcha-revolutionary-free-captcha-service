@@ -254,6 +254,9 @@ Bugfix : Sweet Captcha is now compatible to Wordpress 3.5.
 
 == Upgrade Notice ==
 
+= 3.0.8 =
+Compatible with WordPress v3.9.1, Gravity Forms and Buddypress support
+
 = 3.0.6 =
 Compatible with WordPress v3.8 and Contact Form 7 v3.6
 
