@@ -74,7 +74,7 @@ if (!function_exists('sweetcaptcha_init')) {
     $ver = $plugin_info["Version"];
     $app_id = get_option('sweetcaptcha_app_id', '') ? get_option('sweetcaptcha_app_id', '') : '1';
     wp_enqueue_script('swtcptcf', plugins_url('js/swtcptcf.js', __FILE__), array(), $ver);
-    wp_enqueue_script('sweetcaptcha-csrf', '//'.SWEETCAPTCHA_SITE_URL.'/api/v2/apps/csrf/'.$app_id, array(), $ver, true);
+    wp_enqueue_script('sweetcaptcha-csrf', 'https://'.SWEETCAPTCHA_SITE_URL.'/api/v2/apps/csrf/'.$app_id, array(), $ver, true);
     wp_enqueue_style('sweetcaptcha_Stylesheet', plugins_url('css/style.css', __FILE__), array(), $ver);
   }
 
