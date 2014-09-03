@@ -128,7 +128,7 @@ Sure, Sweet Captcha runs on iPhones, iPads and Android devices
 
 = Where can I find a sample of your Captcha? =
 
-Check out our [screenshots](http://wordpress.org/extend/plugins/sweetcaptcha-revolutionary-free-captcha-service/screenshots/) or visit [our website](http://www.sweetcapthca.com) to try Sweet Captcha yourself.
+Check out our [screenshots](http://wordpress.org/extend/plugins/sweetcaptcha-revolutionary-free-captcha-service/screenshots/) or visit [our website](http://www.sweetcaptcha.com) to try Sweet Captcha yourself.
 
 = Can I choose a language for my Sweet Captcha? =
 
