@@ -3,7 +3,7 @@ Contributors: SweetCaptcha
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJ9FG7STBXQ76
 Tags: captcha, sweetcaptcha, sweet captcha, captsha, antispam, kaptcha, comment, catcha, registration, registration captcha, security, captcha for contact form 7, capatcha, kapcha, plugin, buddypress captcha, captcha protection, spam fpr posts, images captcha, capch, captcha comics, php captcha, wordpress captcha, contact form 7 captcha
 Requires at least: 3.0
-Tested up to: 3.9.1
+Tested up to: 4.0.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -85,6 +85,11 @@ If you like to contribute your translations please contact us at support@sweetca
 * Finnish Sweet Captcha translation
 * Greek Sweet Captcha translation
 * Bulgarian Sweet Captcha translation
+* Turkish Sweet Captcha translation
+* Hungarian Sweet Captcha translation
+* Lithuanian Sweet Captcha translation
+* Slovenian Sweet Captcha translation
+* Bahasa Indonesia Sweet Captcha translation
 
 = IMPORTANT =
 
@@ -156,6 +161,13 @@ Feel free to drop us a line at support@sweetcaptcha.com
 Wordpress >= 2.8, cURL extension
 
 == Changelog ==
+
+= 3.0.9 =
+* Compatible with WordPress 4.0.1
+* NEW: sweet Captcha Hungarian language support added to the plug-in.
+* NEW: sweet Captcha Turkish language support added to the plug-in.
+* NEW: sweet Captcha Lithuanian language support added to the plug-in.
+* NEW: sweet Captcha Bahasa Indonesia language support added to the plug-in.
 
 = 3.0.8 =
 * Compatible with WordPress 3.9.1
