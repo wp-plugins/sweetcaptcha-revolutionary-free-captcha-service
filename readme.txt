@@ -162,6 +162,9 @@ Wordpress >= 2.8, cURL extension
 
 == Changelog ==
 
+= 3.1.0 =
+* Bugfix: issues with contact form 7, didn't block spam, resolved.
+
 = 3.0.9 =
 * Compatible with WordPress 4.0.1
 * NEW: sweet Captcha Hungarian language support added to the plug-in.

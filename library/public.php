@@ -231,14 +231,19 @@ function sweetcaptcha_wpmu_validate_user_signup($errors) {
  * Add SweetCaptcha standard check (use for Contact Form 7)
  */
 function sweetcaptcha_check($errors, $tag = '') {
+
 	global $sweetcaptcha_instance;
 	$scValues = sweetcaptcha_get_values();
+
+	$tag = new WPCF7_Shortcode( $tag );
+
 	if ($sweetcaptcha_instance->check($scValues) != 'true') {
-		if (!empty($tag)) {
-			$errors['valid'] = false;
-			$errors['reason']['your-sweetcaptcha'] = __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha');
+
+		if ( method_exists($errors, 'invalidate' ) ) { // since CF7 4.1
+			$errors->invalidate( $tag , __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha') );
 		} else {
-			$errors['errors']->add('sweetcaptcha', '<strong>' . __('ERROR', 'sweetcaptcha') . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha'));
+			$errors['valid'] = false;
+			$errors['reason'] = '<strong>' . __('ERROR', 'sweetcaptcha') . '</strong>: ' . __(SWEETCAPTCHA_ERROR_MESSAGE, 'sweetcaptcha');
 		}
 	}
 	return $errors;
@@ -248,9 +253,11 @@ function sweetcaptcha_check($errors, $tag = '') {
  * Add SweetCaptcha short code to Contact Form 7
  * @return a string with HTML code
  */
-function sweetcaptcha_shortcode_cf7() {
-	$input = '<span class="wpcf7-form-control-wrap your-sweetcaptcha"><input type="text" name="your-sweetcaptcha" value="" size="1" class="wpcf7-form-control wpcf7-text" style="display:none;" /></span>';
-	$sc = $input . sweetcaptcha_shortcode();
+function sweetcaptcha_shortcode_cf7($tag) {
+
+	$input = '<span class="wpcf7-form-control-wrap sweetcaptcha"><input type="text" name="sweetcaptcha" value="" size="1" class="wpcf7-form-control wpcf7-text" style="display: none;" /></span>';
+	$sc = sweetcaptcha_shortcode().$input;
+
 	return $sc;
 }
 

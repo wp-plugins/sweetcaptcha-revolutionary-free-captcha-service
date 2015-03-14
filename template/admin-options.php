@@ -73,7 +73,7 @@
           <td colspan="2">
             <div style="margin-left: 220px; padding: 10px; background: #eee; width: 600px">
               <?php echo __('To integrate SweetCaptcha with Contact Form 7 please do the following:', 'sweetcaptcha') . '<br />'; ?>
-              <?php echo __('A. Copy the following tag with square brackets [sweetcaptcha]', 'sweetcaptcha') . '<br />'; ?> 
+              <?php echo __('A. Copy the following tag with square brackets [sweetcaptcha sweetcaptcha]', 'sweetcaptcha') . '<br />'; ?>
               <?php echo __('B. Open the page with settings of Contact Form 7', 'sweetcaptcha') . '<br />'; ?>
               <?php echo __('C. Paste the copied tag into "Form" section above the line which contains "&lt;p&gt;[submit "Send"]&lt;/p&gt;"', 'sweetcaptcha') . '<br />'; ?>
               <?php printf(__('D. Need more help ?  <a href="%s" title="Contact us" target="_blank">Contact us</a>.', 'sweetcaptcha'), 'http://'.SWEETCAPTCHA_SITE_URL.''); ?>
